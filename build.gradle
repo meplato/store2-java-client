@@ -1,0 +1,55 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+configurations {
+  provided
+  provided.extendsFrom(compile)
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.apache.httpcomponents:httpclient:4.4'
+  compile 'commons-io:commons-io:2.4'
+  compile 'com.google.code.gson:gson:2.3.1'
+  compile 'commons-codec:commons-codec:1.10'
+  compile 'com.damnhandy:handy-uri-templates:2.0.2'
+  compile 'joda-time:joda-time:2.7'
+  testCompile 'junit:junit:4.12'
+}
+
+sourceCompatibility = 1.7
+version = '2.0.0.beta2'
+jar {
+  manifest {
+    attributes 'Implementation-Title': 'Meplato Store 2.0 API',
+               'Implementation-Version': version
+  }
+}
+
+test {
+  systemProperties 'STORE2_USER': ''
+}
+
+uploadArchives {
+  repositories {
+   flatDir {
+     dirs 'repos'
+   }
+  }
+}
+
+idea {
+  module {
+    //and some extra dirs that should be excluded by IDEA
+    excludeDirs += file('src.old')
+
+    //if you prefer different SDK than that inherited from IDEA project
+    jdkName = '1.7'
+
+    //if you need to put 'provided' dependencies on the classpath
+    scopes.PROVIDED.plus += [ configurations.provided ]
+  }
+}
