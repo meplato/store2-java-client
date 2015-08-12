@@ -59,6 +59,8 @@ public class UpdateProduct {
 	private Eclass[] eclasses;
 	@SerializedName("erpGroupSupplier")
 	private String erpGroupSupplier;
+	@SerializedName("excluded")
+	private Boolean excluded;
 	@SerializedName("extCategory")
 	private String extCategory;
 	@SerializedName("extCategoryId")
@@ -382,6 +384,22 @@ public class UpdateProduct {
 	 */
 	public void setErpGroupSupplier(String erpGroupSupplier) {
 		this.erpGroupSupplier = erpGroupSupplier;
+	}
+
+	/**
+	 * Excluded is a flag that indicates whether to exclude this product from the
+	 * catalog. If true, this product will not be published into the live area.
+	 */
+	public Boolean getExcluded() {
+		return this.excluded;
+	}
+
+	/**
+	 * Excluded is a flag that indicates whether to exclude this product from the
+	 * catalog. If true, this product will not be published into the live area.
+	 */
+	public void setExcluded(Boolean excluded) {
+		this.excluded = excluded;
 	}
 
 	/**

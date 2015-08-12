@@ -45,6 +45,12 @@ public class PublishTest extends BaseTest {
         long i = 0;
         long n = 10;
         while (true) {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+
             PublishStatusResponse publishStatus = service.publishStatus().pin("AD8CCDD5F9").execute();
             assertNotNull(publishStatus);
             assertEquals("store#catalogPublishStatus", publishStatus.getKind());
@@ -53,12 +59,6 @@ public class PublishTest extends BaseTest {
 
             if ("done".equalsIgnoreCase(publishStatus.getStatus())) {
                 break;
-            }
-
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
             }
 
             i += 1;

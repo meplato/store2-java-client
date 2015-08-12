@@ -26,16 +26,24 @@ import com.google.gson.annotations.SerializedName;
  * publish request.
  */
 public class PublishStatusResponse {
+	@SerializedName("busy")
+	private boolean busy;
+	@SerializedName("canceled")
+	private boolean canceled;
 	@SerializedName("currentStep")
-	private int currentStep;
+	private long currentStep;
+	@SerializedName("done")
+	private boolean done;
 	@SerializedName("kind")
 	private String kind;
+	@SerializedName("percent")
+	private int percent;
 	@SerializedName("selfLink")
 	private String selfLink;
 	@SerializedName("status")
 	private String status;
 	@SerializedName("totalSteps")
-	private int totalSteps;
+	private long totalSteps;
 
 	/**
 	 * Create new instance of PublishStatusResponse.
@@ -44,10 +52,38 @@ public class PublishStatusResponse {
 	}
 
 	/**
+	 * Busy indicates whether the catalog is still busy.
+	 */
+	public boolean isBusy() {
+		return this.busy;
+	}
+
+	/**
+	 * Busy indicates whether the catalog is still busy.
+	 */
+	public void setBusy(boolean busy) {
+		this.busy = busy;
+	}
+
+	/**
+	 * Canceled indicates whether the publishing process has been canceled.
+	 */
+	public boolean isCanceled() {
+		return this.canceled;
+	}
+
+	/**
+	 * Canceled indicates whether the publishing process has been canceled.
+	 */
+	public void setCanceled(boolean canceled) {
+		this.canceled = canceled;
+	}
+
+	/**
 	 * CurrentStep is an indicator of the current step in the total list of steps.
 	 * Use in combination with TotalSteps to retrieve the progress in percent.
 	 */
-	public int getCurrentStep() {
+	public long getCurrentStep() {
 		return this.currentStep;
 	}
 
@@ -55,8 +91,22 @@ public class PublishStatusResponse {
 	 * CurrentStep is an indicator of the current step in the total list of steps.
 	 * Use in combination with TotalSteps to retrieve the progress in percent.
 	 */
-	public void setCurrentStep(int currentStep) {
+	public void setCurrentStep(long currentStep) {
 		this.currentStep = currentStep;
+	}
+
+	/**
+	 * Done indicates whether publishing is finished.
+	 */
+	public boolean isDone() {
+		return this.done;
+	}
+
+	/**
+	 * Done indicates whether publishing is finished.
+	 */
+	public void setDone(boolean done) {
+		this.done = done;
 	}
 
 	/**
@@ -71,6 +121,20 @@ public class PublishStatusResponse {
 	 */
 	public void setKind(String kind) {
 		this.kind = kind;
+	}
+
+	/**
+	 * Percent indicates the progress of the publish request.
+	 */
+	public int getPercent() {
+		return this.percent;
+	}
+
+	/**
+	 * Percent indicates the progress of the publish request.
+	 */
+	public void setPercent(int percent) {
+		this.percent = percent;
 	}
 
 	/**
@@ -105,7 +169,7 @@ public class PublishStatusResponse {
 	 * TotalSteps is an indicator of the total number steps required to complete the
 	 * publish request. Use in combination with CurrentStep.
 	 */
-	public int getTotalSteps() {
+	public long getTotalSteps() {
 		return this.totalSteps;
 	}
 
@@ -113,7 +177,7 @@ public class PublishStatusResponse {
 	 * TotalSteps is an indicator of the total number steps required to complete the
 	 * publish request. Use in combination with CurrentStep.
 	 */
-	public void setTotalSteps(int totalSteps) {
+	public void setTotalSteps(long totalSteps) {
 		this.totalSteps = totalSteps;
 	}
 }
