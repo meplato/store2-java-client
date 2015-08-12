@@ -33,7 +33,7 @@ public class GetTest extends BaseTest {
         Service service = getProductsService();
         assertNotNull(service);
 
-        Product product = service.get().pin("AD8CCDD5F9").area("work").id("50763599@12").execute();
+        Product product = service.get().pin("AD8CCDD5F9").area("work").spn("50763599").execute();
         assertNotNull(product);
         assertNotNull(product.getId());
         assertNotEquals("", product.getId());
@@ -68,7 +68,7 @@ public class GetTest extends BaseTest {
         assertNotNull(service);
 
         try {
-            service.get().pin("AD8CCDD5F9").area("work").id("no-such-product").execute();
+            service.get().pin("AD8CCDD5F9").area("work").spn("no-such-product").execute();
             fail("expected to not get data without authorization");
         } catch (ServiceException ex) {
             assertNotNull(ex);

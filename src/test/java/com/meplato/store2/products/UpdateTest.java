@@ -19,6 +19,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -38,12 +39,11 @@ public class UpdateTest extends BaseTest {
         update.setPrice(2.50);
         update.setOrderUnit("PCE");
 
-        UpdateProductResponse updateResponse = service.update().pin("AD8CCDD5F9").area("work").id("MBA11@12").product(update).execute();
+        UpdateProductResponse updateResponse = service.update().pin("AD8CCDD5F9").area("work").spn("MBA11").product(update).execute();
         assertNotNull(updateResponse);
         assertNotNull(updateResponse.getLink());
         assertNotEquals("", updateResponse.getLink());
-        assertNotNull(updateResponse.getId());
-        assertNotEquals("", updateResponse.getId());
+        assertEquals("store#productsUpdateResponse", updateResponse.getKind());
 
         // Here's how to get the product now.
         /*

@@ -306,7 +306,7 @@ public class Service {
 		private final Map<String, String> headers = new HashMap<String, String>();
 		private String pin;
 		private String area;
-		private String id;
+		private String spn;
 
 		/**
 		 * Creates a new instance of DeleteService.
@@ -324,18 +324,18 @@ public class Service {
 		}
 
 		/**
-		 * ID is the identifier of the product to delete.
-		 */
-		public DeleteService id(String id) {
-			this.id = id;
-			return this;
-		}
-
-		/**
 		 * PIN of the catalog.
 		 */
 		public DeleteService pin(String pin) {
 			this.pin = pin;
+			return this;
+		}
+
+		/**
+		 * SPN is the supplier part number of the product to delete.
+		 */
+		public DeleteService spn(String spn) {
+			this.spn = spn;
 			return this;
 		}
 
@@ -347,8 +347,8 @@ public class Service {
 			Map<String, Object> params = new HashMap<String, Object>();
 			params.putAll(this.params);
 			params.put("area", this.area);
-			params.put("id", this.id);
 			params.put("pin", this.pin);
+			params.put("spn", this.spn);
 
 			// Make a copy of the header parameters and set common headers, like the UA
 			Map<String, String> headers = new HashMap<String, String>();
@@ -359,7 +359,7 @@ public class Service {
 				headers.put("Authorization", authorization);
 			}
 
-			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}/products/{id}";
+			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}/products/{spn}";
 			Response response = service.getClient().execute("DELETE", uriTemplate, params, headers, null);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
 				return;
@@ -370,7 +370,7 @@ public class Service {
 	}
 
 	/**
-	 * Get returns a single product.
+	 * Get returns a single product by its Supplier Part Number (SPN).
 	 */
 	public static class GetService {
 		private final Service service;
@@ -378,7 +378,7 @@ public class Service {
 		private final Map<String, String> headers = new HashMap<String, String>();
 		private String pin;
 		private String area;
-		private String id;
+		private String spn;
 
 		/**
 		 * Creates a new instance of GetService.
@@ -396,18 +396,18 @@ public class Service {
 		}
 
 		/**
-		 * ID of the product to get.
-		 */
-		public GetService id(String id) {
-			this.id = id;
-			return this;
-		}
-
-		/**
 		 * PIN of the catalog.
 		 */
 		public GetService pin(String pin) {
 			this.pin = pin;
+			return this;
+		}
+
+		/**
+		 * SPN is the supplier part number of the product to get.
+		 */
+		public GetService spn(String spn) {
+			this.spn = spn;
 			return this;
 		}
 
@@ -419,8 +419,8 @@ public class Service {
 			Map<String, Object> params = new HashMap<String, Object>();
 			params.putAll(this.params);
 			params.put("area", this.area);
-			params.put("id", this.id);
 			params.put("pin", this.pin);
+			params.put("spn", this.spn);
 
 			// Make a copy of the header parameters and set common headers, like the UA
 			Map<String, String> headers = new HashMap<String, String>();
@@ -431,7 +431,7 @@ public class Service {
 				headers.put("Authorization", authorization);
 			}
 
-			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}/products/{id}";
+			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}/products/{spn}";
 			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
 				return response.getBodyJSON(Product.class);
@@ -451,7 +451,7 @@ public class Service {
 		private final Map<String, String> headers = new HashMap<String, String>();
 		private String pin;
 		private String area;
-		private String id;
+		private String spn;
 		private ReplaceProduct product;
 
 		/**
@@ -466,14 +466,6 @@ public class Service {
 		 */
 		public ReplaceService area(String area) {
 			this.area = area;
-			return this;
-		}
-
-		/**
-		 * ID is the identifier of the product to replace.
-		 */
-		public ReplaceService id(String id) {
-			this.id = id;
 			return this;
 		}
 
@@ -494,6 +486,14 @@ public class Service {
 		}
 
 		/**
+		 * SPN is the supplier part number of the product to replace.
+		 */
+		public ReplaceService spn(String spn) {
+			this.spn = spn;
+			return this;
+		}
+
+		/**
 		 * Execute the operation.
 		 */
 		public ReplaceProductResponse execute() throws ServiceException {
@@ -501,8 +501,8 @@ public class Service {
 			Map<String, Object> params = new HashMap<String, Object>();
 			params.putAll(this.params);
 			params.put("area", this.area);
-			params.put("id", this.id);
 			params.put("pin", this.pin);
+			params.put("spn", this.spn);
 
 			// Make a copy of the header parameters and set common headers, like the UA
 			Map<String, String> headers = new HashMap<String, String>();
@@ -513,7 +513,7 @@ public class Service {
 				headers.put("Authorization", authorization);
 			}
 
-			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}/products/{id}";
+			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}/products/{spn}";
 			Response response = service.getClient().execute("PUT", uriTemplate, params, headers, this.product);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
 				return response.getBodyJSON(ReplaceProductResponse.class);
@@ -700,7 +700,7 @@ public class Service {
 		private final Map<String, String> headers = new HashMap<String, String>();
 		private String pin;
 		private String area;
-		private String id;
+		private String spn;
 		private UpdateProduct product;
 
 		/**
@@ -715,14 +715,6 @@ public class Service {
 		 */
 		public UpdateService area(String area) {
 			this.area = area;
-			return this;
-		}
-
-		/**
-		 * ID is the identifier of the product to update.
-		 */
-		public UpdateService id(String id) {
-			this.id = id;
 			return this;
 		}
 
@@ -743,6 +735,14 @@ public class Service {
 		}
 
 		/**
+		 * SPN is the supplier part number of the product to update.
+		 */
+		public UpdateService spn(String spn) {
+			this.spn = spn;
+			return this;
+		}
+
+		/**
 		 * Execute the operation.
 		 */
 		public UpdateProductResponse execute() throws ServiceException {
@@ -750,8 +750,8 @@ public class Service {
 			Map<String, Object> params = new HashMap<String, Object>();
 			params.putAll(this.params);
 			params.put("area", this.area);
-			params.put("id", this.id);
 			params.put("pin", this.pin);
+			params.put("spn", this.spn);
 
 			// Make a copy of the header parameters and set common headers, like the UA
 			Map<String, String> headers = new HashMap<String, String>();
@@ -762,7 +762,7 @@ public class Service {
 				headers.put("Authorization", authorization);
 			}
 
-			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}/products/{id}";
+			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}/products/{spn}";
 			Response response = service.getClient().execute("POST", uriTemplate, params, headers, this.product);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
 				return response.getBodyJSON(UpdateProductResponse.class);

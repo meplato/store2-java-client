@@ -44,8 +44,7 @@ public class CreateTest extends BaseTest {
         assertNotNull(createResponse);
         assertNotNull(createResponse.getLink());
         assertNotEquals("", createResponse.getLink());
-        assertNotNull(createResponse.getId());
-        assertNotEquals("", createResponse.getId());
+        assertEquals("store#productsCreateResponse", createResponse.getKind());
     }
 
     @Test

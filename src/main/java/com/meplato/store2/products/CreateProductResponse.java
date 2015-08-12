@@ -26,8 +26,6 @@ import com.google.gson.annotations.SerializedName;
  * product.
  */
 public class CreateProductResponse {
-	@SerializedName("id")
-	private String id;
 	@SerializedName("kind")
 	private String kind;
 	@SerializedName("link")
@@ -37,20 +35,6 @@ public class CreateProductResponse {
 	 * Create new instance of CreateProductResponse.
 	 */
 	public CreateProductResponse() {
-	}
-
-	/**
-	 * ID is the identifier of the newly created product.
-	 */
-	public String getId() {
-		return this.id;
-	}
-
-	/**
-	 * ID is the identifier of the newly created product.
-	 */
-	public void setId(String id) {
-		this.id = id;
 	}
 
 	/**
