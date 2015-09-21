@@ -30,7 +30,7 @@ public class Availability {
 	@SerializedName("qty")
 	private Double qty;
 	@SerializedName("updated")
-	private Date updated;
+	private String updated;
 
 	/**
 	 * Create new instance of Availability.
@@ -73,14 +73,14 @@ public class Availability {
 	/**
 	 * Updated indicates when the availability message has been last updated. 
 	 */
-	public Date getUpdated() {
+	public String getUpdated() {
 		return this.updated;
 	}
 
 	/**
 	 * Updated indicates when the availability message has been last updated. 
 	 */
-	public void setUpdated(Date updated) {
+	public void setUpdated(String updated) {
 		this.updated = updated;
 	}
 }
