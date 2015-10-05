@@ -431,14 +431,14 @@ public class Product {
 	}
 
 	/**
-	 * Description of the catalog.
+	 * Description of the product.
 	 */
 	public String getDescription() {
 		return this.description;
 	}
 
 	/**
-	 * Description of the catalog.
+	 * Description of the product.
 	 */
 	public void setDescription(String description) {
 		this.description = description;
@@ -773,14 +773,14 @@ public class Product {
 	}
 
 	/**
-	 * Name of the catalog.
+	 * Name of the product.
 	 */
 	public String getName() {
 		return this.name;
 	}
 
 	/**
-	 * Name of the catalog.
+	 * Name of the product.
 	 */
 	public void setName(String name) {
 		this.name = name;

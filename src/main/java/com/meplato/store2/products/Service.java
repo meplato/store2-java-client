@@ -17,7 +17,7 @@
  * 
  * @copyright 2014-2015 Meplato GmbH, Switzerland.
  * @author Meplato API Team <support@meplato.com>
- * @version 2.0.0.beta2
+ * @version 2.0.0.beta3
  * @license Copyright (c) 2015 Meplato GmbH, Switzerland. All rights reserved.
  * @see <a href="https://developer.meplato.com/store2/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/store2/">External documentation</a>
@@ -41,7 +41,7 @@ public class Service {
 	/** API title. */
 	public static String TITLE = "Meplato Store 2 API";
 	/** API version. */
-	public static String VERSION = "2.0.0.beta2";
+	public static String VERSION = "2.0.0.beta3";
 	/** User Agent. */
 	public static String USER_AGENT = "meplato-java-client/2.0";
 	/** Default base URL of the API endpoints. */
@@ -224,6 +224,15 @@ public class Service {
 	 */
 	public UpdateService update() {
 		return new UpdateService(this);
+	}
+
+	/**
+	 * Returns the {@link UpsertService}.
+	 *
+	 * @return the {@link UpsertService}.
+	 */
+	public UpsertService upsert() {
+		return new UpsertService(this);
 	}
 
 	/**
@@ -766,6 +775,78 @@ public class Service {
 			Response response = service.getClient().execute("POST", uriTemplate, params, headers, this.product);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
 				return response.getBodyJSON(UpdateProductResponse.class);
+			}
+
+			throw ServiceException.fromResponse(response);
+		}
+	}
+
+	/**
+	 * Upsert a product in the given catalog and area. Upsert will create if the
+	 * product does not exist yet, otherwise it will update.
+	 */
+	public static class UpsertService {
+		private final Service service;
+		private final Map<String, Object> params = new HashMap<String, Object>();
+		private final Map<String, String> headers = new HashMap<String, String>();
+		private String pin;
+		private String area;
+		private UpsertProduct product;
+
+		/**
+		 * Creates a new instance of UpsertService.
+		 */
+		public UpsertService(Service service) {
+			this.service = service;
+		}
+
+		/**
+		 * Area of the catalog, e.g. work or live.
+		 */
+		public UpsertService area(String area) {
+			this.area = area;
+			return this;
+		}
+
+		/**
+		 * PIN of the catalog.
+		 */
+		public UpsertService pin(String pin) {
+			this.pin = pin;
+			return this;
+		}
+
+		/**
+		 * Product properties of the new product.
+		 */
+		public UpsertService product(UpsertProduct product) {
+			this.product = product;
+			return this;
+		}
+
+		/**
+		 * Execute the operation.
+		 */
+		public UpsertProductResponse execute() throws ServiceException {
+			// Make a copy of the parameters and add the path parameters to it
+			Map<String, Object> params = new HashMap<String, Object>();
+			params.putAll(this.params);
+			params.put("area", this.area);
+			params.put("pin", this.pin);
+
+			// Make a copy of the header parameters and set common headers, like the UA
+			Map<String, String> headers = new HashMap<String, String>();
+			headers.putAll(this.headers);
+
+			String authorization = service.getAuthorizationHeader();
+			if (authorization != null && !authorization.isEmpty()) {
+				headers.put("Authorization", authorization);
+			}
+
+			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}/products/upsert";
+			Response response = service.getClient().execute("POST", uriTemplate, params, headers, this.product);
+			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
+				return response.getBodyJSON(UpsertProductResponse.class);
 			}
 
 			throw ServiceException.fromResponse(response);

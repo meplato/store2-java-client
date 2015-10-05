@@ -22,9 +22,9 @@ import java.util.Map;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * UpdateProduct holds the properties of a product that need to be updated.
+ * UpsertProduct holds the properties of the product to create or update.
  */
-public class UpdateProduct {
+public class UpsertProduct {
 	@SerializedName("availability")
 	private Availability availability;
 	@SerializedName("blobs")
@@ -60,7 +60,7 @@ public class UpdateProduct {
 	@SerializedName("erpGroupSupplier")
 	private String erpGroupSupplier;
 	@SerializedName("excluded")
-	private Boolean excluded;
+	private boolean excluded;
 	@SerializedName("extCategory")
 	private String extCategory;
 	@SerializedName("extCategoryId")
@@ -94,7 +94,7 @@ public class UpdateProduct {
 	@SerializedName("ou")
 	private String orderUnit;
 	@SerializedName("price")
-	private Double price;
+	private double price;
 	@SerializedName("priceQty")
 	private Double priceQty;
 	@SerializedName("quantityInterval")
@@ -110,7 +110,9 @@ public class UpdateProduct {
 	@SerializedName("scalePrices")
 	private ScalePrice[] scalePrices;
 	@SerializedName("service")
-	private Boolean service;
+	private boolean service;
+	@SerializedName("spn")
+	private String spn;
 	@SerializedName("taxCode")
 	private String taxCode;
 	@SerializedName("thumbnail")
@@ -119,9 +121,9 @@ public class UpdateProduct {
 	private Unspsc[] unspscs;
 
 	/**
-	 * Create new instance of UpdateProduct.
+	 * Create new instance of UpsertProduct.
 	 */
-	public UpdateProduct() {
+	public UpsertProduct() {
 	}
 
 	/**
@@ -390,7 +392,7 @@ public class UpdateProduct {
 	 * Excluded is a flag that indicates whether to exclude this product from the
 	 * catalog. If true, this product will not be published into the live area.
 	 */
-	public Boolean getExcluded() {
+	public boolean isExcluded() {
 		return this.excluded;
 	}
 
@@ -398,7 +400,7 @@ public class UpdateProduct {
 	 * Excluded is a flag that indicates whether to exclude this product from the
 	 * catalog. If true, this product will not be published into the live area.
 	 */
-	public void setExcluded(Boolean excluded) {
+	public void setExcluded(boolean excluded) {
 		this.excluded = excluded;
 	}
 
@@ -601,14 +603,14 @@ public class UpdateProduct {
 	}
 
 	/**
-	 * Name of the product.
+	 * Name of the product. The product name is a required field
 	 */
 	public String getName() {
 		return this.name;
 	}
 
 	/**
-	 * Name of the product.
+	 * Name of the product. The product name is a required field
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -616,7 +618,7 @@ public class UpdateProduct {
 
 	/**
 	 * OrderUnit is the order unit of the product, a 3-character ISO code (usually
-	 * project-specific).
+	 * project-specific). OrderUnit is a required field.
 	 */
 	public String getOrderUnit() {
 		return this.orderUnit;
@@ -624,7 +626,7 @@ public class UpdateProduct {
 
 	/**
 	 * OrderUnit is the order unit of the product, a 3-character ISO code (usually
-	 * project-specific).
+	 * project-specific). OrderUnit is a required field.
 	 */
 	public void setOrderUnit(String orderUnit) {
 		this.orderUnit = orderUnit;
@@ -632,15 +634,17 @@ public class UpdateProduct {
 
 	/**
 	 * Price is the net price (per order unit) of the product for the end-user.
+	 * Price is a required field.
 	 */
-	public Double getPrice() {
+	public double getPrice() {
 		return this.price;
 	}
 
 	/**
 	 * Price is the net price (per order unit) of the product for the end-user.
+	 * Price is a required field.
 	 */
-	public void setPrice(Double price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
@@ -756,7 +760,7 @@ public class UpdateProduct {
 	 * Service indicates if the is a good (false) or a service (true). The default
 	 * value is false.
 	 */
-	public Boolean getService() {
+	public boolean isService() {
 		return this.service;
 	}
 
@@ -764,8 +768,22 @@ public class UpdateProduct {
 	 * Service indicates if the is a good (false) or a service (true). The default
 	 * value is false.
 	 */
-	public void setService(Boolean service) {
+	public void setService(boolean service) {
 		this.service = service;
+	}
+
+	/**
+	 * SPN is the supplier part number. SPN is a required field.
+	 */
+	public String getSpn() {
+		return this.spn;
+	}
+
+	/**
+	 * SPN is the supplier part number. SPN is a required field.
+	 */
+	public void setSpn(String spn) {
+		this.spn = spn;
 	}
 
 	/**
