@@ -43,6 +43,16 @@ public class ApacheHttpClient implements Client {
     }
 
     /**
+     * Instantiates a new instance of ApacheHttpClient with the given
+     * CloseableHttpClient.
+     *
+     * @param client the closable HTTP client to use
+     */
+    public ApacheHttpClient(CloseableHttpClient client) {
+        httpClient = client;
+    }
+
+    /**
      * Execute runs a HTTP request/response with an API endpoint.
      *
      * @param method      the HTTP method, e.g. POST or GET
