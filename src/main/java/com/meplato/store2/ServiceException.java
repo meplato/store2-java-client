@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Meplato GmbH, Switzerland.
+ * Copyright (c) 2015-2016 Meplato GmbH, Switzerland.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -16,7 +16,7 @@ package com.meplato.store2;
 /**
  * ServiceException thrown while communicating with a service.
  */
-public class ServiceException extends Throwable {
+public class ServiceException extends Exception {
     /**
      * Encapsulated error object.
      */

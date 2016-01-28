@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Meplato GmbH, Switzerland.
+ * Copyright (c) 2015-2016 Meplato GmbH, Switzerland.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -15,9 +15,12 @@ package com.meplato.store2;
 
 import com.damnhandy.uri.template.UriTemplate;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.entity.EntityBuilder;
 import org.apache.http.client.methods.*;
+import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -35,6 +38,11 @@ public class ApacheHttpClient implements Client {
      */
     private final CloseableHttpClient httpClient;
 
+    /** User Agent. */
+    public static String USER_AGENT = "meplato-api-java-version-apache/1.0.0";
+    /** RFC3339 pattern for deserializing date/time from the API. */
+    public static String RFC3339 = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSXXX";
+
     /**
      * Instantiates a new instance of ApacheHttpClient.
      */
@@ -50,6 +58,10 @@ public class ApacheHttpClient implements Client {
      */
     public ApacheHttpClient(CloseableHttpClient client) {
         httpClient = client;
+    }
+
+    public static Gson getSerializer() {
+        return new GsonBuilder().setDateFormat(RFC3339).create();
     }
 
     /**
@@ -71,10 +83,14 @@ public class ApacheHttpClient implements Client {
         // Body
         HttpEntity requestEntity = null;
         if (body != null) {
-            Gson gson = Service.getSerializer();
+            Gson gson = getSerializer();
             try {
-                requestEntity = new StringEntity(gson.toJson(body));
-            } catch (UnsupportedEncodingException e) {
+                requestEntity = EntityBuilder.create().
+                        setText(gson.toJson(body)).
+                        setContentEncoding("UTF-8").
+                        setContentType(ContentType.APPLICATION_JSON).
+                        build();
+            } catch (Exception e) {
                 throw new ServiceException("Error serializing body", null, e);
             }
         }
@@ -117,8 +133,8 @@ public class ApacheHttpClient implements Client {
         }
         httpRequest.setHeader("Accept", "application/json");
         httpRequest.setHeader("Accept-Charset", "utf-8");
-        httpRequest.setHeader("Content-Type", "application/json");
-        httpRequest.setHeader("User-Agent", Service.USER_AGENT);
+        httpRequest.setHeader("Content-Type", "application/json; charset=utf-8");
+        httpRequest.setHeader("User-Agent", USER_AGENT);
 
         try (CloseableHttpResponse httpResponse = httpClient.execute(httpRequest)) {
             Response response = new ApacheHttpResponse(httpResponse);
