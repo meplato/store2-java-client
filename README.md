@@ -57,7 +57,7 @@ for (Catalog catalog : response.getItems()) {
 }
 ```
 
-Feel free to look at the unit tests to get further information how to use the services.
+Feel free to look at the unit tests to get further information on how to use the services.
 
 ## Documentation
 
