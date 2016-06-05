@@ -22,7 +22,7 @@ dependencies {
 }
 
 sourceCompatibility = 1.7
-version = '2.0.0.beta2'
+version = '2.0.0.beta5'
 jar {
   manifest {
     attributes 'Implementation-Title': 'Meplato Store 2.0 API',

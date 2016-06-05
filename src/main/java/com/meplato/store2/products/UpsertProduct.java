@@ -31,6 +31,8 @@ public class UpsertProduct {
 	private Blob[] blobs;
 	@SerializedName("bpn")
 	private String bpn;
+	@SerializedName("catalogManaged")
+	private boolean catalogManaged;
 	@SerializedName("categories")
 	private String[] categories;
 	@SerializedName("conditions")
@@ -65,6 +67,8 @@ public class UpsertProduct {
 	private String extCategory;
 	@SerializedName("extCategoryId")
 	private String extCategoryId;
+	@SerializedName("extProductId")
+	private String extProductId;
 	@SerializedName("extSchemaType")
 	private String extSchemaType;
 	@SerializedName("features")
@@ -168,6 +172,22 @@ public class UpsertProduct {
 	 */
 	public void setBpn(String bpn) {
 		this.bpn = bpn;
+	}
+
+	/**
+	 * CatalogManaged is a flag that indicates whether this product is configurable
+	 * (or catalog managed in OCI parlance).
+	 */
+	public boolean isCatalogManaged() {
+		return this.catalogManaged;
+	}
+
+	/**
+	 * CatalogManaged is a flag that indicates whether this product is configurable
+	 * (or catalog managed in OCI parlance).
+	 */
+	public void setCatalogManaged(boolean catalogManaged) {
+		this.catalogManaged = catalogManaged;
 	}
 
 	/**
@@ -430,6 +450,22 @@ public class UpsertProduct {
 	 */
 	public void setExtCategoryId(String extCategoryId) {
 		this.extCategoryId = extCategoryId;
+	}
+
+	/**
+	 * ExtProductID is the EXT_PRODUCT_ID field of the SAP OCI specification. It is
+	 * e.g. required for configurable/catalog managed products.
+	 */
+	public String getExtProductId() {
+		return this.extProductId;
+	}
+
+	/**
+	 * ExtProductID is the EXT_PRODUCT_ID field of the SAP OCI specification. It is
+	 * e.g. required for configurable/catalog managed products.
+	 */
+	public void setExtProductId(String extProductId) {
+		this.extProductId = extProductId;
 	}
 
 	/**

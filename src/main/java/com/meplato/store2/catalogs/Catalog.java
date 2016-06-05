@@ -33,6 +33,8 @@ public class Catalog {
 	private String description;
 	@SerializedName("erpNumberBuyer")
 	private String erpNumberBuyer;
+	@SerializedName("hubUrl")
+	private String hubUrl;
 	@SerializedName("id")
 	private long id;
 	@SerializedName("kind")
@@ -53,6 +55,8 @@ public class Catalog {
 	private Long numProductsLive;
 	@SerializedName("numProductsWork")
 	private Long numProductsWork;
+	@SerializedName("ociUrl")
+	private String ociUrl;
 	@SerializedName("pin")
 	private String pin;
 	@SerializedName("projectId")
@@ -136,6 +140,22 @@ public class Catalog {
 	 */
 	public void setErpNumberBuyer(String erpNumberBuyer) {
 		this.erpNumberBuyer = erpNumberBuyer;
+	}
+
+	/**
+	 * HubURL represents the Meplato Hub URL for this catalog, e.g.
+	 * https://hub.meplato.de/forward/12345/shop
+	 */
+	public String getHubUrl() {
+		return this.hubUrl;
+	}
+
+	/**
+	 * HubURL represents the Meplato Hub URL for this catalog, e.g.
+	 * https://hub.meplato.de/forward/12345/shop
+	 */
+	public void setHubUrl(String hubUrl) {
+		this.hubUrl = hubUrl;
 	}
 
 	/**
@@ -282,6 +302,22 @@ public class Catalog {
 	 */
 	public void setNumProductsWork(Long numProductsWork) {
 		this.numProductsWork = numProductsWork;
+	}
+
+	/**
+	 * OciURL represents the OCI punchout URL that the supplier specified for this
+	 * catalog, e.g. https://my-shop.com/oci?param1=a
+	 */
+	public String getOciUrl() {
+		return this.ociUrl;
+	}
+
+	/**
+	 * OciURL represents the OCI punchout URL that the supplier specified for this
+	 * catalog, e.g. https://my-shop.com/oci?param1=a
+	 */
+	public void setOciUrl(String ociUrl) {
+		this.ociUrl = ociUrl;
 	}
 
 	/**

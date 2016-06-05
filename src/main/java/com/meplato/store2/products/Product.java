@@ -33,6 +33,8 @@ public class Product {
 	private String bpn;
 	@SerializedName("catalogId")
 	private long catalogId;
+	@SerializedName("catalogManaged")
+	private boolean catalogManaged;
 	@SerializedName("categories")
 	private String[] categories;
 	@SerializedName("conditions")
@@ -212,6 +214,22 @@ public class Product {
 	 */
 	public void setCatalogId(long catalogId) {
 		this.catalogId = catalogId;
+	}
+
+	/**
+	 * CatalogManaged is a flag that indicates whether this product is configurable
+	 * (or catalog managed in OCI parlance).
+	 */
+	public boolean isCatalogManaged() {
+		return this.catalogManaged;
+	}
+
+	/**
+	 * CatalogManaged is a flag that indicates whether this product is configurable
+	 * (or catalog managed in OCI parlance).
+	 */
+	public void setCatalogManaged(boolean catalogManaged) {
+		this.catalogManaged = catalogManaged;
 	}
 
 	/**
@@ -519,14 +537,16 @@ public class Product {
 	}
 
 	/**
-	 * ExtProductID is the EXT_PRODUCT_ID field of the SAP OCI specification.
+	 * ExtProductID is the EXT_PRODUCT_ID field of the SAP OCI specification. It is
+	 * e.g. required for configurable/catalog managed products.
 	 */
 	public String getExtProductId() {
 		return this.extProductId;
 	}
 
 	/**
-	 * ExtProductID is the EXT_PRODUCT_ID field of the SAP OCI specification.
+	 * ExtProductID is the EXT_PRODUCT_ID field of the SAP OCI specification. It is
+	 * e.g. required for configurable/catalog managed products.
 	 */
 	public void setExtProductId(String extProductId) {
 		this.extProductId = extProductId;
