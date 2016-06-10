@@ -25,6 +25,8 @@ import com.google.gson.annotations.SerializedName;
  * Catalog is a container for products, to be used in a certain project.
  */
 public class Catalog {
+	@SerializedName("country")
+	private String country;
 	@SerializedName("created")
 	private Date created;
 	@SerializedName("currency")
@@ -61,6 +63,8 @@ public class Catalog {
 	private String pin;
 	@SerializedName("projectId")
 	private long projectId;
+	@SerializedName("projectName")
+	private String projectName;
 	@SerializedName("publishedVersion")
 	private Long publishedVersion;
 	@SerializedName("selfLink")
@@ -83,6 +87,22 @@ public class Catalog {
 	}
 
 	/**
+	 * Country is the ISO-3166 alpha-2 code for the country that the catalog is
+	 * destined for (e.g. DE or US).
+	 */
+	public String getCountry() {
+		return this.country;
+	}
+
+	/**
+	 * Country is the ISO-3166 alpha-2 code for the country that the catalog is
+	 * destined for (e.g. DE or US).
+	 */
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	/**
 	 * Created is the creation date and time of the catalog.
 	 */
 	public Date getCreated() {
@@ -98,7 +118,7 @@ public class Catalog {
 
 	/**
 	 * Currency is the ISO-4217 currency code that is used for all products in the
-	 * catalog.
+	 * catalog (e.g. EUR or USD).
 	 */
 	public String getCurrency() {
 		return this.currency;
@@ -106,7 +126,7 @@ public class Catalog {
 
 	/**
 	 * Currency is the ISO-4217 currency code that is used for all products in the
-	 * catalog.
+	 * catalog (e.g. EUR or USD).
 	 */
 	public void setCurrency(String currency) {
 		this.currency = currency;
@@ -188,7 +208,7 @@ public class Catalog {
 
 	/**
 	 * Language is the IETF language tag of the language of all products in the
-	 * catalog.
+	 * catalog (e.g. de or pt-BR).
 	 */
 	public String getLanguage() {
 		return this.language;
@@ -196,7 +216,7 @@ public class Catalog {
 
 	/**
 	 * Language is the IETF language tag of the language of all products in the
-	 * catalog.
+	 * catalog (e.g. de or pt-BR).
 	 */
 	public void setLanguage(String language) {
 		this.language = language;
@@ -349,6 +369,20 @@ public class Catalog {
 	}
 
 	/**
+	 * Name of the project.
+	 */
+	public String getProjectName() {
+		return this.projectName;
+	}
+
+	/**
+	 * Name of the project.
+	 */
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
+
+	/**
 	 * PublishedVersion is the version number of the published catalog. It is
 	 * incremented when the publish task publishes the catalog.
 	 */
@@ -421,28 +455,28 @@ public class Catalog {
 	}
 
 	/**
-	 * ValidFrom is the date the catalog becomes effective.
+	 * ValidFrom is the date the catalog becomes effective (YYYY-MM-DD).
 	 */
 	public String getValidFrom() {
 		return this.validFrom;
 	}
 
 	/**
-	 * ValidFrom is the date the catalog becomes effective.
+	 * ValidFrom is the date the catalog becomes effective (YYYY-MM-DD).
 	 */
 	public void setValidFrom(String validFrom) {
 		this.validFrom = validFrom;
 	}
 
 	/**
-	 * ValidUntil is the date the catalog expires.
+	 * ValidUntil is the date the catalog expires (YYYY-MM-DD).
 	 */
 	public String getValidUntil() {
 		return this.validUntil;
 	}
 
 	/**
-	 * ValidUntil is the date the catalog expires.
+	 * ValidUntil is the date the catalog expires (YYYY-MM-DD).
 	 */
 	public void setValidUntil(String validUntil) {
 		this.validUntil = validUntil;
