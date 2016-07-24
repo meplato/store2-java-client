@@ -47,6 +47,8 @@ public class Catalog {
 	private Date lastImported;
 	@SerializedName("lastPublished")
 	private Date lastPublished;
+	@SerializedName("lockedForDownload")
+	private boolean lockedForDownload;
 	@SerializedName("merchantId")
 	private long merchantId;
 	@SerializedName("merchantName")
@@ -67,6 +69,10 @@ public class Catalog {
 	private String projectName;
 	@SerializedName("publishedVersion")
 	private Long publishedVersion;
+	@SerializedName("sageContract")
+	private String sageContract;
+	@SerializedName("sageNumber")
+	private String sageNumber;
 	@SerializedName("selfLink")
 	private String selfLink;
 	@SerializedName("slug")
@@ -251,6 +257,22 @@ public class Catalog {
 	}
 
 	/**
+	 * LockedForDownload indicates whether a catalog is locked and cannot be
+	 * downloaded.
+	 */
+	public boolean isLockedForDownload() {
+		return this.lockedForDownload;
+	}
+
+	/**
+	 * LockedForDownload indicates whether a catalog is locked and cannot be
+	 * downloaded.
+	 */
+	public void setLockedForDownload(boolean lockedForDownload) {
+		this.lockedForDownload = lockedForDownload;
+	}
+
+	/**
 	 * ID of the merchant.
 	 */
 	public long getMerchantId() {
@@ -396,6 +418,38 @@ public class Catalog {
 	 */
 	public void setPublishedVersion(Long publishedVersion) {
 		this.publishedVersion = publishedVersion;
+	}
+
+	/**
+	 * SageContract represents the internal identifier at Meplato for the contract
+	 * of this catalog.
+	 */
+	public String getSageContract() {
+		return this.sageContract;
+	}
+
+	/**
+	 * SageContract represents the internal identifier at Meplato for the contract
+	 * of this catalog.
+	 */
+	public void setSageContract(String sageContract) {
+		this.sageContract = sageContract;
+	}
+
+	/**
+	 * SageNumber represents the internal identifier at Meplato for the merchant of
+	 * this catalog.
+	 */
+	public String getSageNumber() {
+		return this.sageNumber;
+	}
+
+	/**
+	 * SageNumber represents the internal identifier at Meplato for the merchant of
+	 * this catalog.
+	 */
+	public void setSageNumber(String sageNumber) {
+		this.sageNumber = sageNumber;
 	}
 
 	/**
