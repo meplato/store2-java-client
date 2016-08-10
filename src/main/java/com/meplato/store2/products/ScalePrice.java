@@ -27,6 +27,10 @@ import com.google.gson.annotations.SerializedName;
 public class ScalePrice {
 	@SerializedName("lbound")
 	private double lbound;
+	@SerializedName("listPrice")
+	private Double listPrice;
+	@SerializedName("meplatoPrice")
+	private Double meplatoPrice;
 	@SerializedName("price")
 	private double price;
 
@@ -48,6 +52,34 @@ public class ScalePrice {
 	 */
 	public void setLbound(double lbound) {
 		this.lbound = lbound;
+	}
+
+	/**
+	 * ListPrice is the list price for the given lower bound.
+	 */
+	public Double getListPrice() {
+		return this.listPrice;
+	}
+
+	/**
+	 * ListPrice is the list price for the given lower bound.
+	 */
+	public void setListPrice(Double listPrice) {
+		this.listPrice = listPrice;
+	}
+
+	/**
+	 * MeplatoPrice is the Meplato price for the given lower bound.
+	 */
+	public Double getMeplatoPrice() {
+		return this.meplatoPrice;
+	}
+
+	/**
+	 * MeplatoPrice is the Meplato price for the given lower bound.
+	 */
+	public void setMeplatoPrice(Double meplatoPrice) {
+		this.meplatoPrice = meplatoPrice;
 	}
 
 	/**

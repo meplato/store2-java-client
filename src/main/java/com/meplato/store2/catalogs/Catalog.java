@@ -79,6 +79,20 @@ public class Catalog {
 	private String slug;
 	@SerializedName("state")
 	private String state;
+	@SerializedName("supportsOciBackgroundsearch")
+	private boolean supportsOciBackgroundsearch;
+	@SerializedName("supportsOciDetail")
+	private boolean supportsOciDetail;
+	@SerializedName("supportsOciDetailadd")
+	private boolean supportsOciDetailadd;
+	@SerializedName("supportsOciDownloadjson")
+	private boolean supportsOciDownloadjson;
+	@SerializedName("supportsOciQuantitycheck")
+	private boolean supportsOciQuantitycheck;
+	@SerializedName("supportsOciSourcing")
+	private boolean supportsOciSourcing;
+	@SerializedName("supportsOciValidate")
+	private boolean supportsOciValidate;
 	@SerializedName("updated")
 	private Date updated;
 	@SerializedName("validFrom")
@@ -492,6 +506,118 @@ public class Catalog {
 	 */
 	public void setState(String state) {
 		this.state = state;
+	}
+
+	/**
+	 * SupportsOciBackgroundsearch indicates whether a catalog supports the OCI
+	 * BACKGROUNDSEARCH transaction.
+	 */
+	public boolean isSupportsOciBackgroundsearch() {
+		return this.supportsOciBackgroundsearch;
+	}
+
+	/**
+	 * SupportsOciBackgroundsearch indicates whether a catalog supports the OCI
+	 * BACKGROUNDSEARCH transaction.
+	 */
+	public void setSupportsOciBackgroundsearch(boolean supportsOciBackgroundsearch) {
+		this.supportsOciBackgroundsearch = supportsOciBackgroundsearch;
+	}
+
+	/**
+	 * SupportsOciDetail indicates whether a catalog supports the OCI DETAIL
+	 * transaction.
+	 */
+	public boolean isSupportsOciDetail() {
+		return this.supportsOciDetail;
+	}
+
+	/**
+	 * SupportsOciDetail indicates whether a catalog supports the OCI DETAIL
+	 * transaction.
+	 */
+	public void setSupportsOciDetail(boolean supportsOciDetail) {
+		this.supportsOciDetail = supportsOciDetail;
+	}
+
+	/**
+	 * SupportsOciDetailadd indicates whether a catalog supports the OCI DETAILADD
+	 * transaction.
+	 */
+	public boolean isSupportsOciDetailadd() {
+		return this.supportsOciDetailadd;
+	}
+
+	/**
+	 * SupportsOciDetailadd indicates whether a catalog supports the OCI DETAILADD
+	 * transaction.
+	 */
+	public void setSupportsOciDetailadd(boolean supportsOciDetailadd) {
+		this.supportsOciDetailadd = supportsOciDetailadd;
+	}
+
+	/**
+	 * SupportsOciDownloadjson indicates whether a catalog supports the OCI
+	 * DOWNLOADJSON transaction.
+	 */
+	public boolean isSupportsOciDownloadjson() {
+		return this.supportsOciDownloadjson;
+	}
+
+	/**
+	 * SupportsOciDownloadjson indicates whether a catalog supports the OCI
+	 * DOWNLOADJSON transaction.
+	 */
+	public void setSupportsOciDownloadjson(boolean supportsOciDownloadjson) {
+		this.supportsOciDownloadjson = supportsOciDownloadjson;
+	}
+
+	/**
+	 * SupportsOciQuantitycheck indicates whether a catalog supports the OCI
+	 * QUANTITYCHECK transaction.
+	 */
+	public boolean isSupportsOciQuantitycheck() {
+		return this.supportsOciQuantitycheck;
+	}
+
+	/**
+	 * SupportsOciQuantitycheck indicates whether a catalog supports the OCI
+	 * QUANTITYCHECK transaction.
+	 */
+	public void setSupportsOciQuantitycheck(boolean supportsOciQuantitycheck) {
+		this.supportsOciQuantitycheck = supportsOciQuantitycheck;
+	}
+
+	/**
+	 * SupportsOciSourcing indicates whether a catalog supports the OCI SOURCING
+	 * transaction.
+	 */
+	public boolean isSupportsOciSourcing() {
+		return this.supportsOciSourcing;
+	}
+
+	/**
+	 * SupportsOciSourcing indicates whether a catalog supports the OCI SOURCING
+	 * transaction.
+	 */
+	public void setSupportsOciSourcing(boolean supportsOciSourcing) {
+		this.supportsOciSourcing = supportsOciSourcing;
+	}
+
+	/**
+	 * SupportsOciValidate indicates whether a catalog supports the OCI VALIDATE
+	 * transaction.
+	 */
+	public boolean isSupportsOciValidate() {
+		return this.supportsOciValidate;
+	}
+
+	/**
+	 * SupportsOciValidate indicates whether a catalog supports the OCI VALIDATE
+	 * transaction.
+	 */
+	public void setSupportsOciValidate(boolean supportsOciValidate) {
+		this.supportsOciValidate = supportsOciValidate;
 	}
 
 	/**
