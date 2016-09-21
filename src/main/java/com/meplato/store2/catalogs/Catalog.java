@@ -39,6 +39,8 @@ public class Catalog {
 	private String hubUrl;
 	@SerializedName("id")
 	private long id;
+	@SerializedName("keepOriginalBlobs")
+	private boolean keepOriginalBlobs;
 	@SerializedName("kind")
 	private String kind;
 	@SerializedName("language")
@@ -63,6 +65,8 @@ public class Catalog {
 	private String ociUrl;
 	@SerializedName("pin")
 	private String pin;
+	@SerializedName("project")
+	private Project project;
 	@SerializedName("projectId")
 	private long projectId;
 	@SerializedName("projectName")
@@ -210,6 +214,22 @@ public class Catalog {
 	 */
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	/**
+	 * KeepOriginalBlobs indicates whether the URLs in a blob will be passed through
+	 * and not cached by Store.
+	 */
+	public boolean isKeepOriginalBlobs() {
+		return this.keepOriginalBlobs;
+	}
+
+	/**
+	 * KeepOriginalBlobs indicates whether the URLs in a blob will be passed through
+	 * and not cached by Store.
+	 */
+	public void setKeepOriginalBlobs(boolean keepOriginalBlobs) {
+		this.keepOriginalBlobs = keepOriginalBlobs;
 	}
 
 	/**
@@ -388,6 +408,20 @@ public class Catalog {
 	 */
 	public void setPin(String pin) {
 		this.pin = pin;
+	}
+
+	/**
+	 * Project references the project that this catalog belongs to.
+	 */
+	public Project getProject() {
+		return this.project;
+	}
+
+	/**
+	 * Project references the project that this catalog belongs to.
+	 */
+	public void setProject(Project project) {
+		this.project = project;
 	}
 
 	/**

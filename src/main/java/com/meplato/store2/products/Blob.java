@@ -33,6 +33,8 @@ public class Blob {
 	private String source;
 	@SerializedName("text")
 	private String text;
+	@SerializedName("url")
+	private String url;
 
 	/**
 	 * Create new instance of Blob.
@@ -98,6 +100,20 @@ public class Blob {
 	 */
 	public void setText(String text) {
 		this.text = text;
+	}
+
+	/**
+	 * URL is the URL to the blob.
+	 */
+	public String getUrl() {
+		return this.url;
+	}
+
+	/**
+	 * URL is the URL to the blob.
+	 */
+	public void setUrl(String url) {
+		this.url = url;
 	}
 }
 
