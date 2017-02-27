@@ -49,6 +49,8 @@ public class Merchant {
 	private String ou;
 	@SerializedName("selfLink")
 	private String selfLink;
+	@SerializedName("selfService")
+	private boolean selfService;
 	@SerializedName("timeZone")
 	private String timeZone;
 	@SerializedName("token")
@@ -230,6 +232,22 @@ public class Merchant {
 	 */
 	public void setSelfLink(String selfLink) {
 		this.selfLink = selfLink;
+	}
+
+	/**
+	 * SelfService indicates whether this merchant is on self-service or managed by
+	 * Meplato.
+	 */
+	public boolean isSelfService() {
+		return this.selfService;
+	}
+
+	/**
+	 * SelfService indicates whether this merchant is on self-service or managed by
+	 * Meplato.
+	 */
+	public void setSelfService(boolean selfService) {
+		this.selfService = selfService;
 	}
 
 	/**

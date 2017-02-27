@@ -13,12 +13,12 @@
  */
 // THIS FILE IS AUTO-GENERATED. DO NOT MODIFY!
 /**
- * Package catalogs implements the Meplato Store 2 API.
+ * Package catalogs implements the Meplato Store API.
  * 
- * @copyright 2014-2016 Meplato GmbH, Switzerland.
+ * @copyright 2014-2017 Meplato GmbH, Switzerland.
  * @author Meplato API Team <support@meplato.com>
- * @version 2.0.0.beta9
- * @license Copyright (c) 2015-2016 Meplato GmbH, Switzerland. All rights reserved.
+ * @version 2.0.0
+ * @license Copyright (c) 2015-2017 Meplato GmbH, Switzerland. All rights reserved.
  * @see <a href="https://developer.meplato.com/store2/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/store2/">External documentation</a>
  */
@@ -34,18 +34,18 @@ import org.apache.commons.codec.binary.Base64;
 import com.meplato.store2.*;
 
 /**
- * Service is the entry point of the Meplato Store 2 API.
+ * Service is the entry point of the Meplato Store API.
  */
 
 public class Service {
 	/** API title. */
-	public static String TITLE = "Meplato Store 2 API";
+	public static String TITLE = "Meplato Store API";
 	/** API version. */
-	public static String VERSION = "2.0.0.beta9";
+	public static String VERSION = "2.0.0";
 	/** User Agent. */
 	public static String USER_AGENT = "meplato-java-client/2.0";
 	/** Default base URL of the API endpoints. */
-	public static String BASE_URL = "https://store2.meplato.com/api/v2";
+	public static String BASE_URL = "https://store.meplato.com/api/v2";
 	/** RFC3339 pattern for deserializing date/time from the API. */
 	public static String RFC3339 = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSXXX";
 
