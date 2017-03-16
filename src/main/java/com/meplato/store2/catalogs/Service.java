@@ -17,7 +17,7 @@
  * 
  * @copyright 2014-2017 Meplato GmbH, Switzerland.
  * @author Meplato API Team <support@meplato.com>
- * @version 2.0.1
+ * @version 2.0.2
  * @license Copyright (c) 2015-2017 Meplato GmbH, Switzerland. All rights reserved.
  * @see <a href="https://developer.meplato.com/store2/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/store2/">External documentation</a>
@@ -41,7 +41,7 @@ public class Service {
 	/** API title. */
 	public static String TITLE = "Meplato Store API";
 	/** API version. */
-	public static String VERSION = "2.0.1";
+	public static String VERSION = "2.0.2";
 	/** User Agent. */
 	public static String USER_AGENT = "meplato-java-client/2.0";
 	/** Default base URL of the API endpoints. */
@@ -443,6 +443,14 @@ public class Service {
 		}
 
 		/**
+		 * Q defines are full text query.
+		 */
+		public SearchService q(String q) {
+			this.params.put("q", q);
+			return this;
+		}
+
+		/**
 		 * Skip specifies how many catalogs to skip (default 0).
 		 */
 		public SearchService skip(long skip) {
@@ -483,7 +491,7 @@ public class Service {
 				headers.put("Authorization", authorization);
 			}
 
-			String uriTemplate = service.getBaseURL() + "/catalogs{?skip,take,sort}";
+			String uriTemplate = service.getBaseURL() + "/catalogs{?q,skip,take,sort}";
 			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
 				return response.getBodyJSON(SearchResponse.class);
