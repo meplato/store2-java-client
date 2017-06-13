@@ -35,6 +35,8 @@ public class Catalog {
 	private String description;
 	@SerializedName("erpNumberBuyer")
 	private String erpNumberBuyer;
+	@SerializedName("expired")
+	private boolean expired;
 	@SerializedName("hubUrl")
 	private String hubUrl;
 	@SerializedName("id")
@@ -188,6 +190,20 @@ public class Catalog {
 	 */
 	public void setErpNumberBuyer(String erpNumberBuyer) {
 		this.erpNumberBuyer = erpNumberBuyer;
+	}
+
+	/**
+	 * Expired indicates whether the catalog is expired as of now.
+	 */
+	public boolean isExpired() {
+		return this.expired;
+	}
+
+	/**
+	 * Expired indicates whether the catalog is expired as of now.
+	 */
+	public void setExpired(boolean expired) {
+		this.expired = expired;
 	}
 
 	/**

@@ -13,7 +13,7 @@
  */
 // THIS FILE IS AUTO-GENERATED. DO NOT MODIFY!
 /**
- * Package catalogs implements the Meplato Store API.
+ * Package jobs implements the Meplato Store API.
  * 
  * @copyright 2014-2017 Meplato GmbH, Switzerland.
  * @author Meplato API Team <support@meplato.com>
@@ -22,7 +22,7 @@
  * @see <a href="https://developer.meplato.com/store2/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/store2/">External documentation</a>
  */
-package com.meplato.store2.catalogs;
+package com.meplato.store2.jobs;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -173,33 +173,6 @@ public class Service {
 	}
 
 	/**
-	 * Returns the {@link PublishService}.
-	 *
-	 * @return the {@link PublishService}.
-	 */
-	public PublishService publish() {
-		return new PublishService(this);
-	}
-
-	/**
-	 * Returns the {@link PublishStatusService}.
-	 *
-	 * @return the {@link PublishStatusService}.
-	 */
-	public PublishStatusService publishStatus() {
-		return new PublishStatusService(this);
-	}
-
-	/**
-	 * Returns the {@link PurgeService}.
-	 *
-	 * @return the {@link PurgeService}.
-	 */
-	public PurgeService purge() {
-		return new PurgeService(this);
-	}
-
-	/**
 	 * Returns the {@link SearchService}.
 	 *
 	 * @return the {@link SearchService}.
@@ -209,13 +182,13 @@ public class Service {
 	}
 
 	/**
-	 * Get a single catalog.
+	 * Get a single job.
 	 */
 	public static class GetService {
 		private final Service service;
 		private final Map<String, Object> params = new HashMap<String, Object>();
 		private final Map<String, String> headers = new HashMap<String, String>();
-		private String pin;
+		private String id;
 
 		/**
 		 * Creates a new instance of GetService.
@@ -225,21 +198,21 @@ public class Service {
 		}
 
 		/**
-		 * PIN of the catalog.
+		 * ID of the job.
 		 */
-		public GetService pin(String pin) {
-			this.pin = pin;
+		public GetService id(String id) {
+			this.id = id;
 			return this;
 		}
 
 		/**
 		 * Execute the operation.
 		 */
-		public Catalog execute() throws ServiceException {
+		public Job execute() throws ServiceException {
 			// Make a copy of the parameters and add the path parameters to it
 			Map<String, Object> params = new HashMap<String, Object>();
 			params.putAll(this.params);
-			params.put("pin", this.pin);
+			params.put("id", this.id);
 
 			// Make a copy of the header parameters and set common headers, like the UA
 			Map<String, String> headers = new HashMap<String, String>();
@@ -250,10 +223,10 @@ public class Service {
 				headers.put("Authorization", authorization);
 			}
 
-			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}";
+			String uriTemplate = service.getBaseURL() + "/jobs/{id}";
 			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
-				return response.getBodyJSON(Catalog.class);
+				return response.getBodyJSON(Job.class);
 			}
 
 			throw ServiceException.fromResponse(response);
@@ -261,174 +234,7 @@ public class Service {
 	}
 
 	/**
-	 * Publishes a catalog.
-	 */
-	public static class PublishService {
-		private final Service service;
-		private final Map<String, Object> params = new HashMap<String, Object>();
-		private final Map<String, String> headers = new HashMap<String, String>();
-		private String pin;
-
-		/**
-		 * Creates a new instance of PublishService.
-		 */
-		public PublishService(Service service) {
-			this.service = service;
-		}
-
-		/**
-		 * PIN of the catalog to publish.
-		 */
-		public PublishService pin(String pin) {
-			this.pin = pin;
-			return this;
-		}
-
-		/**
-		 * Execute the operation.
-		 */
-		public PublishResponse execute() throws ServiceException {
-			// Make a copy of the parameters and add the path parameters to it
-			Map<String, Object> params = new HashMap<String, Object>();
-			params.putAll(this.params);
-			params.put("pin", this.pin);
-
-			// Make a copy of the header parameters and set common headers, like the UA
-			Map<String, String> headers = new HashMap<String, String>();
-			headers.putAll(this.headers);
-
-			String authorization = service.getAuthorizationHeader();
-			if (authorization != null && !authorization.isEmpty()) {
-				headers.put("Authorization", authorization);
-			}
-
-			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/publish";
-			Response response = service.getClient().execute("POST", uriTemplate, params, headers, null);
-			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
-				return response.getBodyJSON(PublishResponse.class);
-			}
-
-			throw ServiceException.fromResponse(response);
-		}
-	}
-
-	/**
-	 * Status of a publish process.
-	 */
-	public static class PublishStatusService {
-		private final Service service;
-		private final Map<String, Object> params = new HashMap<String, Object>();
-		private final Map<String, String> headers = new HashMap<String, String>();
-		private String pin;
-
-		/**
-		 * Creates a new instance of PublishStatusService.
-		 */
-		public PublishStatusService(Service service) {
-			this.service = service;
-		}
-
-		/**
-		 * PIN of the catalog to get the publish status from.
-		 */
-		public PublishStatusService pin(String pin) {
-			this.pin = pin;
-			return this;
-		}
-
-		/**
-		 * Execute the operation.
-		 */
-		public PublishStatusResponse execute() throws ServiceException {
-			// Make a copy of the parameters and add the path parameters to it
-			Map<String, Object> params = new HashMap<String, Object>();
-			params.putAll(this.params);
-			params.put("pin", this.pin);
-
-			// Make a copy of the header parameters and set common headers, like the UA
-			Map<String, String> headers = new HashMap<String, String>();
-			headers.putAll(this.headers);
-
-			String authorization = service.getAuthorizationHeader();
-			if (authorization != null && !authorization.isEmpty()) {
-				headers.put("Authorization", authorization);
-			}
-
-			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/publish/status";
-			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
-			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
-				return response.getBodyJSON(PublishStatusResponse.class);
-			}
-
-			throw ServiceException.fromResponse(response);
-		}
-	}
-
-	/**
-	 * Purge the work or live area of a catalog, i.e. remove all products in the
-	 * given area, but do not delete the catalog itself.
-	 */
-	public static class PurgeService {
-		private final Service service;
-		private final Map<String, Object> params = new HashMap<String, Object>();
-		private final Map<String, String> headers = new HashMap<String, String>();
-		private String pin;
-		private String area;
-
-		/**
-		 * Creates a new instance of PurgeService.
-		 */
-		public PurgeService(Service service) {
-			this.service = service;
-		}
-
-		/**
-		 * Area of the catalog to purge, i.e. work or live.
-		 */
-		public PurgeService area(String area) {
-			this.area = area;
-			return this;
-		}
-
-		/**
-		 * PIN of the catalog to purge.
-		 */
-		public PurgeService pin(String pin) {
-			this.pin = pin;
-			return this;
-		}
-
-		/**
-		 * Execute the operation.
-		 */
-		public PurgeResponse execute() throws ServiceException {
-			// Make a copy of the parameters and add the path parameters to it
-			Map<String, Object> params = new HashMap<String, Object>();
-			params.putAll(this.params);
-			params.put("area", this.area);
-			params.put("pin", this.pin);
-
-			// Make a copy of the header parameters and set common headers, like the UA
-			Map<String, String> headers = new HashMap<String, String>();
-			headers.putAll(this.headers);
-
-			String authorization = service.getAuthorizationHeader();
-			if (authorization != null && !authorization.isEmpty()) {
-				headers.put("Authorization", authorization);
-			}
-
-			String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}";
-			Response response = service.getClient().execute("DELETE", uriTemplate, params, headers, null);
-			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
-				return response.getBodyJSON(PurgeResponse.class);
-			}
-
-			throw ServiceException.fromResponse(response);
-		}
-	}
-
-	/**
-	 * Search for catalogs.
+	 * Search for jobs.
 	 */
 	public static class SearchService {
 		private final Service service;
@@ -443,14 +249,6 @@ public class Service {
 		}
 
 		/**
-		 * Q defines are full text query.
-		 */
-		public SearchService q(String q) {
-			this.params.put("q", q);
-			return this;
-		}
-
-		/**
 		 * Skip specifies how many catalogs to skip (default 0).
 		 */
 		public SearchService skip(long skip) {
@@ -459,10 +257,10 @@ public class Service {
 		}
 
 		/**
-		 * Sort order, e.g. name or id or -created (default: score).
+		 * State filter, e.g. waiting,working,succeeded,failed.
 		 */
-		public SearchService sort(String sort) {
-			this.params.put("sort", sort);
+		public SearchService state(String state) {
+			this.params.put("state", state);
 			return this;
 		}
 
@@ -491,7 +289,7 @@ public class Service {
 				headers.put("Authorization", authorization);
 			}
 
-			String uriTemplate = service.getBaseURL() + "/catalogs{?q,skip,take,sort}";
+			String uriTemplate = service.getBaseURL() + "/jobs{?merchantId,skip,take,state}";
 			Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
 			if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
 				return response.getBodyJSON(SearchResponse.class);

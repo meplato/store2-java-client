@@ -56,6 +56,12 @@ public abstract class BaseTest {
         return service;
     }
 
+    public com.meplato.store2.jobs.Service getJobsService() {
+        com.meplato.store2.jobs.Service service = new com.meplato.store2.jobs.Service(getClient());
+        service.setBaseURL(BASE_URL);
+        return service;
+    }
+
     protected void mockResponse(Response response) {
         this.getClient().setResponse(response);
     }
