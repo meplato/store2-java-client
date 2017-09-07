@@ -57,6 +57,8 @@ public class Catalog {
 	private long merchantId;
 	@SerializedName("merchantMpcc")
 	private String merchantMpcc;
+	@SerializedName("merchantMpsc")
+	private String merchantMpsc;
 	@SerializedName("merchantName")
 	private String merchantName;
 	@SerializedName("name")
@@ -73,6 +75,8 @@ public class Catalog {
 	private Project project;
 	@SerializedName("projectId")
 	private long projectId;
+	@SerializedName("projectMpbc")
+	private String projectMpbc;
 	@SerializedName("projectMpcc")
 	private String projectMpcc;
 	@SerializedName("projectName")
@@ -355,6 +359,20 @@ public class Catalog {
 	}
 
 	/**
+	 * MPSC of the merchant.
+	 */
+	public String getMerchantMpsc() {
+		return this.merchantMpsc;
+	}
+
+	/**
+	 * MPSC of the merchant.
+	 */
+	public void setMerchantMpsc(String merchantMpsc) {
+		this.merchantMpsc = merchantMpsc;
+	}
+
+	/**
 	 * Name of the merchant.
 	 */
 	public String getMerchantName() {
@@ -470,6 +488,20 @@ public class Catalog {
 	 */
 	public void setProjectId(long projectId) {
 		this.projectId = projectId;
+	}
+
+	/**
+	 * MPBC of the project.
+	 */
+	public String getProjectMpbc() {
+		return this.projectMpbc;
+	}
+
+	/**
+	 * MPBC of the project.
+	 */
+	public void setProjectMpbc(String projectMpbc) {
+		this.projectMpbc = projectMpbc;
 	}
 
 	/**
