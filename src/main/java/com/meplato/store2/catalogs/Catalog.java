@@ -33,6 +33,12 @@ public class Catalog {
 	private String currency;
 	@SerializedName("description")
 	private String description;
+	@SerializedName("downloadChecksum")
+	private String downloadChecksum;
+	@SerializedName("downloadInterval")
+	private String downloadInterval;
+	@SerializedName("downloadUrl")
+	private String downloadUrl;
 	@SerializedName("erpNumberBuyer")
 	private String erpNumberBuyer;
 	@SerializedName("expired")
@@ -107,6 +113,8 @@ public class Catalog {
 	private boolean supportsOciSourcing;
 	@SerializedName("supportsOciValidate")
 	private boolean supportsOciValidate;
+	@SerializedName("type")
+	private String type;
 	@SerializedName("updated")
 	private Date updated;
 	@SerializedName("validFrom")
@@ -178,6 +186,52 @@ public class Catalog {
 	 */
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	/**
+	 * DownloadChecksum represents the checksum of the catalog last downloaded.
+	 */
+	public String getDownloadChecksum() {
+		return this.downloadChecksum;
+	}
+
+	/**
+	 * DownloadChecksum represents the checksum of the catalog last downloaded.
+	 */
+	public void setDownloadChecksum(String downloadChecksum) {
+		this.downloadChecksum = downloadChecksum;
+	}
+
+	/**
+	 * DownloadInterval represents the interval to use for checking new versions of
+	 * a catalog at the DownloadURL.
+	 */
+	public String getDownloadInterval() {
+		return this.downloadInterval;
+	}
+
+	/**
+	 * DownloadInterval represents the interval to use for checking new versions of
+	 * a catalog at the DownloadURL.
+	 */
+	public void setDownloadInterval(String downloadInterval) {
+		this.downloadInterval = downloadInterval;
+	}
+
+	/**
+	 * DownloadURL represents a URL which is periodically downloaded and imported as
+	 * a new catalog.
+	 */
+	public String getDownloadUrl() {
+		return this.downloadUrl;
+	}
+
+	/**
+	 * DownloadURL represents a URL which is periodically downloaded and imported as
+	 * a new catalog.
+	 */
+	public void setDownloadUrl(String downloadUrl) {
+		this.downloadUrl = downloadUrl;
 	}
 
 	/**
@@ -732,6 +786,20 @@ public class Catalog {
 	 */
 	public void setSupportsOciValidate(boolean supportsOciValidate) {
 		this.supportsOciValidate = supportsOciValidate;
+	}
+
+	/**
+	 * Type of catalog, e.g. corporate or basic.
+	 */
+	public String getType() {
+		return this.type;
+	}
+
+	/**
+	 * Type of catalog, e.g. corporate or basic.
+	 */
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	/**

@@ -27,10 +27,14 @@ import com.google.gson.annotations.SerializedName;
 public class UpsertProduct {
 	@SerializedName("asin")
 	private String asin;
+	@SerializedName("autoConfigure")
+	private Boolean autoConfigure;
 	@SerializedName("availability")
 	private Availability availability;
 	@SerializedName("blobs")
 	private Blob[] blobs;
+	@SerializedName("boostFactor")
+	private Double boostFactor;
 	@SerializedName("bpn")
 	private String bpn;
 	@SerializedName("catalogManaged")
@@ -39,6 +43,14 @@ public class UpsertProduct {
 	private String[] categories;
 	@SerializedName("conditions")
 	private Condition[] conditions;
+	@SerializedName("contract")
+	private String contract;
+	@SerializedName("contractItem")
+	private String contractItem;
+	@SerializedName("conversionDenumerator")
+	private Double conversionDenumerator;
+	@SerializedName("conversionNumerator")
+	private Double conversionNumerator;
 	@SerializedName("cu")
 	private String contentUnit;
 	@SerializedName("cuPerOu")
@@ -55,6 +67,56 @@ public class UpsertProduct {
 	private String custField5;
 	@SerializedName("custFields")
 	private CustField[] custFields;
+	@SerializedName("customField10")
+	private String customField10;
+	@SerializedName("customField11")
+	private String customField11;
+	@SerializedName("customField12")
+	private String customField12;
+	@SerializedName("customField13")
+	private String customField13;
+	@SerializedName("customField14")
+	private String customField14;
+	@SerializedName("customField15")
+	private String customField15;
+	@SerializedName("customField16")
+	private String customField16;
+	@SerializedName("customField17")
+	private String customField17;
+	@SerializedName("customField18")
+	private String customField18;
+	@SerializedName("customField19")
+	private String customField19;
+	@SerializedName("customField20")
+	private String customField20;
+	@SerializedName("customField21")
+	private String customField21;
+	@SerializedName("customField22")
+	private String customField22;
+	@SerializedName("customField23")
+	private String customField23;
+	@SerializedName("customField24")
+	private String customField24;
+	@SerializedName("customField25")
+	private String customField25;
+	@SerializedName("customField26")
+	private String customField26;
+	@SerializedName("customField27")
+	private String customField27;
+	@SerializedName("customField28")
+	private String customField28;
+	@SerializedName("customField29")
+	private String customField29;
+	@SerializedName("customField30")
+	private String customField30;
+	@SerializedName("customField6")
+	private String customField6;
+	@SerializedName("customField7")
+	private String customField7;
+	@SerializedName("customField8")
+	private String customField8;
+	@SerializedName("customField9")
+	private String customField9;
 	@SerializedName("datasheet")
 	private String datasheet;
 	@SerializedName("description")
@@ -69,18 +131,30 @@ public class UpsertProduct {
 	private String extCategory;
 	@SerializedName("extCategoryId")
 	private String extCategoryId;
+	@SerializedName("extConfigForm")
+	private String extConfigForm;
+	@SerializedName("extConfigService")
+	private String extConfigService;
 	@SerializedName("extProductId")
 	private String extProductId;
 	@SerializedName("extSchemaType")
 	private String extSchemaType;
 	@SerializedName("features")
 	private Feature[] features;
+	@SerializedName("glAccount")
+	private String glAccount;
 	@SerializedName("gtin")
 	private String gtin;
 	@SerializedName("hazmats")
 	private Hazmat[] hazmats;
 	@SerializedName("image")
 	private String image;
+	@SerializedName("incomplete")
+	private Boolean incomplete;
+	@SerializedName("isPassword")
+	private Boolean isPassword;
+	@SerializedName("keepPrice")
+	private Boolean keepPrice;
 	@SerializedName("keywords")
 	private String[] keywords;
 	@SerializedName("leadtime")
@@ -101,10 +175,26 @@ public class UpsertProduct {
 	private String multiSupplierName;
 	@SerializedName("name")
 	private String name;
+	@SerializedName("needsGoodsReceipt")
+	private Boolean needsGoodsReceipt;
+	@SerializedName("nfBasePrice")
+	private Double nfBasePrice;
+	@SerializedName("nfBasePriceQuantity")
+	private Double nfBasePriceQuantity;
+	@SerializedName("nfCndId")
+	private String nfCndId;
+	@SerializedName("nfScale")
+	private Double nfScale;
+	@SerializedName("nfScaleQuantity")
+	private Double nfScaleQuantity;
+	@SerializedName("orderable")
+	private Boolean orderable;
 	@SerializedName("ou")
 	private String orderUnit;
 	@SerializedName("price")
 	private double price;
+	@SerializedName("priceFormula")
+	private String priceFormula;
 	@SerializedName("priceQty")
 	private Double priceQty;
 	@SerializedName("quantityInterval")
@@ -113,6 +203,10 @@ public class UpsertProduct {
 	private Double quantityMax;
 	@SerializedName("quantityMin")
 	private Double quantityMin;
+	@SerializedName("rateable")
+	private Boolean rateable;
+	@SerializedName("rateableOnlyIfOrdered")
+	private Boolean rateableOnlyIfOrdered;
 	@SerializedName("references")
 	private Reference[] references;
 	@SerializedName("safetysheet")
@@ -131,6 +225,8 @@ public class UpsertProduct {
 	private String thumbnail;
 	@SerializedName("unspscs")
 	private Unspsc[] unspscs;
+	@SerializedName("visible")
+	private Boolean visible;
 
 	/**
 	 * Create new instance of UpsertProduct.
@@ -150,6 +246,24 @@ public class UpsertProduct {
 	 */
 	public void setAsin(String asin) {
 		this.asin = asin;
+	}
+
+	/**
+	 * AutoConfigure is a flag that indicates whether this product can be configured
+	 * automatically. Please consult your Store Manager before setting a value for
+	 * this field.
+	 */
+	public Boolean getAutoConfigure() {
+		return this.autoConfigure;
+	}
+
+	/**
+	 * AutoConfigure is a flag that indicates whether this product can be configured
+	 * automatically. Please consult your Store Manager before setting a value for
+	 * this field.
+	 */
+	public void setAutoConfigure(Boolean autoConfigure) {
+		this.autoConfigure = autoConfigure;
 	}
 
 	/**
@@ -180,6 +294,22 @@ public class UpsertProduct {
 	 */
 	public void setBlobs(Blob[] blobs) {
 		this.blobs = blobs;
+	}
+
+	/**
+	 * BoostFactor represents a positive or negative boost for the product. Please
+	 * consult your Store Manager before setting a value for this field.
+	 */
+	public Double getBoostFactor() {
+		return this.boostFactor;
+	}
+
+	/**
+	 * BoostFactor represents a positive or negative boost for the product. Please
+	 * consult your Store Manager before setting a value for this field.
+	 */
+	public void setBoostFactor(Double boostFactor) {
+		this.boostFactor = boostFactor;
 	}
 
 	/**
@@ -240,6 +370,74 @@ public class UpsertProduct {
 	 */
 	public void setConditions(Condition[] conditions) {
 		this.conditions = conditions;
+	}
+
+	/**
+	 * Contract represents the contract number to be used when purchasing this
+	 * product. Please consult your Store Manager before setting a value for this
+	 * field.
+	 */
+	public String getContract() {
+		return this.contract;
+	}
+
+	/**
+	 * Contract represents the contract number to be used when purchasing this
+	 * product. Please consult your Store Manager before setting a value for this
+	 * field.
+	 */
+	public void setContract(String contract) {
+		this.contract = contract;
+	}
+
+	/**
+	 * ContractItem represents line number in the contract to be used when
+	 * purchasing this product. See also Contract. Please consult your Store Manager
+	 * before setting a value for this field.
+	 */
+	public String getContractItem() {
+		return this.contractItem;
+	}
+
+	/**
+	 * ContractItem represents line number in the contract to be used when
+	 * purchasing this product. See also Contract. Please consult your Store Manager
+	 * before setting a value for this field.
+	 */
+	public void setContractItem(String contractItem) {
+		this.contractItem = contractItem;
+	}
+
+	/**
+	 * ConversionDenumerator is the denumerator for calculating price quantities.
+	 * Please consult your Store Manager before setting a value for this field.
+	 */
+	public Double getConversionDenumerator() {
+		return this.conversionDenumerator;
+	}
+
+	/**
+	 * ConversionDenumerator is the denumerator for calculating price quantities.
+	 * Please consult your Store Manager before setting a value for this field.
+	 */
+	public void setConversionDenumerator(Double conversionDenumerator) {
+		this.conversionDenumerator = conversionDenumerator;
+	}
+
+	/**
+	 * ConversionNumerator is the numerator for calculating price quantities. Please
+	 * consult your Store Manager before setting a value for this field.
+	 */
+	public Double getConversionNumerator() {
+		return this.conversionNumerator;
+	}
+
+	/**
+	 * ConversionNumerator is the numerator for calculating price quantities. Please
+	 * consult your Store Manager before setting a value for this field.
+	 */
+	public void setConversionNumerator(Double conversionNumerator) {
+		this.conversionNumerator = conversionNumerator;
 	}
 
 	/**
@@ -371,6 +569,406 @@ public class UpsertProduct {
 	}
 
 	/**
+	 * CustomField10 represents the 10th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField10() {
+		return this.customField10;
+	}
+
+	/**
+	 * CustomField10 represents the 10th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField10(String customField10) {
+		this.customField10 = customField10;
+	}
+
+	/**
+	 * CustomField11 represents the 11th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField11() {
+		return this.customField11;
+	}
+
+	/**
+	 * CustomField11 represents the 11th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField11(String customField11) {
+		this.customField11 = customField11;
+	}
+
+	/**
+	 * CustomField12 represents the 12th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField12() {
+		return this.customField12;
+	}
+
+	/**
+	 * CustomField12 represents the 12th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField12(String customField12) {
+		this.customField12 = customField12;
+	}
+
+	/**
+	 * CustomField13 represents the 13th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField13() {
+		return this.customField13;
+	}
+
+	/**
+	 * CustomField13 represents the 13th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField13(String customField13) {
+		this.customField13 = customField13;
+	}
+
+	/**
+	 * CustomField14 represents the 14th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField14() {
+		return this.customField14;
+	}
+
+	/**
+	 * CustomField14 represents the 14th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField14(String customField14) {
+		this.customField14 = customField14;
+	}
+
+	/**
+	 * CustomField15 represents the 15th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField15() {
+		return this.customField15;
+	}
+
+	/**
+	 * CustomField15 represents the 15th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField15(String customField15) {
+		this.customField15 = customField15;
+	}
+
+	/**
+	 * CustomField16 represents the 16th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField16() {
+		return this.customField16;
+	}
+
+	/**
+	 * CustomField16 represents the 16th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField16(String customField16) {
+		this.customField16 = customField16;
+	}
+
+	/**
+	 * CustomField17 represents the 17th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField17() {
+		return this.customField17;
+	}
+
+	/**
+	 * CustomField17 represents the 17th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField17(String customField17) {
+		this.customField17 = customField17;
+	}
+
+	/**
+	 * CustomField18 represents the 18th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField18() {
+		return this.customField18;
+	}
+
+	/**
+	 * CustomField18 represents the 18th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField18(String customField18) {
+		this.customField18 = customField18;
+	}
+
+	/**
+	 * CustomField19 represents the 19th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField19() {
+		return this.customField19;
+	}
+
+	/**
+	 * CustomField19 represents the 19th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField19(String customField19) {
+		this.customField19 = customField19;
+	}
+
+	/**
+	 * CustomField20 represents the 20th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField20() {
+		return this.customField20;
+	}
+
+	/**
+	 * CustomField20 represents the 20th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField20(String customField20) {
+		this.customField20 = customField20;
+	}
+
+	/**
+	 * CustomField21 represents the 21st customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField21() {
+		return this.customField21;
+	}
+
+	/**
+	 * CustomField21 represents the 21st customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField21(String customField21) {
+		this.customField21 = customField21;
+	}
+
+	/**
+	 * CustomField22 represents the 22nd customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField22() {
+		return this.customField22;
+	}
+
+	/**
+	 * CustomField22 represents the 22nd customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField22(String customField22) {
+		this.customField22 = customField22;
+	}
+
+	/**
+	 * CustomField23 represents the 23rd customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField23() {
+		return this.customField23;
+	}
+
+	/**
+	 * CustomField23 represents the 23rd customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField23(String customField23) {
+		this.customField23 = customField23;
+	}
+
+	/**
+	 * CustomField24 represents the 24th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField24() {
+		return this.customField24;
+	}
+
+	/**
+	 * CustomField24 represents the 24th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField24(String customField24) {
+		this.customField24 = customField24;
+	}
+
+	/**
+	 * CustomField25 represents the 25th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField25() {
+		return this.customField25;
+	}
+
+	/**
+	 * CustomField25 represents the 25th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField25(String customField25) {
+		this.customField25 = customField25;
+	}
+
+	/**
+	 * CustomField26 represents the 26th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField26() {
+		return this.customField26;
+	}
+
+	/**
+	 * CustomField26 represents the 26th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField26(String customField26) {
+		this.customField26 = customField26;
+	}
+
+	/**
+	 * CustomField27 represents the 27th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField27() {
+		return this.customField27;
+	}
+
+	/**
+	 * CustomField27 represents the 27th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField27(String customField27) {
+		this.customField27 = customField27;
+	}
+
+	/**
+	 * CustomField28 represents the 28th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField28() {
+		return this.customField28;
+	}
+
+	/**
+	 * CustomField28 represents the 28th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField28(String customField28) {
+		this.customField28 = customField28;
+	}
+
+	/**
+	 * CustomField29 represents the 29th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField29() {
+		return this.customField29;
+	}
+
+	/**
+	 * CustomField29 represents the 29th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField29(String customField29) {
+		this.customField29 = customField29;
+	}
+
+	/**
+	 * CustomField30 represents the 30th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public String getCustomField30() {
+		return this.customField30;
+	}
+
+	/**
+	 * CustomField30 represents the 30th customer-specific field. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setCustomField30(String customField30) {
+		this.customField30 = customField30;
+	}
+
+	/**
+	 * CustomField6 represents the 6th customer-specific field. Please consult your
+	 * Store Manager before setting a value for this field.
+	 */
+	public String getCustomField6() {
+		return this.customField6;
+	}
+
+	/**
+	 * CustomField6 represents the 6th customer-specific field. Please consult your
+	 * Store Manager before setting a value for this field.
+	 */
+	public void setCustomField6(String customField6) {
+		this.customField6 = customField6;
+	}
+
+	/**
+	 * CustomField7 represents the 7th customer-specific field. Please consult your
+	 * Store Manager before setting a value for this field.
+	 */
+	public String getCustomField7() {
+		return this.customField7;
+	}
+
+	/**
+	 * CustomField7 represents the 7th customer-specific field. Please consult your
+	 * Store Manager before setting a value for this field.
+	 */
+	public void setCustomField7(String customField7) {
+		this.customField7 = customField7;
+	}
+
+	/**
+	 * CustomField8 represents the 8th customer-specific field. Please consult your
+	 * Store Manager before setting a value for this field.
+	 */
+	public String getCustomField8() {
+		return this.customField8;
+	}
+
+	/**
+	 * CustomField8 represents the 8th customer-specific field. Please consult your
+	 * Store Manager before setting a value for this field.
+	 */
+	public void setCustomField8(String customField8) {
+		this.customField8 = customField8;
+	}
+
+	/**
+	 * CustomField9 represents the 9th customer-specific field. Please consult your
+	 * Store Manager before setting a value for this field.
+	 */
+	public String getCustomField9() {
+		return this.customField9;
+	}
+
+	/**
+	 * CustomField9 represents the 9th customer-specific field. Please consult your
+	 * Store Manager before setting a value for this field.
+	 */
+	public void setCustomField9(String customField9) {
+		this.customField9 = customField9;
+	}
+
+	/**
 	 * Datasheet is the name of an datasheet file (in the media files) or a URL to
 	 * the datasheet on the internet.
 	 */
@@ -475,6 +1073,42 @@ public class UpsertProduct {
 	}
 
 	/**
+	 * ExtConfigForm represents information required to make the product
+	 * configurable. Please consult your Store Manager before setting a value for
+	 * this field.
+	 */
+	public String getExtConfigForm() {
+		return this.extConfigForm;
+	}
+
+	/**
+	 * ExtConfigForm represents information required to make the product
+	 * configurable. Please consult your Store Manager before setting a value for
+	 * this field.
+	 */
+	public void setExtConfigForm(String extConfigForm) {
+		this.extConfigForm = extConfigForm;
+	}
+
+	/**
+	 * ExtConfigService represents additional information required to make the
+	 * product configurable. See also ExtConfigForm. Please consult your Store
+	 * Manager before setting a value for this field.
+	 */
+	public String getExtConfigService() {
+		return this.extConfigService;
+	}
+
+	/**
+	 * ExtConfigService represents additional information required to make the
+	 * product configurable. See also ExtConfigForm. Please consult your Store
+	 * Manager before setting a value for this field.
+	 */
+	public void setExtConfigService(String extConfigService) {
+		this.extConfigService = extConfigService;
+	}
+
+	/**
 	 * ExtProductID is the EXT_PRODUCT_ID field of the SAP OCI specification. It is
 	 * e.g. required for configurable/catalog managed products.
 	 */
@@ -519,6 +1153,22 @@ public class UpsertProduct {
 	}
 
 	/**
+	 * GLAccount represents the GL account number to use for this product. Please
+	 * consult your Store Manager before setting a value for this field.
+	 */
+	public String getGlAccount() {
+		return this.glAccount;
+	}
+
+	/**
+	 * GLAccount represents the GL account number to use for this product. Please
+	 * consult your Store Manager before setting a value for this field.
+	 */
+	public void setGlAccount(String glAccount) {
+		this.glAccount = glAccount;
+	}
+
+	/**
 	 * GTIN is the global trade item number of the product (used to be EAN).
 	 */
 	public String getGtin() {
@@ -560,6 +1210,58 @@ public class UpsertProduct {
 	 */
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	/**
+	 * Incomplete is a flag that indicates whether this product is incomplete.
+	 * Please consult your Store Manager before setting a value for this field.
+	 */
+	public Boolean getIncomplete() {
+		return this.incomplete;
+	}
+
+	/**
+	 * Incomplete is a flag that indicates whether this product is incomplete.
+	 * Please consult your Store Manager before setting a value for this field.
+	 */
+	public void setIncomplete(Boolean incomplete) {
+		this.incomplete = incomplete;
+	}
+
+	/**
+	 * IsPassword is a flag that indicates whether this product will be used to
+	 * purchase a password, e.g. for a software product. Please consult your Store
+	 * Manager before setting a value for this field.
+	 */
+	public Boolean getIsPassword() {
+		return this.isPassword;
+	}
+
+	/**
+	 * IsPassword is a flag that indicates whether this product will be used to
+	 * purchase a password, e.g. for a software product. Please consult your Store
+	 * Manager before setting a value for this field.
+	 */
+	public void setIsPassword(Boolean isPassword) {
+		this.isPassword = isPassword;
+	}
+
+	/**
+	 * KeepPrice is a flag that indicates whether the price of the product will or
+	 * will not be calculated by the catalog. Please consult your Store Manager
+	 * before setting a value for this field.
+	 */
+	public Boolean getKeepPrice() {
+		return this.keepPrice;
+	}
+
+	/**
+	 * KeepPrice is a flag that indicates whether the price of the product will or
+	 * will not be calculated by the catalog. Please consult your Store Manager
+	 * before setting a value for this field.
+	 */
+	public void setKeepPrice(Boolean keepPrice) {
+		this.keepPrice = keepPrice;
 	}
 
 	/**
@@ -707,6 +1409,122 @@ public class UpsertProduct {
 	}
 
 	/**
+	 * NeedsGoodsReceipt is a flag that indicates whether this product requires a
+	 * goods receipt process. Please consult your Store Manager before setting a
+	 * value for this field.
+	 */
+	public Boolean getNeedsGoodsReceipt() {
+		return this.needsGoodsReceipt;
+	}
+
+	/**
+	 * NeedsGoodsReceipt is a flag that indicates whether this product requires a
+	 * goods receipt process. Please consult your Store Manager before setting a
+	 * value for this field.
+	 */
+	public void setNeedsGoodsReceipt(Boolean needsGoodsReceipt) {
+		this.needsGoodsReceipt = needsGoodsReceipt;
+	}
+
+	/**
+	 * NFBasePrice represents a part for calculating metal surcharges. Please
+	 * consult your Store Manager before setting a value for this field.
+	 */
+	public Double getNfBasePrice() {
+		return this.nfBasePrice;
+	}
+
+	/**
+	 * NFBasePrice represents a part for calculating metal surcharges. Please
+	 * consult your Store Manager before setting a value for this field.
+	 */
+	public void setNfBasePrice(Double nfBasePrice) {
+		this.nfBasePrice = nfBasePrice;
+	}
+
+	/**
+	 * NFBasePriceQuantity represents a part for calculating metal surcharges.
+	 * Please consult your Store Manager before setting a value for this field.
+	 */
+	public Double getNfBasePriceQuantity() {
+		return this.nfBasePriceQuantity;
+	}
+
+	/**
+	 * NFBasePriceQuantity represents a part for calculating metal surcharges.
+	 * Please consult your Store Manager before setting a value for this field.
+	 */
+	public void setNfBasePriceQuantity(Double nfBasePriceQuantity) {
+		this.nfBasePriceQuantity = nfBasePriceQuantity;
+	}
+
+	/**
+	 * NFCndID represents the key to calculate metal surcharges. Please consult your
+	 * Store Manager before setting a value for this field.
+	 */
+	public String getNfCndId() {
+		return this.nfCndId;
+	}
+
+	/**
+	 * NFCndID represents the key to calculate metal surcharges. Please consult your
+	 * Store Manager before setting a value for this field.
+	 */
+	public void setNfCndId(String nfCndId) {
+		this.nfCndId = nfCndId;
+	}
+
+	/**
+	 * NFScale represents a part for calculating metal surcharges. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public Double getNfScale() {
+		return this.nfScale;
+	}
+
+	/**
+	 * NFScale represents a part for calculating metal surcharges. Please consult
+	 * your Store Manager before setting a value for this field.
+	 */
+	public void setNfScale(Double nfScale) {
+		this.nfScale = nfScale;
+	}
+
+	/**
+	 * NFScaleQuantity represents a part for calculating metal surcharges. Please
+	 * consult your Store Manager before setting a value for this field.
+	 */
+	public Double getNfScaleQuantity() {
+		return this.nfScaleQuantity;
+	}
+
+	/**
+	 * NFScaleQuantity represents a part for calculating metal surcharges. Please
+	 * consult your Store Manager before setting a value for this field.
+	 */
+	public void setNfScaleQuantity(Double nfScaleQuantity) {
+		this.nfScaleQuantity = nfScaleQuantity;
+	}
+
+	/**
+	 * Orderable is a flag that indicates whether this product will be orderable to
+	 * the end-user when shopping. Please consult your Store Manager before setting
+	 * a value for this field.
+	 */
+	public Boolean getOrderable() {
+		return this.orderable;
+	}
+
+	/**
+	 * Orderable is a flag that indicates whether this product will be orderable to
+	 * the end-user when shopping. Please consult your Store Manager before setting
+	 * a value for this field.
+	 */
+	public void setOrderable(Boolean orderable) {
+		this.orderable = orderable;
+	}
+
+	/**
 	 * OrderUnit is the order unit of the product, a 3-character ISO code (usually
 	 * project-specific). OrderUnit is a required field.
 	 */
@@ -736,6 +1554,22 @@ public class UpsertProduct {
 	 */
 	public void setPrice(double price) {
 		this.price = price;
+	}
+
+	/**
+	 * PriceFormula represents the formula to calculate the price of the product.
+	 * Please consult your Store Manager before setting a value for this field.
+	 */
+	public String getPriceFormula() {
+		return this.priceFormula;
+	}
+
+	/**
+	 * PriceFormula represents the formula to calculate the price of the product.
+	 * Please consult your Store Manager before setting a value for this field.
+	 */
+	public void setPriceFormula(String priceFormula) {
+		this.priceFormula = priceFormula;
 	}
 
 	/**
@@ -796,6 +1630,42 @@ public class UpsertProduct {
 	 */
 	public void setQuantityMin(Double quantityMin) {
 		this.quantityMin = quantityMin;
+	}
+
+	/**
+	 * Rateable is a flag that indicates whether the product can be rated by
+	 * end-users. Please consult your Store Manager before setting a value for this
+	 * field.
+	 */
+	public Boolean getRateable() {
+		return this.rateable;
+	}
+
+	/**
+	 * Rateable is a flag that indicates whether the product can be rated by
+	 * end-users. Please consult your Store Manager before setting a value for this
+	 * field.
+	 */
+	public void setRateable(Boolean rateable) {
+		this.rateable = rateable;
+	}
+
+	/**
+	 * RateableOnlyIfOrdered is a flag that indicates whether the product can be
+	 * rated only after being ordered. Please consult your Store Manager before
+	 * setting a value for this field.
+	 */
+	public Boolean getRateableOnlyIfOrdered() {
+		return this.rateableOnlyIfOrdered;
+	}
+
+	/**
+	 * RateableOnlyIfOrdered is a flag that indicates whether the product can be
+	 * rated only after being ordered. Please consult your Store Manager before
+	 * setting a value for this field.
+	 */
+	public void setRateableOnlyIfOrdered(Boolean rateableOnlyIfOrdered) {
+		this.rateableOnlyIfOrdered = rateableOnlyIfOrdered;
 	}
 
 	/**
@@ -932,6 +1802,24 @@ public class UpsertProduct {
 	 */
 	public void setUnspscs(Unspsc[] unspscs) {
 		this.unspscs = unspscs;
+	}
+
+	/**
+	 * Visible is a flag that indicates whether this product will be visible to the
+	 * end-user when shopping. Please consult your Store Manager before setting a
+	 * value for this field.
+	 */
+	public Boolean getVisible() {
+		return this.visible;
+	}
+
+	/**
+	 * Visible is a flag that indicates whether this product will be visible to the
+	 * end-user when shopping. Please consult your Store Manager before setting a
+	 * value for this field.
+	 */
+	public void setVisible(Boolean visible) {
+		this.visible = visible;
 	}
 }
 
