@@ -15,10 +15,10 @@
 /**
  * Package store2 implements the Meplato Store API.
  * 
- * @copyright 2014-2017 Meplato GmbH, Switzerland.
+ * @copyright 2014-2018 Meplato GmbH, Switzerland.
  * @author Meplato API Team <support@meplato.com>
- * @version 2.1.0
- * @license Copyright (c) 2015-2017 Meplato GmbH, Switzerland. All rights reserved.
+ * @version 2.1.1
+ * @license Copyright (c) 2015-2018 Meplato GmbH, Switzerland. All rights reserved.
  * @see <a href="https://developer.meplato.com/store2/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/store2/">External documentation</a>
  */
@@ -39,7 +39,7 @@ public class Service {
 	/** API title. */
 	public static String TITLE = "Meplato Store API";
 	/** API version. */
-	public static String VERSION = "2.1.0";
+	public static String VERSION = "2.1.1";
 	/** User Agent. */
 	public static String USER_AGENT = "meplato-java-client/2.0";
 	/** Default base URL of the API endpoints. */

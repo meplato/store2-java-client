@@ -51,6 +51,8 @@ public class Catalog {
 	private boolean keepOriginalBlobs;
 	@SerializedName("kind")
 	private String kind;
+	@SerializedName("kpiSummary")
+	private KPISummary kpiSummary;
 	@SerializedName("language")
 	private String language;
 	@SerializedName("lastImported")
@@ -322,6 +324,22 @@ public class Catalog {
 	 */
 	public void setKind(String kind) {
 		this.kind = kind;
+	}
+
+	/**
+	 * KPISummary returns the outcome of analyzing the contents for key performance
+	 * indicators.
+	 */
+	public KPISummary getKpiSummary() {
+		return this.kpiSummary;
+	}
+
+	/**
+	 * KPISummary returns the outcome of analyzing the contents for key performance
+	 * indicators.
+	 */
+	public void setKpiSummary(KPISummary kpiSummary) {
+		this.kpiSummary = kpiSummary;
 	}
 
 	/**

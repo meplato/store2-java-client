@@ -13,6 +13,7 @@
  */
 package com.meplato.store2.products;
 
+import com.damnhandy.uri.template.UriTemplate;
 import com.meplato.store2.*;
 import com.meplato.store2.Error;
 import org.apache.http.HttpException;

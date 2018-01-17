@@ -13,6 +13,7 @@
  */
 package com.meplato.store2.products;
 
+import com.meplato.store2.ApacheHttpClient;
 import com.meplato.store2.ServiceException;
 import org.apache.http.HttpException;
 import org.junit.Test;
@@ -40,6 +41,36 @@ public class UpdateTest extends BaseTest {
         update.setOrderUnit("PCE");
 
         UpdateProductResponse updateResponse = service.update().pin("AD8CCDD5F9").area("work").spn("MBA11").product(update).execute();
+        assertNotNull(updateResponse);
+        assertNotNull(updateResponse.getLink());
+        assertNotEquals("", updateResponse.getLink());
+        assertEquals("store#productsUpdateResponse", updateResponse.getKind());
+
+        // Here's how to get the product now.
+        /*
+        Product product = service.get().pin("AD8CCDD5F9").area("work").id("MBA11@12").execute();
+        assertNotNull(product);
+        assertEquals("MBA11@12", product.getId());
+        assertEquals("MBA11", product.getSpn());
+        assertEquals(update.getName(), product.getName());
+        assertTrue(update.getPrice() == product.getPrice());
+        */
+    }
+
+    @Test
+    public void testProductsUpdateWithSlash() throws ServiceException, IOException, HttpException {
+        ApacheHttpClient client = new ApacheHttpClient();
+        Service service = new com.meplato.store2.products.Service(client);
+        service.setUser("f7e7b9f67eccf18d");
+        service.setBaseURL("https://store3.go/api/v2");
+        assertNotNull(service);
+
+        UpdateProduct update = new UpdateProduct();
+        update.setName("Produkt 1000 (NEU!)");
+        update.setPrice(2.50);
+        update.setOrderUnit("PCE");
+
+        UpdateProductResponse updateResponse = service.update().pin("AD8CCDD5F9").area("work").spn("MBA11/2017").product(update).execute();
         assertNotNull(updateResponse);
         assertNotNull(updateResponse.getLink());
         assertNotEquals("", updateResponse.getLink());

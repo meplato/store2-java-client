@@ -13,8 +13,19 @@
  */
 package com.meplato.store2;
 
+import com.damnhandy.uri.template.UriTemplate;
+import com.meplato.store2.products.CreateProduct;
+import com.meplato.store2.products.CreateProductResponse;
+import com.meplato.store2.products.Service;
+import org.apache.http.HttpException;
 import org.junit.Test;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
@@ -25,6 +36,24 @@ public class ServiceTest extends BaseTest {
     @Test
     public void testGetClient() throws Exception {
         assertNotNull(getClient());
+    }
+
+    @Test
+    public void testUriTemplateWithSlash() throws ServiceException, IOException, HttpException {
+        // Make a copy of the parameters and add the path parameters to it
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("area", "work");
+        params.put("pin", "AD8CCDD5F9");
+        params.put("spn", "1000/11");
+
+        // Make a copy of the header parameters and set common headers, like the UA
+        Map<String, String> headers = new HashMap<String, String>();
+        headers.put("Authorization", "secret");
+
+        String uriTemplate = "/catalogs/{pin}/{area}/products/{spn}";
+
+        String url = UriTemplate.fromTemplate(uriTemplate).expand(params);
+        assertEquals("/catalogs/AD8CCDD5F9/work/products/1000%2F11", url);
     }
 
     /*

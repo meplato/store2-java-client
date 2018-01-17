@@ -24,7 +24,7 @@ import java.io.IOException;
  * Base class for all tests.
  */
 public abstract class BaseTest {
-    private static final String BASE_URL = "http://store2.go/api/v2";
+    private static final String BASE_URL = "https://store3.go/api/v2";
 
     private MockClient client;
 
