@@ -59,10 +59,9 @@ public class UpdateTest extends BaseTest {
 
     @Test
     public void testProductsUpdateWithSlash() throws ServiceException, IOException, HttpException {
-        ApacheHttpClient client = new ApacheHttpClient();
-        Service service = new com.meplato.store2.products.Service(client);
-        service.setUser("f7e7b9f67eccf18d");
-        service.setBaseURL("https://store3.go/api/v2");
+        this.mockResponseFromFile("products.update.success");
+
+        Service service = getProductsService();
         assertNotNull(service);
 
         UpdateProduct update = new UpdateProduct();
