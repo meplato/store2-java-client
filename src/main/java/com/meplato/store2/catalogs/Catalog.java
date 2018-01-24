@@ -31,6 +31,8 @@ public class Catalog {
 	private Date created;
 	@SerializedName("currency")
 	private String currency;
+	@SerializedName("custFields")
+	private CustField[] custFields;
 	@SerializedName("description")
 	private String description;
 	@SerializedName("downloadChecksum")
@@ -174,6 +176,22 @@ public class Catalog {
 	 */
 	public void setCurrency(String currency) {
 		this.currency = currency;
+	}
+
+	/**
+	 * CustFields is an array of generic name/value pairs for customer-specific
+	 * attributes.
+	 */
+	public CustField[] getCustFields() {
+		return this.custFields;
+	}
+
+	/**
+	 * CustFields is an array of generic name/value pairs for customer-specific
+	 * attributes.
+	 */
+	public void setCustFields(CustField[] custFields) {
+		this.custFields = custFields;
 	}
 
 	/**
