@@ -1,5 +1,7 @@
 # Meplato Store 2.0 API for Java
 
+[![Build Status](https://travis-ci.org/meplato/store2-java-client.svg?branch=master)](https://travis-ci.org/meplato/store2-java-client)
+
 This is the Java client for the Meplato Store 2 API. It helps you write
 software to integrate into the Meplato suite for suppliers.
 
