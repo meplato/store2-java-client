@@ -163,6 +163,8 @@ public class Product {
 	private String imageURL;
 	@SerializedName("incomplete")
 	private Boolean incomplete;
+	@SerializedName("intrastat")
+	private Intrastat intrastat;
 	@SerializedName("isPassword")
 	private Boolean isPassword;
 	@SerializedName("keepPrice")
@@ -1268,6 +1270,20 @@ public class Product {
 	 */
 	public void setIncomplete(Boolean incomplete) {
 		this.incomplete = incomplete;
+	}
+
+	/**
+	 * Intrastat specifies required data for Intrastat messages. 
+	 */
+	public Intrastat getIntrastat() {
+		return this.intrastat;
+	}
+
+	/**
+	 * Intrastat specifies required data for Intrastat messages. 
+	 */
+	public void setIntrastat(Intrastat intrastat) {
+		this.intrastat = intrastat;
 	}
 
 	/**
