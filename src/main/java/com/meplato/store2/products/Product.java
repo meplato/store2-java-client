@@ -53,6 +53,8 @@ public class Product {
 	private Double conversionDenumerator;
 	@SerializedName("conversionNumerator")
 	private Double conversionNumerator;
+	@SerializedName("country")
+	private String country;
 	@SerializedName("created")
 	private Date created;
 	@SerializedName("cu")
@@ -470,6 +472,24 @@ public class Product {
 	 */
 	public void setConversionNumerator(Double conversionNumerator) {
 		this.conversionNumerator = conversionNumerator;
+	}
+
+	/**
+	 * Country represents the ISO code of the country of origin, i.e. the country
+	 * where the product has been created/produced, e.g. DE. If unspecified, the
+	 * field is initialized with the catalog's country field. 
+	 */
+	public String getCountry() {
+		return this.country;
+	}
+
+	/**
+	 * Country represents the ISO code of the country of origin, i.e. the country
+	 * where the product has been created/produced, e.g. DE. If unspecified, the
+	 * field is initialized with the catalog's country field. 
+	 */
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	/**
