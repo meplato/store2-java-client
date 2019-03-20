@@ -42,4 +42,24 @@ public class GetTest extends BaseTest {
         assertNotNull(catalog.getCreated());
         assertNotNull(catalog.getUpdated());
     }
+
+    @Test
+    public void testCatalogsGetNotFound() throws ServiceException, IOException, HttpException {
+        this.mockResponseFromFile("catalogs.get.not_found");
+
+        Service service = getCatalogsService();
+        assertNotNull(service);
+
+        try {
+            service.get().pin("5094310527").execute();
+            fail("expected to not get catalog");
+        } catch (ServiceException ex) {
+            assertNotNull(ex);
+            assertEquals(404, ex.getStatusCode());
+            assertNotNull(ex.getError());
+            assertEquals("Catalog not found", ex.getMessage());
+            assertNotNull(ex.getError().getError());
+            assertEquals(0, ex.getError().getError().getCode());
+        }
+    }
 }

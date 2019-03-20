@@ -23,14 +23,21 @@ public class ServiceException extends Exception {
     private final Error error;
 
     /**
+     * HTTP status code.
+     */
+    private int statusCode;
+
+    /**
      * Initializes the exception.
      *
-     * @param message the error message.
-     * @param error   the error object.
-     * @param ex      the Throwable or {@code null}.
+     * @param message    the error message.
+     * @param statusCode the HTTP status code.
+     * @param error      the error object.
+     * @param ex         the Throwable or {@code null}.
      */
-    public ServiceException(String message, Error error, Throwable ex) {
+    public ServiceException(String message, int statusCode, Error error, Throwable ex) {
         super(message, ex);
+        this.statusCode = statusCode;
         this.error = error;
     }
 
@@ -44,6 +51,13 @@ public class ServiceException extends Exception {
     }
 
     /**
+     * Returns the HTTP status code of the response.
+     *
+     * @return the HTTP status code.
+     */
+    public int getStatusCode() { return statusCode; }
+
+    /**
      * Takes a {@link Response} and tries to deserialize the error object
      * in it, then wraps it in a {@link ServiceException}.
      *
@@ -52,16 +66,17 @@ public class ServiceException extends Exception {
      */
     public static ServiceException fromResponse(Response response) {
         if (response == null) {
-            return new ServiceException("Request failed", null, null);
+            return new ServiceException("Request failed", 500, null, null);
         }
 
+        int statusCode = response.getStatusCode();
         Error error = response.getBodyJSON(Error.class);
         if (error == null) {
-            return new ServiceException("Request failed", null, null);
+            return new ServiceException("Request failed", statusCode, null, null);
         }
         if (error.getError() == null) {
-            return new ServiceException("Request failed", error, null);
+            return new ServiceException("Request failed", statusCode, error, null);
         }
-        return new ServiceException(error.getError().getMessage(), error, null);
+        return new ServiceException(error.getError().getMessage(), statusCode, error, null);
     }
 }

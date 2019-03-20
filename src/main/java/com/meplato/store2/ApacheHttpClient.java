@@ -91,7 +91,7 @@ public class ApacheHttpClient implements Client {
                         setContentType(ContentType.APPLICATION_JSON).
                         build();
             } catch (Exception e) {
-                throw new ServiceException("Error serializing body", null, e);
+                throw new ServiceException("Error serializing body", 500, null, e);
             }
         }
 
@@ -124,7 +124,7 @@ public class ApacheHttpClient implements Client {
         } else if (method.equalsIgnoreCase("OPTIONS")) {
             httpRequest = new HttpOptions(url);
         } else {
-            throw new ServiceException("Invalid HTTP method: " + method, null, null);
+            throw new ServiceException("Invalid HTTP method: " + method, 500, null, null);
         }
 
         // Headers
@@ -144,9 +144,9 @@ public class ApacheHttpClient implements Client {
             }
             throw ServiceException.fromResponse(response);
         } catch (ClientProtocolException e) {
-            throw new ServiceException("Client Protocol Exception", null, e);
+            throw new ServiceException("Client Protocol Exception", 500, null, e);
         } catch (IOException e) {
-            throw new ServiceException("IO Exception", null, e);
+            throw new ServiceException("IO Exception", 500, null, e);
         }
     }
 }

@@ -48,6 +48,7 @@ public class DeleteTest extends BaseTest {
             fail("expected to not succeed");
         } catch (ServiceException ex) {
             assertNotNull(ex);
+            assertEquals(404, ex.getStatusCode());
             assertNotNull(ex.getError());
             assertEquals("Product not found", ex.getMessage());
         }

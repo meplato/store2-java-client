@@ -123,11 +123,11 @@ public class JettyHttpClient implements Client {
             }
             throw ServiceException.fromResponse(response);
         } catch (InterruptedException e) {
-            throw new ServiceException("Client InterruptedException", null, e);
+            throw new ServiceException("Client InterruptedException", 500, null, e);
         } catch (TimeoutException e) {
-            throw new ServiceException("Client Timeout", null, e);
+            throw new ServiceException("Client Timeout", 500, null, e);
         } catch (ExecutionException e) {
-            throw new ServiceException("Client Execution Exception", null, e);
+            throw new ServiceException("Client Execution Exception", 500, null, e);
         }
     }
 }
