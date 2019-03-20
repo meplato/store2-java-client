@@ -66,6 +66,7 @@ public class CreateTest extends BaseTest {
             fail("expected to fail without authorization");
         } catch (ServiceException ex) {
             assertNotNull(ex);
+            assertEquals(400, ex.getStatusCode());
             assertNotNull(ex.getError());
             assertEquals("Bitte prüfen Sie Ihre Eingaben", ex.getMessage());
             Error.ErrorInner error = ex.getError().getError();

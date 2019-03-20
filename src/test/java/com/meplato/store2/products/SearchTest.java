@@ -63,6 +63,7 @@ public class SearchTest extends BaseTest {
             fail("expected to not get data without authorization");
         } catch (ServiceException ex) {
             assertNotNull(ex);
+            assertEquals(401, ex.getStatusCode());
             assertNotNull(ex.getError());
             assertEquals("Unauthorized", ex.getMessage());
         }

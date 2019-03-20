@@ -72,8 +72,29 @@ public class GetTest extends BaseTest {
             fail("expected to not get data without authorization");
         } catch (ServiceException ex) {
             assertNotNull(ex);
+            assertEquals(401, ex.getStatusCode());
             assertNotNull(ex.getError());
             assertEquals("Unauthorized", ex.getMessage());
+        }
+    }
+
+    @Test
+    public void testProductsGetNotFound() throws ServiceException, IOException, HttpException {
+        this.mockResponseFromFile("products.get.not_found");
+
+        Service service = getProductsService();
+        assertNotNull(service);
+
+        try {
+            service.get().pin("AD8CCDD5F9").area("work").spn("no-such-product").execute();
+            fail("expected to not get data");
+        } catch (ServiceException ex) {
+            assertNotNull(ex);
+            assertEquals(404, ex.getStatusCode());
+            assertNotNull(ex.getError());
+            assertEquals("Product not found", ex.getMessage());
+            assertNotNull(ex.getError().getError());
+            assertEquals(0, ex.getError().getError().getCode());
         }
     }
 }
