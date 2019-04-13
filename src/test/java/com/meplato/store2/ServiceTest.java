@@ -56,6 +56,24 @@ public class ServiceTest extends BaseTest {
         assertEquals("/catalogs/AD8CCDD5F9/work/products/1000%2F11", url);
     }
 
+    @Test
+    public void testUriTemplateWithURLEncoding() throws ServiceException, IOException, HttpException {
+        // Make a copy of the parameters and add the path parameters to it
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("area", "work");
+        params.put("pin", "AD8CCDD5F9");
+        params.put("spn", "123456 1+2");
+
+        // Make a copy of the header parameters and set common headers, like the UA
+        Map<String, String> headers = new HashMap<String, String>();
+        headers.put("Authorization", "secret");
+
+        String uriTemplate = "/catalogs/{pin}/{area}/products/{spn}";
+
+        String url = UriTemplate.fromTemplate(uriTemplate).expand(params);
+        assertEquals("/catalogs/AD8CCDD5F9/work/products/123456%201%2B2", url);
+    }
+
     /*
     @Test
     public void testGsonDateSerialization() throws Exception {

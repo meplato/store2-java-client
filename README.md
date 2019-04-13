@@ -16,15 +16,6 @@ Get your login by contacting Meplato Supplier Network Services. The API token
 is required to securely communicate with the Meplato Store 2 API. You can
 find it in the personalization section when logged into Meplato Store.
 
-## Installation
-
-First install [gradle](https://gradle.org/), then run e.g. `gradle jar`
-to build up the Java Archive to use.
-
-If you need an IntelliJ IDEA project, run `gradle idea`.
-
-Run `gradle tasks` to get a list of available tasks you can perform.
-
 ## Getting started
 
 All functionality in the client is separated into services. So you first

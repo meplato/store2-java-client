@@ -54,7 +54,7 @@ public class ApacheHttpResponse implements Response {
                 this.body = EntityUtils.toString(entity, charset);
             } catch (IOException e) {
                 EntityUtils.consumeQuietly(entity);
-                throw new ServiceException("Error deserializing data", null, e);
+                throw new ServiceException("Error deserializing data", this.statusCode, null, e);
             } finally {
                 try {
                     response.close();
@@ -82,7 +82,7 @@ public class ApacheHttpResponse implements Response {
                 Charset charset = contentType.getCharset();
                 this.body = EntityUtils.toString(entity, charset);
             } catch (IOException e) {
-                throw new ServiceException("Error deserializing data", null, e);
+                throw new ServiceException("Error deserializing data", this.statusCode, null, e);
             } finally {
             }
         } else {
