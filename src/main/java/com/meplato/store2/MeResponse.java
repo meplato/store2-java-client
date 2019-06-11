@@ -13,103 +13,97 @@
  */
 package com.meplato.store2;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 
 /**
  * MeResponse returns various information about the user and endpoints.
  */
 public class MeResponse {
-	@SerializedName("catalogsLink")
-	private String catalogsLink;
-	@SerializedName("kind")
-	private String kind;
-	@SerializedName("merchant")
-	private Merchant merchant;
-	@SerializedName("selfLink")
-	private String selfLink;
-	@SerializedName("user")
-	private User user;
+    @SerializedName("catalogsLink")
+    private String catalogsLink;
+    @SerializedName("kind")
+    private String kind;
+    @SerializedName("merchant")
+    private Merchant merchant;
+    @SerializedName("selfLink")
+    private String selfLink;
+    @SerializedName("user")
+    private User user;
 
-	/**
-	 * Create new instance of MeResponse.
-	 */
-	public MeResponse() {
-	}
+    /**
+     * Create new instance of MeResponse.
+     */
+    public MeResponse() {
+    }
 
-	/**
-	 * CatalogsLink is the URL for retrieving the list of catalogs.
-	 */
-	public String getCatalogsLink() {
-		return this.catalogsLink;
-	}
+    /**
+     * CatalogsLink is the URL for retrieving the list of catalogs.
+     */
+    public String getCatalogsLink() {
+        return this.catalogsLink;
+    }
 
-	/**
-	 * CatalogsLink is the URL for retrieving the list of catalogs.
-	 */
-	public void setCatalogsLink(String catalogsLink) {
-		this.catalogsLink = catalogsLink;
-	}
+    /**
+     * CatalogsLink is the URL for retrieving the list of catalogs.
+     */
+    public void setCatalogsLink(String catalogsLink) {
+        this.catalogsLink = catalogsLink;
+    }
 
-	/**
-	 * Kind is store#me for this entity.
-	 */
-	public String getKind() {
-		return this.kind;
-	}
+    /**
+     * Kind is store#me for this entity.
+     */
+    public String getKind() {
+        return this.kind;
+    }
 
-	/**
-	 * Kind is store#me for this entity.
-	 */
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
+    /**
+     * Kind is store#me for this entity.
+     */
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
 
-	/**
-	 * Merchant returns information about your merchant account.
-	 */
-	public Merchant getMerchant() {
-		return this.merchant;
-	}
+    /**
+     * Merchant returns information about your merchant account.
+     */
+    public Merchant getMerchant() {
+        return this.merchant;
+    }
 
-	/**
-	 * Merchant returns information about your merchant account.
-	 */
-	public void setMerchant(Merchant merchant) {
-		this.merchant = merchant;
-	}
+    /**
+     * Merchant returns information about your merchant account.
+     */
+    public void setMerchant(Merchant merchant) {
+        this.merchant = merchant;
+    }
 
-	/**
-	 * SelfLink is the URL of this request.
-	 */
-	public String getSelfLink() {
-		return this.selfLink;
-	}
+    /**
+     * SelfLink is the URL of this request.
+     */
+    public String getSelfLink() {
+        return this.selfLink;
+    }
 
-	/**
-	 * SelfLink is the URL of this request.
-	 */
-	public void setSelfLink(String selfLink) {
-		this.selfLink = selfLink;
-	}
+    /**
+     * SelfLink is the URL of this request.
+     */
+    public void setSelfLink(String selfLink) {
+        this.selfLink = selfLink;
+    }
 
-	/**
-	 * User returns information about your user account.
-	 */
-	public User getUser() {
-		return this.user;
-	}
+    /**
+     * User returns information about your user account.
+     */
+    public User getUser() {
+        return this.user;
+    }
 
-	/**
-	 * User returns information about your user account.
-	 */
-	public void setUser(User user) {
-		this.user = user;
-	}
+    /**
+     * User returns information about your user account.
+     */
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
 

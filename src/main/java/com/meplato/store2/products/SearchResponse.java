@@ -13,119 +13,113 @@
  */
 package com.meplato.store2.products;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 
 /**
  * SearchResponse is a partial listing of products.
  */
 public class SearchResponse {
-	@SerializedName("items")
-	private Product[] items;
-	@SerializedName("kind")
-	private String kind;
-	@SerializedName("nextLink")
-	private String nextLink;
-	@SerializedName("previousLink")
-	private String previousLink;
-	@SerializedName("selfLink")
-	private String selfLink;
-	@SerializedName("totalItems")
-	private long totalItems;
+    @SerializedName("items")
+    private Product[] items;
+    @SerializedName("kind")
+    private String kind;
+    @SerializedName("nextLink")
+    private String nextLink;
+    @SerializedName("previousLink")
+    private String previousLink;
+    @SerializedName("selfLink")
+    private String selfLink;
+    @SerializedName("totalItems")
+    private long totalItems;
 
-	/**
-	 * Create new instance of SearchResponse.
-	 */
-	public SearchResponse() {
-	}
+    /**
+     * Create new instance of SearchResponse.
+     */
+    public SearchResponse() {
+    }
 
-	/**
-	 * Items is the slice of products of this result.
-	 */
-	public Product[] getItems() {
-		return this.items;
-	}
+    /**
+     * Items is the slice of products of this result.
+     */
+    public Product[] getItems() {
+        return this.items;
+    }
 
-	/**
-	 * Items is the slice of products of this result.
-	 */
-	public void setItems(Product[] items) {
-		this.items = items;
-	}
+    /**
+     * Items is the slice of products of this result.
+     */
+    public void setItems(Product[] items) {
+        this.items = items;
+    }
 
-	/**
-	 * Kind is store#products/search for this kind of response.
-	 */
-	public String getKind() {
-		return this.kind;
-	}
+    /**
+     * Kind is store#products/search for this kind of response.
+     */
+    public String getKind() {
+        return this.kind;
+    }
 
-	/**
-	 * Kind is store#products/search for this kind of response.
-	 */
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
+    /**
+     * Kind is store#products/search for this kind of response.
+     */
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
 
-	/**
-	 * NextLink returns the URL to the next slice of products (if any).
-	 */
-	public String getNextLink() {
-		return this.nextLink;
-	}
+    /**
+     * NextLink returns the URL to the next slice of products (if any).
+     */
+    public String getNextLink() {
+        return this.nextLink;
+    }
 
-	/**
-	 * NextLink returns the URL to the next slice of products (if any).
-	 */
-	public void setNextLink(String nextLink) {
-		this.nextLink = nextLink;
-	}
+    /**
+     * NextLink returns the URL to the next slice of products (if any).
+     */
+    public void setNextLink(String nextLink) {
+        this.nextLink = nextLink;
+    }
 
-	/**
-	 * PreviousLink returns the URL of the previous slice of products (if any).
-	 */
-	public String getPreviousLink() {
-		return this.previousLink;
-	}
+    /**
+     * PreviousLink returns the URL of the previous slice of products (if any).
+     */
+    public String getPreviousLink() {
+        return this.previousLink;
+    }
 
-	/**
-	 * PreviousLink returns the URL of the previous slice of products (if any).
-	 */
-	public void setPreviousLink(String previousLink) {
-		this.previousLink = previousLink;
-	}
+    /**
+     * PreviousLink returns the URL of the previous slice of products (if any).
+     */
+    public void setPreviousLink(String previousLink) {
+        this.previousLink = previousLink;
+    }
 
-	/**
-	 * SelfLink returns the URL to this page.
-	 */
-	public String getSelfLink() {
-		return this.selfLink;
-	}
+    /**
+     * SelfLink returns the URL to this page.
+     */
+    public String getSelfLink() {
+        return this.selfLink;
+    }
 
-	/**
-	 * SelfLink returns the URL to this page.
-	 */
-	public void setSelfLink(String selfLink) {
-		this.selfLink = selfLink;
-	}
+    /**
+     * SelfLink returns the URL to this page.
+     */
+    public void setSelfLink(String selfLink) {
+        this.selfLink = selfLink;
+    }
 
-	/**
-	 * TotalItems describes the total number of products found.
-	 */
-	public long getTotalItems() {
-		return this.totalItems;
-	}
+    /**
+     * TotalItems describes the total number of products found.
+     */
+    public long getTotalItems() {
+        return this.totalItems;
+    }
 
-	/**
-	 * TotalItems describes the total number of products found.
-	 */
-	public void setTotalItems(long totalItems) {
-		this.totalItems = totalItems;
-	}
+    /**
+     * TotalItems describes the total number of products found.
+     */
+    public void setTotalItems(long totalItems) {
+        this.totalItems = totalItems;
+    }
 }
 

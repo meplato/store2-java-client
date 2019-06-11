@@ -13,55 +13,49 @@
  */
 package com.meplato.store2.products;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 
 /**
  * Unspsc is used to tie a product to a UNSPSC schema.
  */
 public class Unspsc {
-	@SerializedName("code")
-	private String code;
-	@SerializedName("version")
-	private String version;
+    @SerializedName("code")
+    private String code;
+    @SerializedName("version")
+    private String version;
 
-	/**
-	 * Create new instance of Unspsc.
-	 */
-	public Unspsc() {
-	}
+    /**
+     * Create new instance of Unspsc.
+     */
+    public Unspsc() {
+    }
 
-	/**
-	 * Code is the UNSPSC code. Only use digits for encoding, e.g. 43211503.
-	 */
-	public String getCode() {
-		return this.code;
-	}
+    /**
+     * Code is the UNSPSC code. Only use digits for encoding, e.g. 43211503.
+     */
+    public String getCode() {
+        return this.code;
+    }
 
-	/**
-	 * Code is the UNSPSC code. Only use digits for encoding, e.g. 43211503.
-	 */
-	public void setCode(String code) {
-		this.code = code;
-	}
+    /**
+     * Code is the UNSPSC code. Only use digits for encoding, e.g. 43211503.
+     */
+    public void setCode(String code) {
+        this.code = code;
+    }
 
-	/**
-	 * Version is the UNSPSC version in the major.minor format, e.g. 16.0901.
-	 */
-	public String getVersion() {
-		return this.version;
-	}
+    /**
+     * Version is the UNSPSC version in the major.minor format, e.g. 16.0901.
+     */
+    public String getVersion() {
+        return this.version;
+    }
 
-	/**
-	 * Version is the UNSPSC version in the major.minor format, e.g. 16.0901.
-	 */
-	public void setVersion(String version) {
-		this.version = version;
-	}
+    /**
+     * Version is the UNSPSC version in the major.minor format, e.g. 16.0901.
+     */
+    public void setVersion(String version) {
+        this.version = version;
+    }
 }
 

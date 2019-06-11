@@ -17,7 +17,7 @@ import java.util.Map;
 
 /**
  * Client represents an interface for HTTP clients.
- *
+ * <p>
  * The default implementation for Client is ApacheHttpClient.
  * Feel free to create your own implementation. You might also
  * need to implement your own Response; see ApacheHttpResponse

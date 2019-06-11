@@ -13,57 +13,51 @@
  */
 package com.meplato.store2.products;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 
 /**
  * Condition describes a product status, e.g. refurbished or used.
  */
 public class Condition {
-	@SerializedName("kind")
-	private String kind;
-	@SerializedName("text")
-	private String text;
+    @SerializedName("kind")
+    private String kind;
+    @SerializedName("text")
+    private String text;
 
-	/**
-	 * Create new instance of Condition.
-	 */
-	public Condition() {
-	}
+    /**
+     * Create new instance of Condition.
+     */
+    public Condition() {
+    }
 
-	/**
-	 * Kind describes the condition, e.g. bargain, new_product, old_product, new,
-	 * used, refurbished, or core_product.
-	 */
-	public String getKind() {
-		return this.kind;
-	}
+    /**
+     * Kind describes the condition, e.g. bargain, new_product, old_product, new,
+     * used, refurbished, or core_product.
+     */
+    public String getKind() {
+        return this.kind;
+    }
 
-	/**
-	 * Kind describes the condition, e.g. bargain, new_product, old_product, new,
-	 * used, refurbished, or core_product.
-	 */
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
+    /**
+     * Kind describes the condition, e.g. bargain, new_product, old_product, new,
+     * used, refurbished, or core_product.
+     */
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
 
-	/**
-	 * Text gives a textual description of the condition.
-	 */
-	public String getText() {
-		return this.text;
-	}
+    /**
+     * Text gives a textual description of the condition.
+     */
+    public String getText() {
+        return this.text;
+    }
 
-	/**
-	 * Text gives a textual description of the condition.
-	 */
-	public void setText(String text) {
-		this.text = text;
-	}
+    /**
+     * Text gives a textual description of the condition.
+     */
+    public void setText(String text) {
+        this.text = text;
+    }
 }
 
