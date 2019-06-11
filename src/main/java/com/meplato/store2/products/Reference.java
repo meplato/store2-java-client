@@ -13,73 +13,67 @@
  */
 package com.meplato.store2.products;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 
 /**
  * Reference describes a reference from one product to another product.
  */
 public class Reference {
-	@SerializedName("kind")
-	private String kind;
-	@SerializedName("qty")
-	private Double qty;
-	@SerializedName("spn")
-	private String spn;
+    @SerializedName("kind")
+    private String kind;
+    @SerializedName("qty")
+    private Double qty;
+    @SerializedName("spn")
+    private String spn;
 
-	/**
-	 * Create new instance of Reference.
-	 */
-	public Reference() {
-	}
+    /**
+     * Create new instance of Reference.
+     */
+    public Reference() {
+    }
 
-	/**
-	 * Kind describes the type of reference.
-	 */
-	public String getKind() {
-		return this.kind;
-	}
+    /**
+     * Kind describes the type of reference.
+     */
+    public String getKind() {
+        return this.kind;
+    }
 
-	/**
-	 * Kind describes the type of reference.
-	 */
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
+    /**
+     * Kind describes the type of reference.
+     */
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
 
-	/**
-	 * Qty describes the quantity for certain kinds of references. E.g. the
-	 * consists_of kind must use the quantity field to be useful for the end-user. 
-	 */
-	public Double getQty() {
-		return this.qty;
-	}
+    /**
+     * Qty describes the quantity for certain kinds of references. E.g. the
+     * consists_of kind must use the quantity field to be useful for the end-user.
+     */
+    public Double getQty() {
+        return this.qty;
+    }
 
-	/**
-	 * Qty describes the quantity for certain kinds of references. E.g. the
-	 * consists_of kind must use the quantity field to be useful for the end-user. 
-	 */
-	public void setQty(Double qty) {
-		this.qty = qty;
-	}
+    /**
+     * Qty describes the quantity for certain kinds of references. E.g. the
+     * consists_of kind must use the quantity field to be useful for the end-user.
+     */
+    public void setQty(Double qty) {
+        this.qty = qty;
+    }
 
-	/**
-	 * SPN specifies the supplier product number of the other product.
-	 */
-	public String getSpn() {
-		return this.spn;
-	}
+    /**
+     * SPN specifies the supplier product number of the other product.
+     */
+    public String getSpn() {
+        return this.spn;
+    }
 
-	/**
-	 * SPN specifies the supplier product number of the other product.
-	 */
-	public void setSpn(String spn) {
-		this.spn = spn;
-	}
+    /**
+     * SPN specifies the supplier product number of the other product.
+     */
+    public void setSpn(String spn) {
+        this.spn = spn;
+    }
 }
 

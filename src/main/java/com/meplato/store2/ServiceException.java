@@ -55,7 +55,9 @@ public class ServiceException extends Exception {
      *
      * @return the HTTP status code.
      */
-    public int getStatusCode() { return statusCode; }
+    public int getStatusCode() {
+        return statusCode;
+    }
 
     /**
      * Takes a {@link Response} and tries to deserialize the error object

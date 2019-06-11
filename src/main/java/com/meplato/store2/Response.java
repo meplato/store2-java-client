@@ -15,7 +15,7 @@ package com.meplato.store2;
 
 /**
  * Response from a Client.
- *
+ * <p>
  * The default ApacheHttpClient uses the accompanying ApacheHttpResponse.
  * Feel free to implement your own Response class.
  */

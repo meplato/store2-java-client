@@ -13,12 +13,6 @@
  */
 package com.meplato.store2.products;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -26,43 +20,43 @@ import com.google.gson.annotations.SerializedName;
  * mechanism for customer-specific fields.
  */
 public class CustField {
-	@SerializedName("name")
-	private String name;
-	@SerializedName("value")
-	private String value;
+    @SerializedName("name")
+    private String name;
+    @SerializedName("value")
+    private String value;
 
-	/**
-	 * Create new instance of CustField.
-	 */
-	public CustField() {
-	}
+    /**
+     * Create new instance of CustField.
+     */
+    public CustField() {
+    }
 
-	/**
-	 * Name is the name of the customer-specific field, e.g. TaxRate.
-	 */
-	public String getName() {
-		return this.name;
-	}
+    /**
+     * Name is the name of the customer-specific field, e.g. TaxRate.
+     */
+    public String getName() {
+        return this.name;
+    }
 
-	/**
-	 * Name is the name of the customer-specific field, e.g. TaxRate.
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
+    /**
+     * Name is the name of the customer-specific field, e.g. TaxRate.
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	/**
-	 * Value is the value of the customer-specific field, e.g. 19%.
-	 */
-	public String getValue() {
-		return this.value;
-	}
+    /**
+     * Value is the value of the customer-specific field, e.g. 19%.
+     */
+    public String getValue() {
+        return this.value;
+    }
 
-	/**
-	 * Value is the value of the customer-specific field, e.g. 19%.
-	 */
-	public void setValue(String value) {
-		this.value = value;
-	}
+    /**
+     * Value is the value of the customer-specific field, e.g. 19%.
+     */
+    public void setValue(String value) {
+        this.value = value;
+    }
 }
 

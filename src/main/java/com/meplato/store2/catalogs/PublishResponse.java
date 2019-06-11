@@ -13,71 +13,65 @@
  */
 package com.meplato.store2.catalogs;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 
 /**
  * PublishResponse is the response of the request to publish a catalog.
  */
 public class PublishResponse {
-	@SerializedName("kind")
-	private String kind;
-	@SerializedName("selfLink")
-	private String selfLink;
-	@SerializedName("statusLink")
-	private String statusLink;
+    @SerializedName("kind")
+    private String kind;
+    @SerializedName("selfLink")
+    private String selfLink;
+    @SerializedName("statusLink")
+    private String statusLink;
 
-	/**
-	 * Create new instance of PublishResponse.
-	 */
-	public PublishResponse() {
-	}
+    /**
+     * Create new instance of PublishResponse.
+     */
+    public PublishResponse() {
+    }
 
-	/**
-	 * Kind is store#catalogPublish for this kind of response.
-	 */
-	public String getKind() {
-		return this.kind;
-	}
+    /**
+     * Kind is store#catalogPublish for this kind of response.
+     */
+    public String getKind() {
+        return this.kind;
+    }
 
-	/**
-	 * Kind is store#catalogPublish for this kind of response.
-	 */
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
+    /**
+     * Kind is store#catalogPublish for this kind of response.
+     */
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
 
-	/**
-	 * SelfLink returns the URL to this page.
-	 */
-	public String getSelfLink() {
-		return this.selfLink;
-	}
+    /**
+     * SelfLink returns the URL to this page.
+     */
+    public String getSelfLink() {
+        return this.selfLink;
+    }
 
-	/**
-	 * SelfLink returns the URL to this page.
-	 */
-	public void setSelfLink(String selfLink) {
-		this.selfLink = selfLink;
-	}
+    /**
+     * SelfLink returns the URL to this page.
+     */
+    public void setSelfLink(String selfLink) {
+        this.selfLink = selfLink;
+    }
 
-	/**
-	 * StatusLink returns the URL that returns the current status of the request.
-	 */
-	public String getStatusLink() {
-		return this.statusLink;
-	}
+    /**
+     * StatusLink returns the URL that returns the current status of the request.
+     */
+    public String getStatusLink() {
+        return this.statusLink;
+    }
 
-	/**
-	 * StatusLink returns the URL that returns the current status of the request.
-	 */
-	public void setStatusLink(String statusLink) {
-		this.statusLink = statusLink;
-	}
+    /**
+     * StatusLink returns the URL that returns the current status of the request.
+     */
+    public void setStatusLink(String statusLink) {
+        this.statusLink = statusLink;
+    }
 }
 

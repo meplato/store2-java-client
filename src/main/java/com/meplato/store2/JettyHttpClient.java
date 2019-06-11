@@ -15,7 +15,7 @@ package com.meplato.store2;
 
 import com.damnhandy.uri.template.UriTemplate;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.meplato.store2.internal.GsonUtil;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.api.ContentResponse;
 import org.eclipse.jetty.client.api.Request;
@@ -28,36 +28,36 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * JettyHttpClient implements Client by means of org.eclipse.jetty.client.HttpClient.
- *
+ * <p>
  * See http://www.eclipse.org/jetty/documentation/current/http-client-other.html
  * for information about setting a HTTP proxy.
  */
 public class JettyHttpClient implements Client {
-    /** Jetty HTTP client (capable of HTTP/2.0) */
+    /**
+     * Jetty HTTP client (capable of HTTP/2.0)
+     */
     private final HttpClient httpClient;
 
-    /** Timeout for requests (in seconds) */
+    /**
+     * Timeout for requests (in seconds)
+     */
     private long timeout;
 
-    /** User Agent. */
+    /**
+     * User Agent.
+     */
     public static String USER_AGENT = "meplato-api-java-version-jetty/1.0.0";
-    /** RFC3339 pattern for deserializing date/time from the API. */
-    public static String RFC3339 = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSXXX";
 
     /**
      * Instantiates a new instance of JettyHttpClient with the given
      * HttpClient.
-     *
+     * <p>
      * The caller is responsible for starting the HTTP Client.
      *
      * @param client the configured Jetty HTTP client to use
      */
     public JettyHttpClient(HttpClient client) {
         httpClient = client;
-    }
-
-    public static Gson getSerializer() {
-        return new GsonBuilder().setDateFormat(RFC3339).create();
     }
 
     /**
@@ -102,7 +102,7 @@ public class JettyHttpClient implements Client {
 
         // Body handling
         if (body != null) {
-            Gson gson = getSerializer();
+            Gson gson = GsonUtil.getSerializer();
             request = request.content(new StringContentProvider(gson.toJson(body), "UTF-8"), "application/json");
         }
 

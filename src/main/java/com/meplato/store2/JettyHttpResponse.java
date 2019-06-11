@@ -14,6 +14,7 @@
 package com.meplato.store2;
 
 import com.google.gson.Gson;
+import com.meplato.store2.internal.GsonUtil;
 import org.eclipse.jetty.client.api.ContentResponse;
 
 /**
@@ -71,7 +72,7 @@ public class JettyHttpResponse implements Response {
     @Override
     public <T> T getBodyJSON(Class<T> clazz) {
         if (this.body != null) {
-            Gson gson = JettyHttpClient.getSerializer();
+            Gson gson = GsonUtil.getSerializer();
             return gson.fromJson(this.body, clazz);
         } else {
             return null;

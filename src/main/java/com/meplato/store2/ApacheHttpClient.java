@@ -15,18 +15,16 @@ package com.meplato.store2;
 
 import com.damnhandy.uri.template.UriTemplate;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.meplato.store2.internal.GsonUtil;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.EntityBuilder;
 import org.apache.http.client.methods.*;
 import org.apache.http.entity.ContentType;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
 /**
@@ -38,10 +36,10 @@ public class ApacheHttpClient implements Client {
      */
     private final CloseableHttpClient httpClient;
 
-    /** User Agent. */
+    /**
+     * User Agent.
+     */
     public static String USER_AGENT = "meplato-api-java-version-apache/1.0.0";
-    /** RFC3339 pattern for deserializing date/time from the API. */
-    public static String RFC3339 = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSXXX";
 
     /**
      * Instantiates a new instance of ApacheHttpClient.
@@ -58,10 +56,6 @@ public class ApacheHttpClient implements Client {
      */
     public ApacheHttpClient(CloseableHttpClient client) {
         httpClient = client;
-    }
-
-    public static Gson getSerializer() {
-        return new GsonBuilder().setDateFormat(RFC3339).create();
     }
 
     /**
@@ -83,7 +77,7 @@ public class ApacheHttpClient implements Client {
         // Body
         HttpEntity requestEntity = null;
         if (body != null) {
-            Gson gson = getSerializer();
+            Gson gson = GsonUtil.getSerializer();
             try {
                 requestEntity = EntityBuilder.create().
                         setText(gson.toJson(body)).

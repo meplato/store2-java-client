@@ -13,12 +13,6 @@
  */
 package com.meplato.store2.products;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -26,43 +20,43 @@ import com.google.gson.annotations.SerializedName;
  * product.
  */
 public class UpsertProductResponse {
-	@SerializedName("kind")
-	private String kind;
-	@SerializedName("link")
-	private String link;
+    @SerializedName("kind")
+    private String kind;
+    @SerializedName("link")
+    private String link;
 
-	/**
-	 * Create new instance of UpsertProductResponse.
-	 */
-	public UpsertProductResponse() {
-	}
+    /**
+     * Create new instance of UpsertProductResponse.
+     */
+    public UpsertProductResponse() {
+    }
 
-	/**
-	 * Kind describes this entity.
-	 */
-	public String getKind() {
-		return this.kind;
-	}
+    /**
+     * Kind describes this entity.
+     */
+    public String getKind() {
+        return this.kind;
+    }
 
-	/**
-	 * Kind describes this entity.
-	 */
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
+    /**
+     * Kind describes this entity.
+     */
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
 
-	/**
-	 * Link returns a URL to the representation of the created or updated product.
-	 */
-	public String getLink() {
-		return this.link;
-	}
+    /**
+     * Link returns a URL to the representation of the created or updated product.
+     */
+    public String getLink() {
+        return this.link;
+    }
 
-	/**
-	 * Link returns a URL to the representation of the created or updated product.
-	 */
-	public void setLink(String link) {
-		this.link = link;
-	}
+    /**
+     * Link returns a URL to the representation of the created or updated product.
+     */
+    public void setLink(String link) {
+        this.link = link;
+    }
 }
 

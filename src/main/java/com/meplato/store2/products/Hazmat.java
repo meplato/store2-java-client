@@ -13,57 +13,51 @@
  */
 package com.meplato.store2.products;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 
 /**
  * Hazmat describes a hazardous/dangerous good.
  */
 public class Hazmat {
-	@SerializedName("kind")
-	private String kind;
-	@SerializedName("text")
-	private String text;
+    @SerializedName("kind")
+    private String kind;
+    @SerializedName("text")
+    private String text;
 
-	/**
-	 * Create new instance of Hazmat.
-	 */
-	public Hazmat() {
-	}
+    /**
+     * Create new instance of Hazmat.
+     */
+    public Hazmat() {
+    }
 
-	/**
-	 * Kind describes the classification system, e.g. GGVS.
-	 */
-	public String getKind() {
-		return this.kind;
-	}
+    /**
+     * Kind describes the classification system, e.g. GGVS.
+     */
+    public String getKind() {
+        return this.kind;
+    }
 
-	/**
-	 * Kind describes the classification system, e.g. GGVS.
-	 */
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
+    /**
+     * Kind describes the classification system, e.g. GGVS.
+     */
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
 
-	/**
-	 * Text gives a textual description or a code of the harm that the product can
-	 * do to people, property, or the environment.
-	 */
-	public String getText() {
-		return this.text;
-	}
+    /**
+     * Text gives a textual description or a code of the harm that the product can
+     * do to people, property, or the environment.
+     */
+    public String getText() {
+        return this.text;
+    }
 
-	/**
-	 * Text gives a textual description or a code of the harm that the product can
-	 * do to people, property, or the environment.
-	 */
-	public void setText(String text) {
-		this.text = text;
-	}
+    /**
+     * Text gives a textual description or a code of the harm that the product can
+     * do to people, property, or the environment.
+     */
+    public void setText(String text) {
+        this.text = text;
+    }
 }
 

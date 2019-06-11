@@ -13,107 +13,101 @@
  */
 package com.meplato.store2.products;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 
 /**
  * Blob describes external product data, e.g. an image or a datasheet.
  */
 public class Blob {
-	@SerializedName("kind")
-	private String kind;
-	@SerializedName("lang")
-	private String language;
-	@SerializedName("source")
-	private String source;
-	@SerializedName("text")
-	private String text;
-	@SerializedName("url")
-	private String url;
+    @SerializedName("kind")
+    private String kind;
+    @SerializedName("lang")
+    private String language;
+    @SerializedName("source")
+    private String source;
+    @SerializedName("text")
+    private String text;
+    @SerializedName("url")
+    private String url;
 
-	/**
-	 * Create new instance of Blob.
-	 */
-	public Blob() {
-	}
+    /**
+     * Create new instance of Blob.
+     */
+    public Blob() {
+    }
 
-	/**
-	 * Kind describes the type of blob, e.g. image, detail, thumbnail, datasheet, or
-	 * safetysheet.
-	 */
-	public String getKind() {
-		return this.kind;
-	}
+    /**
+     * Kind describes the type of blob, e.g. image, detail, thumbnail, datasheet, or
+     * safetysheet.
+     */
+    public String getKind() {
+        return this.kind;
+    }
 
-	/**
-	 * Kind describes the type of blob, e.g. image, detail, thumbnail, datasheet, or
-	 * safetysheet.
-	 */
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
+    /**
+     * Kind describes the type of blob, e.g. image, detail, thumbnail, datasheet, or
+     * safetysheet.
+     */
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
 
-	/**
-	 * Language indicates the language of the blob, e.g. the language of a
-	 * datasheet.
-	 */
-	public String getLanguage() {
-		return this.language;
-	}
+    /**
+     * Language indicates the language of the blob, e.g. the language of a
+     * datasheet.
+     */
+    public String getLanguage() {
+        return this.language;
+    }
 
-	/**
-	 * Language indicates the language of the blob, e.g. the language of a
-	 * datasheet.
-	 */
-	public void setLanguage(String language) {
-		this.language = language;
-	}
+    /**
+     * Language indicates the language of the blob, e.g. the language of a
+     * datasheet.
+     */
+    public void setLanguage(String language) {
+        this.language = language;
+    }
 
-	/**
-	 * Source is either a (relative) file name or a URL.
-	 */
-	public String getSource() {
-		return this.source;
-	}
+    /**
+     * Source is either a (relative) file name or a URL.
+     */
+    public String getSource() {
+        return this.source;
+    }
 
-	/**
-	 * Source is either a (relative) file name or a URL.
-	 */
-	public void setSource(String source) {
-		this.source = source;
-	}
+    /**
+     * Source is either a (relative) file name or a URL.
+     */
+    public void setSource(String source) {
+        this.source = source;
+    }
 
-	/**
-	 * Text gives a textual description the blob.
-	 */
-	public String getText() {
-		return this.text;
-	}
+    /**
+     * Text gives a textual description the blob.
+     */
+    public String getText() {
+        return this.text;
+    }
 
-	/**
-	 * Text gives a textual description the blob.
-	 */
-	public void setText(String text) {
-		this.text = text;
-	}
+    /**
+     * Text gives a textual description the blob.
+     */
+    public void setText(String text) {
+        this.text = text;
+    }
 
-	/**
-	 * URL is the URL to the blob.
-	 */
-	public String getUrl() {
-		return this.url;
-	}
+    /**
+     * URL is the URL to the blob.
+     */
+    public String getUrl() {
+        return this.url;
+    }
 
-	/**
-	 * URL is the URL to the blob.
-	 */
-	public void setUrl(String url) {
-		this.url = url;
-	}
+    /**
+     * URL is the URL to the blob.
+     */
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }
 

@@ -13,39 +13,33 @@
  */
 package com.meplato.store2.catalogs;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 
 /**
  * PurgeResponse is the response of the request to purge an area of a catalog.
  */
 public class PurgeResponse {
-	@SerializedName("kind")
-	private String kind;
+    @SerializedName("kind")
+    private String kind;
 
-	/**
-	 * Create new instance of PurgeResponse.
-	 */
-	public PurgeResponse() {
-	}
+    /**
+     * Create new instance of PurgeResponse.
+     */
+    public PurgeResponse() {
+    }
 
-	/**
-	 * Kind is store#catalogPurge for this kind of response.
-	 */
-	public String getKind() {
-		return this.kind;
-	}
+    /**
+     * Kind is store#catalogPurge for this kind of response.
+     */
+    public String getKind() {
+        return this.kind;
+    }
 
-	/**
-	 * Kind is store#catalogPurge for this kind of response.
-	 */
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
+    /**
+     * Kind is store#catalogPurge for this kind of response.
+     */
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
 }
 

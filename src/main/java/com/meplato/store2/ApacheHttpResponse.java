@@ -14,6 +14,7 @@
 package com.meplato.store2;
 
 import com.google.gson.Gson;
+import com.meplato.store2.internal.GsonUtil;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -120,7 +121,7 @@ public class ApacheHttpResponse implements Response {
     @Override
     public <T> T getBodyJSON(Class<T> clazz) {
         if (this.body != null) {
-            Gson gson = Service.getSerializer();
+            Gson gson = GsonUtil.getSerializer();
             return gson.fromJson(this.body, clazz);
         } else {
             return null;
