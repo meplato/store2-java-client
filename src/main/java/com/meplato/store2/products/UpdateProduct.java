@@ -158,7 +158,7 @@ public class UpdateProduct {
     @SerializedName("keywords")
     private String[] keywords;
     @SerializedName("leadtime")
-    private Double leadtime;
+    private Optional<Double> leadtime;
     @SerializedName("listPrice")
     private Double listPrice;
     @SerializedName("manufactcode")
@@ -1311,14 +1311,14 @@ public class UpdateProduct {
     /**
      * Leadtime is the number of days for delivery.
      */
-    public Double getLeadtime() {
+    public Optional<Double> getLeadtime() {
         return this.leadtime;
     }
 
     /**
      * Leadtime is the number of days for delivery.
      */
-    public void setLeadtime(Double leadtime) {
+    public void setLeadtime(Optional<Double> leadtime) {
         this.leadtime = leadtime;
     }
 

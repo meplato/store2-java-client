@@ -106,30 +106,33 @@ public class UpdateTest extends BaseTest {
         update.setName("Produkt 1000");
         update.setKeepPrice(true);
         update.setManufacturer("Microsoft");
+        update.setLeadtime(Optional.of(3.0));
         update.setQuantityMin(Optional.of(10.0));
         update.setQuantityMax(Optional.empty());
         update.setQuantityInterval(Optional.of(1.0));
         have = gson.toJson(update);
-        assertEquals("{\"keepPrice\":true,\"manufacturer\":\"Microsoft\",\"name\":\"Produkt 1000\",\"quantityInterval\":1.0,\"quantityMax\":null,\"quantityMin\":10.0}", have);
+        assertEquals("{\"keepPrice\":true,\"leadtime\":3.0,\"manufacturer\":\"Microsoft\",\"name\":\"Produkt 1000\",\"quantityInterval\":1.0,\"quantityMax\":null,\"quantityMin\":10.0}", have);
 
         // Null value for nullable field like quantityMin
         update = new UpdateProduct();
         update.setName("Produkt 1000");
         update.setKeepPrice(null);
         update.setManufacturer(null);
+        update.setLeadtime(Optional.empty());
         update.setQuantityMin(Optional.empty());
         update.setQuantityMax(Optional.empty());
         update.setQuantityInterval(Optional.empty());
         have = gson.toJson(update);
-        assertEquals("{\"name\":\"Produkt 1000\",\"quantityInterval\":null,\"quantityMax\":null,\"quantityMin\":null}", have);
+        assertEquals("{\"leadtime\":null,\"name\":\"Produkt 1000\",\"quantityInterval\":null,\"quantityMax\":null,\"quantityMin\":null}", have);
 
         // Null value for nullable field like quantityMin
         update = new UpdateProduct();
         update.setName("Produkt 1000");
+        update.setLeadtime(Optional.ofNullable(null));
         update.setQuantityMin(Optional.ofNullable(null));
         update.setQuantityMax(Optional.ofNullable(null));
         update.setQuantityInterval(Optional.ofNullable(null));
         have = gson.toJson(update);
-        assertEquals("{\"name\":\"Produkt 1000\",\"quantityInterval\":null,\"quantityMax\":null,\"quantityMin\":null}", have);
+        assertEquals("{\"leadtime\":null,\"name\":\"Produkt 1000\",\"quantityInterval\":null,\"quantityMax\":null,\"quantityMin\":null}", have);
     }
 }
