@@ -38,9 +38,9 @@ public class UpdateTest extends BaseTest {
         assertNotNull(service);
 
         UpdateProduct update = new UpdateProduct();
-        update.setName("Produkt 1000 (NEU!)");
-        update.setPrice(2.50);
-        update.setOrderUnit("PCE");
+        update.setName(Optional.of("Produkt 1000 (NEU!)"));
+        update.setPrice(Optional.of(2.50));
+        update.setOrderUnit(Optional.of("PCE"));
 
         UpdateProductResponse updateResponse = service.update().pin("AD8CCDD5F9").area("work").spn("MBA11").product(update).execute();
         assertNotNull(updateResponse);
@@ -67,9 +67,9 @@ public class UpdateTest extends BaseTest {
         assertNotNull(service);
 
         UpdateProduct update = new UpdateProduct();
-        update.setName("Produkt 1000 (NEU!)");
-        update.setPrice(2.50);
-        update.setOrderUnit("PCE");
+        update.setName(Optional.of("Produkt 1000 (NEU!)"));
+        update.setPrice(Optional.of(2.50));
+        update.setOrderUnit(Optional.of("PCE"));
 
         UpdateProductResponse updateResponse = service.update().pin("AD8CCDD5F9").area("work").spn("MBA11/2017").product(update).execute();
         assertNotNull(updateResponse);
@@ -97,15 +97,15 @@ public class UpdateTest extends BaseTest {
 
         // No value for nullable field like quantityMin
         update = new UpdateProduct();
-        update.setName("Produkt 1000");
+        update.setName(Optional.of("Produkt 1000"));
         have = gson.toJson(update);
         assertEquals("{\"name\":\"Produkt 1000\"}", have);
 
         // Specific non-null value for nullable field like quantityMin, quantityMax, and quantityInterval
         update = new UpdateProduct();
-        update.setName("Produkt 1000");
-        update.setKeepPrice(true);
-        update.setManufacturer("Microsoft");
+        update.setName(Optional.of("Produkt 1000"));
+        update.setKeepPrice(Optional.of(true));
+        update.setManufacturer(Optional.of("Microsoft"));
         update.setLeadtime(Optional.of(3.0));
         update.setQuantityMin(Optional.of(10.0));
         update.setQuantityMax(Optional.empty());
@@ -115,24 +115,23 @@ public class UpdateTest extends BaseTest {
 
         // Null value for nullable field like quantityMin
         update = new UpdateProduct();
-        update.setName("Produkt 1000");
-        update.setKeepPrice(null);
-        update.setManufacturer(null);
+        update.setName(Optional.of("Produkt 1000"));
+        update.setKeepPrice(Optional.empty());
+        update.setManufacturer(Optional.ofNullable(null));
         update.setLeadtime(Optional.empty());
         update.setQuantityMin(Optional.empty());
         update.setQuantityMax(Optional.empty());
         update.setQuantityInterval(Optional.empty());
         have = gson.toJson(update);
-        assertEquals("{\"leadtime\":null,\"name\":\"Produkt 1000\",\"quantityInterval\":null,\"quantityMax\":null,\"quantityMin\":null}", have);
+        assertEquals("{\"keepPrice\":null,\"leadtime\":null,\"manufacturer\":null,\"name\":\"Produkt 1000\",\"quantityInterval\":null,\"quantityMax\":null,\"quantityMin\":null}", have);
 
         // Null value for nullable field like quantityMin
         update = new UpdateProduct();
-        update.setName("Produkt 1000");
         update.setLeadtime(Optional.ofNullable(null));
         update.setQuantityMin(Optional.ofNullable(null));
         update.setQuantityMax(Optional.ofNullable(null));
         update.setQuantityInterval(Optional.ofNullable(null));
         have = gson.toJson(update);
-        assertEquals("{\"leadtime\":null,\"name\":\"Produkt 1000\",\"quantityInterval\":null,\"quantityMax\":null,\"quantityMin\":null}", have);
+        assertEquals("{\"leadtime\":null,\"quantityInterval\":null,\"quantityMax\":null,\"quantityMin\":null}", have);
     }
 }

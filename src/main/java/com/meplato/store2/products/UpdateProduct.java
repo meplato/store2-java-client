@@ -22,181 +22,181 @@ import java.util.Optional;
  */
 public class UpdateProduct {
     @SerializedName("asin")
-    private String asin;
+    private Optional<String> asin;
     @SerializedName("autoConfigure")
-    private Boolean autoConfigure;
+    private Optional<Boolean> autoConfigure;
     @SerializedName("availability")
-    private Availability availability;
+    private Optional<Availability> availability;
     @SerializedName("blobs")
-    private Blob[] blobs;
+    private Optional<Blob[]> blobs;
     @SerializedName("boostFactor")
-    private Double boostFactor;
+    private Optional<Double> boostFactor;
     @SerializedName("bpn")
-    private String bpn;
+    private Optional<String> bpn;
     @SerializedName("catalogManaged")
-    private Boolean catalogManaged;
+    private Optional<Boolean> catalogManaged;
     @SerializedName("categories")
-    private String[] categories;
+    private Optional<String[]> categories;
     @SerializedName("conditions")
-    private Condition[] conditions;
+    private Optional<Condition[]> conditions;
     @SerializedName("contract")
-    private String contract;
+    private Optional<String> contract;
     @SerializedName("contractItem")
-    private String contractItem;
+    private Optional<String> contractItem;
     @SerializedName("conversionDenumerator")
-    private Double conversionDenumerator;
+    private Optional<Double> conversionDenumerator;
     @SerializedName("conversionNumerator")
-    private Double conversionNumerator;
+    private Optional<Double> conversionNumerator;
     @SerializedName("country")
-    private String country;
+    private Optional<String> country;
     @SerializedName("cu")
-    private String contentUnit;
+    private Optional<String> contentUnit;
     @SerializedName("cuPerOu")
-    private Double cuPerOu;
+    private Optional<Double> cuPerOu;
     @SerializedName("custField1")
-    private String custField1;
+    private Optional<String> custField1;
     @SerializedName("custField2")
-    private String custField2;
+    private Optional<String> custField2;
     @SerializedName("custField3")
-    private String custField3;
+    private Optional<String> custField3;
     @SerializedName("custField4")
-    private String custField4;
+    private Optional<String> custField4;
     @SerializedName("custField5")
-    private String custField5;
+    private Optional<String> custField5;
     @SerializedName("custFields")
-    private CustField[] custFields;
+    private Optional<CustField[]> custFields;
     @SerializedName("customField10")
-    private String customField10;
+    private Optional<String> customField10;
     @SerializedName("customField11")
-    private String customField11;
+    private Optional<String> customField11;
     @SerializedName("customField12")
-    private String customField12;
+    private Optional<String> customField12;
     @SerializedName("customField13")
-    private String customField13;
+    private Optional<String> customField13;
     @SerializedName("customField14")
-    private String customField14;
+    private Optional<String> customField14;
     @SerializedName("customField15")
-    private String customField15;
+    private Optional<String> customField15;
     @SerializedName("customField16")
-    private String customField16;
+    private Optional<String> customField16;
     @SerializedName("customField17")
-    private String customField17;
+    private Optional<String> customField17;
     @SerializedName("customField18")
-    private String customField18;
+    private Optional<String> customField18;
     @SerializedName("customField19")
-    private String customField19;
+    private Optional<String> customField19;
     @SerializedName("customField20")
-    private String customField20;
+    private Optional<String> customField20;
     @SerializedName("customField21")
-    private String customField21;
+    private Optional<String> customField21;
     @SerializedName("customField22")
-    private String customField22;
+    private Optional<String> customField22;
     @SerializedName("customField23")
-    private String customField23;
+    private Optional<String> customField23;
     @SerializedName("customField24")
-    private String customField24;
+    private Optional<String> customField24;
     @SerializedName("customField25")
-    private String customField25;
+    private Optional<String> customField25;
     @SerializedName("customField26")
-    private String customField26;
+    private Optional<String> customField26;
     @SerializedName("customField27")
-    private String customField27;
+    private Optional<String> customField27;
     @SerializedName("customField28")
-    private String customField28;
+    private Optional<String> customField28;
     @SerializedName("customField29")
-    private String customField29;
+    private Optional<String> customField29;
     @SerializedName("customField30")
-    private String customField30;
+    private Optional<String> customField30;
     @SerializedName("customField6")
-    private String customField6;
+    private Optional<String> customField6;
     @SerializedName("customField7")
-    private String customField7;
+    private Optional<String> customField7;
     @SerializedName("customField8")
-    private String customField8;
+    private Optional<String> customField8;
     @SerializedName("customField9")
-    private String customField9;
+    private Optional<String> customField9;
     @SerializedName("datasheet")
-    private String datasheet;
+    private Optional<String> datasheet;
     @SerializedName("description")
-    private String description;
+    private Optional<String> description;
     @SerializedName("eclasses")
-    private Eclass[] eclasses;
+    private Optional<Eclass[]> eclasses;
     @SerializedName("erpGroupSupplier")
-    private String erpGroupSupplier;
+    private Optional<String> erpGroupSupplier;
     @SerializedName("excluded")
-    private Boolean excluded;
+    private Optional<Boolean> excluded;
     @SerializedName("extCategory")
-    private String extCategory;
+    private Optional<String> extCategory;
     @SerializedName("extCategoryId")
-    private String extCategoryId;
+    private Optional<String> extCategoryId;
     @SerializedName("extConfigForm")
-    private String extConfigForm;
+    private Optional<String> extConfigForm;
     @SerializedName("extConfigService")
-    private String extConfigService;
+    private Optional<String> extConfigService;
     @SerializedName("extProductId")
-    private String extProductId;
+    private Optional<String> extProductId;
     @SerializedName("extSchemaType")
-    private String extSchemaType;
+    private Optional<String> extSchemaType;
     @SerializedName("features")
-    private Feature[] features;
+    private Optional<Feature[]> features;
     @SerializedName("glAccount")
-    private String glAccount;
+    private Optional<String> glAccount;
     @SerializedName("gtin")
-    private String gtin;
+    private Optional<String> gtin;
     @SerializedName("hazmats")
-    private Hazmat[] hazmats;
+    private Optional<Hazmat[]> hazmats;
     @SerializedName("image")
-    private String image;
+    private Optional<String> image;
     @SerializedName("incomplete")
-    private Boolean incomplete;
+    private Optional<Boolean> incomplete;
     @SerializedName("intrastat")
-    private Intrastat intrastat;
+    private Optional<Intrastat> intrastat;
     @SerializedName("isPassword")
-    private Boolean isPassword;
+    private Optional<Boolean> isPassword;
     @SerializedName("keepPrice")
-    private Boolean keepPrice;
+    private Optional<Boolean> keepPrice;
     @SerializedName("keywords")
-    private String[] keywords;
+    private Optional<String[]> keywords;
     @SerializedName("leadtime")
     private Optional<Double> leadtime;
     @SerializedName("listPrice")
-    private Double listPrice;
+    private Optional<Double> listPrice;
     @SerializedName("manufactcode")
-    private String manufactcode;
+    private Optional<String> manufactcode;
     @SerializedName("manufacturer")
-    private String manufacturer;
+    private Optional<String> manufacturer;
     @SerializedName("matgroup")
-    private String matgroup;
+    private Optional<String> matgroup;
     @SerializedName("mpn")
-    private String mpn;
+    private Optional<String> mpn;
     @SerializedName("multiSupplierId")
-    private String multiSupplierId;
+    private Optional<String> multiSupplierId;
     @SerializedName("multiSupplierName")
-    private String multiSupplierName;
+    private Optional<String> multiSupplierName;
     @SerializedName("name")
-    private String name;
+    private Optional<String> name;
     @SerializedName("needsGoodsReceipt")
-    private Boolean needsGoodsReceipt;
+    private Optional<Boolean> needsGoodsReceipt;
     @SerializedName("nfBasePrice")
-    private Double nfBasePrice;
+    private Optional<Double> nfBasePrice;
     @SerializedName("nfBasePriceQuantity")
-    private Double nfBasePriceQuantity;
+    private Optional<Double> nfBasePriceQuantity;
     @SerializedName("nfCndId")
-    private String nfCndId;
+    private Optional<String> nfCndId;
     @SerializedName("nfScale")
-    private Double nfScale;
+    private Optional<Double> nfScale;
     @SerializedName("nfScaleQuantity")
-    private Double nfScaleQuantity;
+    private Optional<Double> nfScaleQuantity;
     @SerializedName("orderable")
-    private Boolean orderable;
+    private Optional<Boolean> orderable;
     @SerializedName("ou")
-    private String orderUnit;
+    private Optional<String> orderUnit;
     @SerializedName("price")
-    private Double price;
+    private Optional<Double> price;
     @SerializedName("priceFormula")
-    private String priceFormula;
+    private Optional<String> priceFormula;
     @SerializedName("priceQty")
-    private Double priceQty;
+    private Optional<Double> priceQty;
     @SerializedName("quantityInterval")
     private Optional<Double> quantityInterval;
     @SerializedName("quantityMax")
@@ -204,27 +204,27 @@ public class UpdateProduct {
     @SerializedName("quantityMin")
     private Optional<Double> quantityMin;
     @SerializedName("rateable")
-    private Boolean rateable;
+    private Optional<Boolean> rateable;
     @SerializedName("rateableOnlyIfOrdered")
-    private Boolean rateableOnlyIfOrdered;
+    private Optional<Boolean> rateableOnlyIfOrdered;
     @SerializedName("references")
-    private Reference[] references;
+    private Optional<Reference[]> references;
     @SerializedName("safetysheet")
-    private String safetysheet;
+    private Optional<String> safetysheet;
     @SerializedName("scalePrices")
-    private ScalePrice[] scalePrices;
+    private Optional<ScalePrice[]> scalePrices;
     @SerializedName("service")
-    private Boolean service;
+    private Optional<Boolean> service;
     @SerializedName("taxCode")
-    private String taxCode;
+    private Optional<String> taxCode;
     @SerializedName("taxRate")
-    private Double taxRate;
+    private Optional<Double> taxRate;
     @SerializedName("thumbnail")
-    private String thumbnail;
+    private Optional<String> thumbnail;
     @SerializedName("unspscs")
-    private Unspsc[] unspscs;
+    private Optional<Unspsc[]> unspscs;
     @SerializedName("visible")
-    private Boolean visible;
+    private Optional<Boolean> visible;
 
     /**
      * Create new instance of UpdateProduct.
@@ -235,14 +235,14 @@ public class UpdateProduct {
     /**
      * ASIN is the unique Amazon article number of the product.
      */
-    public String getAsin() {
+    public Optional<String> getAsin() {
         return this.asin;
     }
 
     /**
      * ASIN is the unique Amazon article number of the product.
      */
-    public void setAsin(String asin) {
+    public void setAsin(Optional<String> asin) {
         this.asin = asin;
     }
 
@@ -251,7 +251,7 @@ public class UpdateProduct {
      * automatically. Please consult your Store Manager before setting a value for
      * this field.
      */
-    public Boolean getAutoConfigure() {
+    public Optional<Boolean> getAutoConfigure() {
         return this.autoConfigure;
     }
 
@@ -260,7 +260,7 @@ public class UpdateProduct {
      * automatically. Please consult your Store Manager before setting a value for
      * this field.
      */
-    public void setAutoConfigure(Boolean autoConfigure) {
+    public void setAutoConfigure(Optional<Boolean> autoConfigure) {
         this.autoConfigure = autoConfigure;
     }
 
@@ -268,7 +268,7 @@ public class UpdateProduct {
      * Availability allows the update of product availability data, e.g. the number
      * of items in stock or the date when the product will be available again.
      */
-    public Availability getAvailability() {
+    public Optional<Availability> getAvailability() {
         return this.availability;
     }
 
@@ -276,21 +276,21 @@ public class UpdateProduct {
      * Availability allows the update of product availability data, e.g. the number
      * of items in stock or the date when the product will be available again.
      */
-    public void setAvailability(Availability availability) {
+    public void setAvailability(Optional<Availability> availability) {
         this.availability = availability;
     }
 
     /**
      * Blobs specifies external data, e.g. images or datasheets.
      */
-    public Blob[] getBlobs() {
+    public Optional<Blob[]> getBlobs() {
         return this.blobs;
     }
 
     /**
      * Blobs specifies external data, e.g. images or datasheets.
      */
-    public void setBlobs(Blob[] blobs) {
+    public void setBlobs(Optional<Blob[]> blobs) {
         this.blobs = blobs;
     }
 
@@ -298,7 +298,7 @@ public class UpdateProduct {
      * BoostFactor represents a positive or negative boost for the product. Please
      * consult your Store Manager before setting a value for this field.
      */
-    public Double getBoostFactor() {
+    public Optional<Double> getBoostFactor() {
         return this.boostFactor;
     }
 
@@ -306,21 +306,21 @@ public class UpdateProduct {
      * BoostFactor represents a positive or negative boost for the product. Please
      * consult your Store Manager before setting a value for this field.
      */
-    public void setBoostFactor(Double boostFactor) {
+    public void setBoostFactor(Optional<Double> boostFactor) {
         this.boostFactor = boostFactor;
     }
 
     /**
      * BPN is the buyer part number of the product.
      */
-    public String getBpn() {
+    public Optional<String> getBpn() {
         return this.bpn;
     }
 
     /**
      * BPN is the buyer part number of the product.
      */
-    public void setBpn(String bpn) {
+    public void setBpn(Optional<String> bpn) {
         this.bpn = bpn;
     }
 
@@ -328,7 +328,7 @@ public class UpdateProduct {
      * CatalogManaged is a flag that indicates whether this product is configurable
      * (or catalog managed in OCI parlance).
      */
-    public Boolean getCatalogManaged() {
+    public Optional<Boolean> getCatalogManaged() {
         return this.catalogManaged;
     }
 
@@ -336,7 +336,7 @@ public class UpdateProduct {
      * CatalogManaged is a flag that indicates whether this product is configurable
      * (or catalog managed in OCI parlance).
      */
-    public void setCatalogManaged(Boolean catalogManaged) {
+    public void setCatalogManaged(Optional<Boolean> catalogManaged) {
         this.catalogManaged = catalogManaged;
     }
 
@@ -344,7 +344,7 @@ public class UpdateProduct {
      * Categories is a list of (supplier-specific) category names the product
      * belongs to.
      */
-    public String[] getCategories() {
+    public Optional<String[]> getCategories() {
         return this.categories;
     }
 
@@ -352,21 +352,21 @@ public class UpdateProduct {
      * Categories is a list of (supplier-specific) category names the product
      * belongs to.
      */
-    public void setCategories(String[] categories) {
+    public void setCategories(Optional<String[]> categories) {
         this.categories = categories;
     }
 
     /**
      * Conditions describes the product conditions, e.g. refurbished or used.
      */
-    public Condition[] getConditions() {
+    public Optional<Condition[]> getConditions() {
         return this.conditions;
     }
 
     /**
      * Conditions describes the product conditions, e.g. refurbished or used.
      */
-    public void setConditions(Condition[] conditions) {
+    public void setConditions(Optional<Condition[]> conditions) {
         this.conditions = conditions;
     }
 
@@ -375,7 +375,7 @@ public class UpdateProduct {
      * product. Please consult your Store Manager before setting a value for this
      * field.
      */
-    public String getContract() {
+    public Optional<String> getContract() {
         return this.contract;
     }
 
@@ -384,7 +384,7 @@ public class UpdateProduct {
      * product. Please consult your Store Manager before setting a value for this
      * field.
      */
-    public void setContract(String contract) {
+    public void setContract(Optional<String> contract) {
         this.contract = contract;
     }
 
@@ -393,7 +393,7 @@ public class UpdateProduct {
      * purchasing this product. See also Contract. Please consult your Store Manager
      * before setting a value for this field.
      */
-    public String getContractItem() {
+    public Optional<String> getContractItem() {
         return this.contractItem;
     }
 
@@ -402,7 +402,7 @@ public class UpdateProduct {
      * purchasing this product. See also Contract. Please consult your Store Manager
      * before setting a value for this field.
      */
-    public void setContractItem(String contractItem) {
+    public void setContractItem(Optional<String> contractItem) {
         this.contractItem = contractItem;
     }
 
@@ -410,7 +410,7 @@ public class UpdateProduct {
      * ConversionDenumerator is the denumerator for calculating price quantities.
      * Please consult your Store Manager before setting a value for this field.
      */
-    public Double getConversionDenumerator() {
+    public Optional<Double> getConversionDenumerator() {
         return this.conversionDenumerator;
     }
 
@@ -418,7 +418,7 @@ public class UpdateProduct {
      * ConversionDenumerator is the denumerator for calculating price quantities.
      * Please consult your Store Manager before setting a value for this field.
      */
-    public void setConversionDenumerator(Double conversionDenumerator) {
+    public void setConversionDenumerator(Optional<Double> conversionDenumerator) {
         this.conversionDenumerator = conversionDenumerator;
     }
 
@@ -426,7 +426,7 @@ public class UpdateProduct {
      * ConversionNumerator is the numerator for calculating price quantities. Please
      * consult your Store Manager before setting a value for this field.
      */
-    public Double getConversionNumerator() {
+    public Optional<Double> getConversionNumerator() {
         return this.conversionNumerator;
     }
 
@@ -434,7 +434,7 @@ public class UpdateProduct {
      * ConversionNumerator is the numerator for calculating price quantities. Please
      * consult your Store Manager before setting a value for this field.
      */
-    public void setConversionNumerator(Double conversionNumerator) {
+    public void setConversionNumerator(Optional<Double> conversionNumerator) {
         this.conversionNumerator = conversionNumerator;
     }
 
@@ -443,7 +443,7 @@ public class UpdateProduct {
      * where the product has been created/produced, e.g. DE. If unspecified, the
      * field is initialized with the catalog's country field.
      */
-    public String getCountry() {
+    public Optional<String> getCountry() {
         return this.country;
     }
 
@@ -452,7 +452,7 @@ public class UpdateProduct {
      * where the product has been created/produced, e.g. DE. If unspecified, the
      * field is initialized with the catalog's country field.
      */
-    public void setCountry(String country) {
+    public void setCountry(Optional<String> country) {
         this.country = country;
     }
 
@@ -460,7 +460,7 @@ public class UpdateProduct {
      * ContentUnit is the content unit of the product, a 3-character ISO code
      * (usually project-specific).
      */
-    public String getContentUnit() {
+    public Optional<String> getContentUnit() {
         return this.contentUnit;
     }
 
@@ -468,7 +468,7 @@ public class UpdateProduct {
      * ContentUnit is the content unit of the product, a 3-character ISO code
      * (usually project-specific).
      */
-    public void setContentUnit(String contentUnit) {
+    public void setContentUnit(Optional<String> contentUnit) {
         this.contentUnit = contentUnit;
     }
 
@@ -476,7 +476,7 @@ public class UpdateProduct {
      * CuPerOu describes the number of content units per order unit, e.g. the 12 in
      * '1 case contains 12 bottles'.
      */
-    public Double getCuPerOu() {
+    public Optional<Double> getCuPerOu() {
         return this.cuPerOu;
     }
 
@@ -484,7 +484,7 @@ public class UpdateProduct {
      * CuPerOu describes the number of content units per order unit, e.g. the 12 in
      * '1 case contains 12 bottles'.
      */
-    public void setCuPerOu(Double cuPerOu) {
+    public void setCuPerOu(Optional<Double> cuPerOu) {
         this.cuPerOu = cuPerOu;
     }
 
@@ -492,7 +492,7 @@ public class UpdateProduct {
      * CustField1 is the CUST_FIELD1 of the SAP OCI specification. It has a maximum
      * length of 10 characters.
      */
-    public String getCustField1() {
+    public Optional<String> getCustField1() {
         return this.custField1;
     }
 
@@ -500,7 +500,7 @@ public class UpdateProduct {
      * CustField1 is the CUST_FIELD1 of the SAP OCI specification. It has a maximum
      * length of 10 characters.
      */
-    public void setCustField1(String custField1) {
+    public void setCustField1(Optional<String> custField1) {
         this.custField1 = custField1;
     }
 
@@ -508,7 +508,7 @@ public class UpdateProduct {
      * CustField2 is the CUST_FIELD2 of the SAP OCI specification. It has a maximum
      * length of 10 characters.
      */
-    public String getCustField2() {
+    public Optional<String> getCustField2() {
         return this.custField2;
     }
 
@@ -516,7 +516,7 @@ public class UpdateProduct {
      * CustField2 is the CUST_FIELD2 of the SAP OCI specification. It has a maximum
      * length of 10 characters.
      */
-    public void setCustField2(String custField2) {
+    public void setCustField2(Optional<String> custField2) {
         this.custField2 = custField2;
     }
 
@@ -524,7 +524,7 @@ public class UpdateProduct {
      * CustField3 is the CUST_FIELD3 of the SAP OCI specification. It has a maximum
      * length of 10 characters.
      */
-    public String getCustField3() {
+    public Optional<String> getCustField3() {
         return this.custField3;
     }
 
@@ -532,7 +532,7 @@ public class UpdateProduct {
      * CustField3 is the CUST_FIELD3 of the SAP OCI specification. It has a maximum
      * length of 10 characters.
      */
-    public void setCustField3(String custField3) {
+    public void setCustField3(Optional<String> custField3) {
         this.custField3 = custField3;
     }
 
@@ -540,7 +540,7 @@ public class UpdateProduct {
      * CustField4 is the CUST_FIELD4 of the SAP OCI specification. It has a maximum
      * length of 20 characters.
      */
-    public String getCustField4() {
+    public Optional<String> getCustField4() {
         return this.custField4;
     }
 
@@ -548,7 +548,7 @@ public class UpdateProduct {
      * CustField4 is the CUST_FIELD4 of the SAP OCI specification. It has a maximum
      * length of 20 characters.
      */
-    public void setCustField4(String custField4) {
+    public void setCustField4(Optional<String> custField4) {
         this.custField4 = custField4;
     }
 
@@ -556,7 +556,7 @@ public class UpdateProduct {
      * CustField5 is the CUST_FIELD5 of the SAP OCI specification. It has a maximum
      * length of 50 characters.
      */
-    public String getCustField5() {
+    public Optional<String> getCustField5() {
         return this.custField5;
     }
 
@@ -564,7 +564,7 @@ public class UpdateProduct {
      * CustField5 is the CUST_FIELD5 of the SAP OCI specification. It has a maximum
      * length of 50 characters.
      */
-    public void setCustField5(String custField5) {
+    public void setCustField5(Optional<String> custField5) {
         this.custField5 = custField5;
     }
 
@@ -572,7 +572,7 @@ public class UpdateProduct {
      * CustFields is an array of generic name/value pairs for customer-specific
      * attributes.
      */
-    public CustField[] getCustFields() {
+    public Optional<CustField[]> getCustFields() {
         return this.custFields;
     }
 
@@ -580,7 +580,7 @@ public class UpdateProduct {
      * CustFields is an array of generic name/value pairs for customer-specific
      * attributes.
      */
-    public void setCustFields(CustField[] custFields) {
+    public void setCustFields(Optional<CustField[]> custFields) {
         this.custFields = custFields;
     }
 
@@ -588,7 +588,7 @@ public class UpdateProduct {
      * CustomField10 represents the 10th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField10() {
+    public Optional<String> getCustomField10() {
         return this.customField10;
     }
 
@@ -596,7 +596,7 @@ public class UpdateProduct {
      * CustomField10 represents the 10th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField10(String customField10) {
+    public void setCustomField10(Optional<String> customField10) {
         this.customField10 = customField10;
     }
 
@@ -604,7 +604,7 @@ public class UpdateProduct {
      * CustomField11 represents the 11th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField11() {
+    public Optional<String> getCustomField11() {
         return this.customField11;
     }
 
@@ -612,7 +612,7 @@ public class UpdateProduct {
      * CustomField11 represents the 11th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField11(String customField11) {
+    public void setCustomField11(Optional<String> customField11) {
         this.customField11 = customField11;
     }
 
@@ -620,7 +620,7 @@ public class UpdateProduct {
      * CustomField12 represents the 12th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField12() {
+    public Optional<String> getCustomField12() {
         return this.customField12;
     }
 
@@ -628,7 +628,7 @@ public class UpdateProduct {
      * CustomField12 represents the 12th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField12(String customField12) {
+    public void setCustomField12(Optional<String> customField12) {
         this.customField12 = customField12;
     }
 
@@ -636,7 +636,7 @@ public class UpdateProduct {
      * CustomField13 represents the 13th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField13() {
+    public Optional<String> getCustomField13() {
         return this.customField13;
     }
 
@@ -644,7 +644,7 @@ public class UpdateProduct {
      * CustomField13 represents the 13th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField13(String customField13) {
+    public void setCustomField13(Optional<String> customField13) {
         this.customField13 = customField13;
     }
 
@@ -652,7 +652,7 @@ public class UpdateProduct {
      * CustomField14 represents the 14th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField14() {
+    public Optional<String> getCustomField14() {
         return this.customField14;
     }
 
@@ -660,7 +660,7 @@ public class UpdateProduct {
      * CustomField14 represents the 14th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField14(String customField14) {
+    public void setCustomField14(Optional<String> customField14) {
         this.customField14 = customField14;
     }
 
@@ -668,7 +668,7 @@ public class UpdateProduct {
      * CustomField15 represents the 15th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField15() {
+    public Optional<String> getCustomField15() {
         return this.customField15;
     }
 
@@ -676,7 +676,7 @@ public class UpdateProduct {
      * CustomField15 represents the 15th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField15(String customField15) {
+    public void setCustomField15(Optional<String> customField15) {
         this.customField15 = customField15;
     }
 
@@ -684,7 +684,7 @@ public class UpdateProduct {
      * CustomField16 represents the 16th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField16() {
+    public Optional<String> getCustomField16() {
         return this.customField16;
     }
 
@@ -692,7 +692,7 @@ public class UpdateProduct {
      * CustomField16 represents the 16th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField16(String customField16) {
+    public void setCustomField16(Optional<String> customField16) {
         this.customField16 = customField16;
     }
 
@@ -700,7 +700,7 @@ public class UpdateProduct {
      * CustomField17 represents the 17th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField17() {
+    public Optional<String> getCustomField17() {
         return this.customField17;
     }
 
@@ -708,7 +708,7 @@ public class UpdateProduct {
      * CustomField17 represents the 17th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField17(String customField17) {
+    public void setCustomField17(Optional<String> customField17) {
         this.customField17 = customField17;
     }
 
@@ -716,7 +716,7 @@ public class UpdateProduct {
      * CustomField18 represents the 18th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField18() {
+    public Optional<String> getCustomField18() {
         return this.customField18;
     }
 
@@ -724,7 +724,7 @@ public class UpdateProduct {
      * CustomField18 represents the 18th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField18(String customField18) {
+    public void setCustomField18(Optional<String> customField18) {
         this.customField18 = customField18;
     }
 
@@ -732,7 +732,7 @@ public class UpdateProduct {
      * CustomField19 represents the 19th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField19() {
+    public Optional<String> getCustomField19() {
         return this.customField19;
     }
 
@@ -740,7 +740,7 @@ public class UpdateProduct {
      * CustomField19 represents the 19th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField19(String customField19) {
+    public void setCustomField19(Optional<String> customField19) {
         this.customField19 = customField19;
     }
 
@@ -748,7 +748,7 @@ public class UpdateProduct {
      * CustomField20 represents the 20th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField20() {
+    public Optional<String> getCustomField20() {
         return this.customField20;
     }
 
@@ -756,7 +756,7 @@ public class UpdateProduct {
      * CustomField20 represents the 20th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField20(String customField20) {
+    public void setCustomField20(Optional<String> customField20) {
         this.customField20 = customField20;
     }
 
@@ -764,7 +764,7 @@ public class UpdateProduct {
      * CustomField21 represents the 21st customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField21() {
+    public Optional<String> getCustomField21() {
         return this.customField21;
     }
 
@@ -772,7 +772,7 @@ public class UpdateProduct {
      * CustomField21 represents the 21st customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField21(String customField21) {
+    public void setCustomField21(Optional<String> customField21) {
         this.customField21 = customField21;
     }
 
@@ -780,7 +780,7 @@ public class UpdateProduct {
      * CustomField22 represents the 22nd customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField22() {
+    public Optional<String> getCustomField22() {
         return this.customField22;
     }
 
@@ -788,7 +788,7 @@ public class UpdateProduct {
      * CustomField22 represents the 22nd customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField22(String customField22) {
+    public void setCustomField22(Optional<String> customField22) {
         this.customField22 = customField22;
     }
 
@@ -796,7 +796,7 @@ public class UpdateProduct {
      * CustomField23 represents the 23rd customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField23() {
+    public Optional<String> getCustomField23() {
         return this.customField23;
     }
 
@@ -804,7 +804,7 @@ public class UpdateProduct {
      * CustomField23 represents the 23rd customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField23(String customField23) {
+    public void setCustomField23(Optional<String> customField23) {
         this.customField23 = customField23;
     }
 
@@ -812,7 +812,7 @@ public class UpdateProduct {
      * CustomField24 represents the 24th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField24() {
+    public Optional<String> getCustomField24() {
         return this.customField24;
     }
 
@@ -820,7 +820,7 @@ public class UpdateProduct {
      * CustomField24 represents the 24th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField24(String customField24) {
+    public void setCustomField24(Optional<String> customField24) {
         this.customField24 = customField24;
     }
 
@@ -828,7 +828,7 @@ public class UpdateProduct {
      * CustomField25 represents the 25th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField25() {
+    public Optional<String> getCustomField25() {
         return this.customField25;
     }
 
@@ -836,7 +836,7 @@ public class UpdateProduct {
      * CustomField25 represents the 25th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField25(String customField25) {
+    public void setCustomField25(Optional<String> customField25) {
         this.customField25 = customField25;
     }
 
@@ -844,7 +844,7 @@ public class UpdateProduct {
      * CustomField26 represents the 26th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField26() {
+    public Optional<String> getCustomField26() {
         return this.customField26;
     }
 
@@ -852,7 +852,7 @@ public class UpdateProduct {
      * CustomField26 represents the 26th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField26(String customField26) {
+    public void setCustomField26(Optional<String> customField26) {
         this.customField26 = customField26;
     }
 
@@ -860,7 +860,7 @@ public class UpdateProduct {
      * CustomField27 represents the 27th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField27() {
+    public Optional<String> getCustomField27() {
         return this.customField27;
     }
 
@@ -868,7 +868,7 @@ public class UpdateProduct {
      * CustomField27 represents the 27th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField27(String customField27) {
+    public void setCustomField27(Optional<String> customField27) {
         this.customField27 = customField27;
     }
 
@@ -876,7 +876,7 @@ public class UpdateProduct {
      * CustomField28 represents the 28th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField28() {
+    public Optional<String> getCustomField28() {
         return this.customField28;
     }
 
@@ -884,7 +884,7 @@ public class UpdateProduct {
      * CustomField28 represents the 28th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField28(String customField28) {
+    public void setCustomField28(Optional<String> customField28) {
         this.customField28 = customField28;
     }
 
@@ -892,7 +892,7 @@ public class UpdateProduct {
      * CustomField29 represents the 29th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField29() {
+    public Optional<String> getCustomField29() {
         return this.customField29;
     }
 
@@ -900,7 +900,7 @@ public class UpdateProduct {
      * CustomField29 represents the 29th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField29(String customField29) {
+    public void setCustomField29(Optional<String> customField29) {
         this.customField29 = customField29;
     }
 
@@ -908,7 +908,7 @@ public class UpdateProduct {
      * CustomField30 represents the 30th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public String getCustomField30() {
+    public Optional<String> getCustomField30() {
         return this.customField30;
     }
 
@@ -916,7 +916,7 @@ public class UpdateProduct {
      * CustomField30 represents the 30th customer-specific field. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setCustomField30(String customField30) {
+    public void setCustomField30(Optional<String> customField30) {
         this.customField30 = customField30;
     }
 
@@ -924,7 +924,7 @@ public class UpdateProduct {
      * CustomField6 represents the 6th customer-specific field. Please consult your
      * Store Manager before setting a value for this field.
      */
-    public String getCustomField6() {
+    public Optional<String> getCustomField6() {
         return this.customField6;
     }
 
@@ -932,7 +932,7 @@ public class UpdateProduct {
      * CustomField6 represents the 6th customer-specific field. Please consult your
      * Store Manager before setting a value for this field.
      */
-    public void setCustomField6(String customField6) {
+    public void setCustomField6(Optional<String> customField6) {
         this.customField6 = customField6;
     }
 
@@ -940,7 +940,7 @@ public class UpdateProduct {
      * CustomField7 represents the 7th customer-specific field. Please consult your
      * Store Manager before setting a value for this field.
      */
-    public String getCustomField7() {
+    public Optional<String> getCustomField7() {
         return this.customField7;
     }
 
@@ -948,7 +948,7 @@ public class UpdateProduct {
      * CustomField7 represents the 7th customer-specific field. Please consult your
      * Store Manager before setting a value for this field.
      */
-    public void setCustomField7(String customField7) {
+    public void setCustomField7(Optional<String> customField7) {
         this.customField7 = customField7;
     }
 
@@ -956,7 +956,7 @@ public class UpdateProduct {
      * CustomField8 represents the 8th customer-specific field. Please consult your
      * Store Manager before setting a value for this field.
      */
-    public String getCustomField8() {
+    public Optional<String> getCustomField8() {
         return this.customField8;
     }
 
@@ -964,7 +964,7 @@ public class UpdateProduct {
      * CustomField8 represents the 8th customer-specific field. Please consult your
      * Store Manager before setting a value for this field.
      */
-    public void setCustomField8(String customField8) {
+    public void setCustomField8(Optional<String> customField8) {
         this.customField8 = customField8;
     }
 
@@ -972,7 +972,7 @@ public class UpdateProduct {
      * CustomField9 represents the 9th customer-specific field. Please consult your
      * Store Manager before setting a value for this field.
      */
-    public String getCustomField9() {
+    public Optional<String> getCustomField9() {
         return this.customField9;
     }
 
@@ -980,7 +980,7 @@ public class UpdateProduct {
      * CustomField9 represents the 9th customer-specific field. Please consult your
      * Store Manager before setting a value for this field.
      */
-    public void setCustomField9(String customField9) {
+    public void setCustomField9(Optional<String> customField9) {
         this.customField9 = customField9;
     }
 
@@ -988,7 +988,7 @@ public class UpdateProduct {
      * Datasheet is the name of an datasheet file (in the media files) or a URL to
      * the datasheet on the internet.
      */
-    public String getDatasheet() {
+    public Optional<String> getDatasheet() {
         return this.datasheet;
     }
 
@@ -996,35 +996,35 @@ public class UpdateProduct {
      * Datasheet is the name of an datasheet file (in the media files) or a URL to
      * the datasheet on the internet.
      */
-    public void setDatasheet(String datasheet) {
+    public void setDatasheet(Optional<String> datasheet) {
         this.datasheet = datasheet;
     }
 
     /**
      * Description of the product.
      */
-    public String getDescription() {
+    public Optional<String> getDescription() {
         return this.description;
     }
 
     /**
      * Description of the product.
      */
-    public void setDescription(String description) {
+    public void setDescription(Optional<String> description) {
         this.description = description;
     }
 
     /**
      * Eclasses is a list of eCl@ss categories the product belongs to.
      */
-    public Eclass[] getEclasses() {
+    public Optional<Eclass[]> getEclasses() {
         return this.eclasses;
     }
 
     /**
      * Eclasses is a list of eCl@ss categories the product belongs to.
      */
-    public void setEclasses(Eclass[] eclasses) {
+    public void setEclasses(Optional<Eclass[]> eclasses) {
         this.eclasses = eclasses;
     }
 
@@ -1032,7 +1032,7 @@ public class UpdateProduct {
      * erpGroupSupplier is the material group of the product on the
      * merchant-/supplier-side.
      */
-    public String getErpGroupSupplier() {
+    public Optional<String> getErpGroupSupplier() {
         return this.erpGroupSupplier;
     }
 
@@ -1040,7 +1040,7 @@ public class UpdateProduct {
      * erpGroupSupplier is the material group of the product on the
      * merchant-/supplier-side.
      */
-    public void setErpGroupSupplier(String erpGroupSupplier) {
+    public void setErpGroupSupplier(Optional<String> erpGroupSupplier) {
         this.erpGroupSupplier = erpGroupSupplier;
     }
 
@@ -1048,7 +1048,7 @@ public class UpdateProduct {
      * Excluded is a flag that indicates whether to exclude this product from the
      * catalog. If true, this product will not be published into the live area.
      */
-    public Boolean getExcluded() {
+    public Optional<Boolean> getExcluded() {
         return this.excluded;
     }
 
@@ -1056,35 +1056,35 @@ public class UpdateProduct {
      * Excluded is a flag that indicates whether to exclude this product from the
      * catalog. If true, this product will not be published into the live area.
      */
-    public void setExcluded(Boolean excluded) {
+    public void setExcluded(Optional<Boolean> excluded) {
         this.excluded = excluded;
     }
 
     /**
      * ExtCategory is the EXT_CATEGORY field of the SAP OCI specification.
      */
-    public String getExtCategory() {
+    public Optional<String> getExtCategory() {
         return this.extCategory;
     }
 
     /**
      * ExtCategory is the EXT_CATEGORY field of the SAP OCI specification.
      */
-    public void setExtCategory(String extCategory) {
+    public void setExtCategory(Optional<String> extCategory) {
         this.extCategory = extCategory;
     }
 
     /**
      * ExtCategoryID is the EXT_CATEGORY_ID field of the SAP OCI specification.
      */
-    public String getExtCategoryId() {
+    public Optional<String> getExtCategoryId() {
         return this.extCategoryId;
     }
 
     /**
      * ExtCategoryID is the EXT_CATEGORY_ID field of the SAP OCI specification.
      */
-    public void setExtCategoryId(String extCategoryId) {
+    public void setExtCategoryId(Optional<String> extCategoryId) {
         this.extCategoryId = extCategoryId;
     }
 
@@ -1093,7 +1093,7 @@ public class UpdateProduct {
      * configurable. Please consult your Store Manager before setting a value for
      * this field.
      */
-    public String getExtConfigForm() {
+    public Optional<String> getExtConfigForm() {
         return this.extConfigForm;
     }
 
@@ -1102,7 +1102,7 @@ public class UpdateProduct {
      * configurable. Please consult your Store Manager before setting a value for
      * this field.
      */
-    public void setExtConfigForm(String extConfigForm) {
+    public void setExtConfigForm(Optional<String> extConfigForm) {
         this.extConfigForm = extConfigForm;
     }
 
@@ -1111,7 +1111,7 @@ public class UpdateProduct {
      * product configurable. See also ExtConfigForm. Please consult your Store
      * Manager before setting a value for this field.
      */
-    public String getExtConfigService() {
+    public Optional<String> getExtConfigService() {
         return this.extConfigService;
     }
 
@@ -1120,7 +1120,7 @@ public class UpdateProduct {
      * product configurable. See also ExtConfigForm. Please consult your Store
      * Manager before setting a value for this field.
      */
-    public void setExtConfigService(String extConfigService) {
+    public void setExtConfigService(Optional<String> extConfigService) {
         this.extConfigService = extConfigService;
     }
 
@@ -1128,7 +1128,7 @@ public class UpdateProduct {
      * ExtProductID is the EXT_PRODUCT_ID field of the SAP OCI specification. It is
      * e.g. required for configurable/catalog managed products.
      */
-    public String getExtProductId() {
+    public Optional<String> getExtProductId() {
         return this.extProductId;
     }
 
@@ -1136,35 +1136,35 @@ public class UpdateProduct {
      * ExtProductID is the EXT_PRODUCT_ID field of the SAP OCI specification. It is
      * e.g. required for configurable/catalog managed products.
      */
-    public void setExtProductId(String extProductId) {
+    public void setExtProductId(Optional<String> extProductId) {
         this.extProductId = extProductId;
     }
 
     /**
      * ExtSchemaType is the EXT_SCHEMA_TYPE field of the SAP OCI specification.
      */
-    public String getExtSchemaType() {
+    public Optional<String> getExtSchemaType() {
         return this.extSchemaType;
     }
 
     /**
      * ExtSchemaType is the EXT_SCHEMA_TYPE field of the SAP OCI specification.
      */
-    public void setExtSchemaType(String extSchemaType) {
+    public void setExtSchemaType(Optional<String> extSchemaType) {
         this.extSchemaType = extSchemaType;
     }
 
     /**
      * Features defines product features, i.e. additional properties of the product.
      */
-    public Feature[] getFeatures() {
+    public Optional<Feature[]> getFeatures() {
         return this.features;
     }
 
     /**
      * Features defines product features, i.e. additional properties of the product.
      */
-    public void setFeatures(Feature[] features) {
+    public void setFeatures(Optional<Feature[]> features) {
         this.features = features;
     }
 
@@ -1172,7 +1172,7 @@ public class UpdateProduct {
      * GLAccount represents the GL account number to use for this product. Please
      * consult your Store Manager before setting a value for this field.
      */
-    public String getGlAccount() {
+    public Optional<String> getGlAccount() {
         return this.glAccount;
     }
 
@@ -1180,35 +1180,35 @@ public class UpdateProduct {
      * GLAccount represents the GL account number to use for this product. Please
      * consult your Store Manager before setting a value for this field.
      */
-    public void setGlAccount(String glAccount) {
+    public void setGlAccount(Optional<String> glAccount) {
         this.glAccount = glAccount;
     }
 
     /**
      * GTIN is the global trade item number of the product (used to be EAN).
      */
-    public String getGtin() {
+    public Optional<String> getGtin() {
         return this.gtin;
     }
 
     /**
      * GTIN is the global trade item number of the product (used to be EAN).
      */
-    public void setGtin(String gtin) {
+    public void setGtin(Optional<String> gtin) {
         this.gtin = gtin;
     }
 
     /**
      * Hazmats classifies hazardous/dangerous goods.
      */
-    public Hazmat[] getHazmats() {
+    public Optional<Hazmat[]> getHazmats() {
         return this.hazmats;
     }
 
     /**
      * Hazmats classifies hazardous/dangerous goods.
      */
-    public void setHazmats(Hazmat[] hazmats) {
+    public void setHazmats(Optional<Hazmat[]> hazmats) {
         this.hazmats = hazmats;
     }
 
@@ -1216,7 +1216,7 @@ public class UpdateProduct {
      * Image is the name of an image file (in the media files) or a URL to the image
      * on the internet.
      */
-    public String getImage() {
+    public Optional<String> getImage() {
         return this.image;
     }
 
@@ -1224,7 +1224,7 @@ public class UpdateProduct {
      * Image is the name of an image file (in the media files) or a URL to the image
      * on the internet.
      */
-    public void setImage(String image) {
+    public void setImage(Optional<String> image) {
         this.image = image;
     }
 
@@ -1232,7 +1232,7 @@ public class UpdateProduct {
      * Incomplete is a flag that indicates whether this product is incomplete.
      * Please consult your Store Manager before setting a value for this field.
      */
-    public Boolean getIncomplete() {
+    public Optional<Boolean> getIncomplete() {
         return this.incomplete;
     }
 
@@ -1240,21 +1240,21 @@ public class UpdateProduct {
      * Incomplete is a flag that indicates whether this product is incomplete.
      * Please consult your Store Manager before setting a value for this field.
      */
-    public void setIncomplete(Boolean incomplete) {
+    public void setIncomplete(Optional<Boolean> incomplete) {
         this.incomplete = incomplete;
     }
 
     /**
      * Intrastat specifies required data for Intrastat messages.
      */
-    public Intrastat getIntrastat() {
+    public Optional<Intrastat> getIntrastat() {
         return this.intrastat;
     }
 
     /**
      * Intrastat specifies required data for Intrastat messages.
      */
-    public void setIntrastat(Intrastat intrastat) {
+    public void setIntrastat(Optional<Intrastat> intrastat) {
         this.intrastat = intrastat;
     }
 
@@ -1263,7 +1263,7 @@ public class UpdateProduct {
      * purchase a password, e.g. for a software product. Please consult your Store
      * Manager before setting a value for this field.
      */
-    public Boolean getIsPassword() {
+    public Optional<Boolean> getIsPassword() {
         return this.isPassword;
     }
 
@@ -1272,7 +1272,7 @@ public class UpdateProduct {
      * purchase a password, e.g. for a software product. Please consult your Store
      * Manager before setting a value for this field.
      */
-    public void setIsPassword(Boolean isPassword) {
+    public void setIsPassword(Optional<Boolean> isPassword) {
         this.isPassword = isPassword;
     }
 
@@ -1281,7 +1281,7 @@ public class UpdateProduct {
      * will not be calculated by the catalog. Please consult your Store Manager
      * before setting a value for this field.
      */
-    public Boolean getKeepPrice() {
+    public Optional<Boolean> getKeepPrice() {
         return this.keepPrice;
     }
 
@@ -1290,21 +1290,21 @@ public class UpdateProduct {
      * will not be calculated by the catalog. Please consult your Store Manager
      * before setting a value for this field.
      */
-    public void setKeepPrice(Boolean keepPrice) {
+    public void setKeepPrice(Optional<Boolean> keepPrice) {
         this.keepPrice = keepPrice;
     }
 
     /**
      * Keywords is a list of aliases for the product.
      */
-    public String[] getKeywords() {
+    public Optional<String[]> getKeywords() {
         return this.keywords;
     }
 
     /**
      * Keywords is a list of aliases for the product.
      */
-    public void setKeywords(String[] keywords) {
+    public void setKeywords(Optional<String[]> keywords) {
         this.keywords = keywords;
     }
 
@@ -1325,70 +1325,70 @@ public class UpdateProduct {
     /**
      * ListPrice is the net list price of the product.
      */
-    public Double getListPrice() {
+    public Optional<Double> getListPrice() {
         return this.listPrice;
     }
 
     /**
      * ListPrice is the net list price of the product.
      */
-    public void setListPrice(Double listPrice) {
+    public void setListPrice(Optional<Double> listPrice) {
         this.listPrice = listPrice;
     }
 
     /**
      * Manufactcode is the manufacturer code as used in the SAP OCI specification.
      */
-    public String getManufactcode() {
+    public Optional<String> getManufactcode() {
         return this.manufactcode;
     }
 
     /**
      * Manufactcode is the manufacturer code as used in the SAP OCI specification.
      */
-    public void setManufactcode(String manufactcode) {
+    public void setManufactcode(Optional<String> manufactcode) {
         this.manufactcode = manufactcode;
     }
 
     /**
      * Manufacturer is the name of the manufacturer.
      */
-    public String getManufacturer() {
+    public Optional<String> getManufacturer() {
         return this.manufacturer;
     }
 
     /**
      * Manufacturer is the name of the manufacturer.
      */
-    public void setManufacturer(String manufacturer) {
+    public void setManufacturer(Optional<String> manufacturer) {
         this.manufacturer = manufacturer;
     }
 
     /**
      * Matgroup is the material group of the product on the buy-side.
      */
-    public String getMatgroup() {
+    public Optional<String> getMatgroup() {
         return this.matgroup;
     }
 
     /**
      * Matgroup is the material group of the product on the buy-side.
      */
-    public void setMatgroup(String matgroup) {
+    public void setMatgroup(Optional<String> matgroup) {
         this.matgroup = matgroup;
     }
 
     /**
      * MPN is the manufacturer part number.
      */
-    public String getMpn() {
+    public Optional<String> getMpn() {
         return this.mpn;
     }
 
     /**
      * MPN is the manufacturer part number.
      */
-    public void setMpn(String mpn) {
+    public void setMpn(Optional<String> mpn) {
         this.mpn = mpn;
     }
 
@@ -1396,7 +1396,7 @@ public class UpdateProduct {
      * MultiSupplierID represents an optional field for the unique identifier of a
      * supplier in a multi-supplier catalog.
      */
-    public String getMultiSupplierId() {
+    public Optional<String> getMultiSupplierId() {
         return this.multiSupplierId;
     }
 
@@ -1404,7 +1404,7 @@ public class UpdateProduct {
      * MultiSupplierID represents an optional field for the unique identifier of a
      * supplier in a multi-supplier catalog.
      */
-    public void setMultiSupplierId(String multiSupplierId) {
+    public void setMultiSupplierId(Optional<String> multiSupplierId) {
         this.multiSupplierId = multiSupplierId;
     }
 
@@ -1412,7 +1412,7 @@ public class UpdateProduct {
      * MultiSupplierName represents an optional field for the name of the supplier
      * in a multi-supplier catalog.
      */
-    public String getMultiSupplierName() {
+    public Optional<String> getMultiSupplierName() {
         return this.multiSupplierName;
     }
 
@@ -1420,21 +1420,21 @@ public class UpdateProduct {
      * MultiSupplierName represents an optional field for the name of the supplier
      * in a multi-supplier catalog.
      */
-    public void setMultiSupplierName(String multiSupplierName) {
+    public void setMultiSupplierName(Optional<String> multiSupplierName) {
         this.multiSupplierName = multiSupplierName;
     }
 
     /**
      * Name of the product.
      */
-    public String getName() {
+    public Optional<String> getName() {
         return this.name;
     }
 
     /**
      * Name of the product.
      */
-    public void setName(String name) {
+    public void setName(Optional<String> name) {
         this.name = name;
     }
 
@@ -1443,7 +1443,7 @@ public class UpdateProduct {
      * goods receipt process. Please consult your Store Manager before setting a
      * value for this field.
      */
-    public Boolean getNeedsGoodsReceipt() {
+    public Optional<Boolean> getNeedsGoodsReceipt() {
         return this.needsGoodsReceipt;
     }
 
@@ -1452,7 +1452,7 @@ public class UpdateProduct {
      * goods receipt process. Please consult your Store Manager before setting a
      * value for this field.
      */
-    public void setNeedsGoodsReceipt(Boolean needsGoodsReceipt) {
+    public void setNeedsGoodsReceipt(Optional<Boolean> needsGoodsReceipt) {
         this.needsGoodsReceipt = needsGoodsReceipt;
     }
 
@@ -1460,7 +1460,7 @@ public class UpdateProduct {
      * NFBasePrice represents a part for calculating metal surcharges. Please
      * consult your Store Manager before setting a value for this field.
      */
-    public Double getNfBasePrice() {
+    public Optional<Double> getNfBasePrice() {
         return this.nfBasePrice;
     }
 
@@ -1468,7 +1468,7 @@ public class UpdateProduct {
      * NFBasePrice represents a part for calculating metal surcharges. Please
      * consult your Store Manager before setting a value for this field.
      */
-    public void setNfBasePrice(Double nfBasePrice) {
+    public void setNfBasePrice(Optional<Double> nfBasePrice) {
         this.nfBasePrice = nfBasePrice;
     }
 
@@ -1476,7 +1476,7 @@ public class UpdateProduct {
      * NFBasePriceQuantity represents a part for calculating metal surcharges.
      * Please consult your Store Manager before setting a value for this field.
      */
-    public Double getNfBasePriceQuantity() {
+    public Optional<Double> getNfBasePriceQuantity() {
         return this.nfBasePriceQuantity;
     }
 
@@ -1484,7 +1484,7 @@ public class UpdateProduct {
      * NFBasePriceQuantity represents a part for calculating metal surcharges.
      * Please consult your Store Manager before setting a value for this field.
      */
-    public void setNfBasePriceQuantity(Double nfBasePriceQuantity) {
+    public void setNfBasePriceQuantity(Optional<Double> nfBasePriceQuantity) {
         this.nfBasePriceQuantity = nfBasePriceQuantity;
     }
 
@@ -1492,7 +1492,7 @@ public class UpdateProduct {
      * NFCndID represents the key to calculate metal surcharges. Please consult your
      * Store Manager before setting a value for this field.
      */
-    public String getNfCndId() {
+    public Optional<String> getNfCndId() {
         return this.nfCndId;
     }
 
@@ -1500,7 +1500,7 @@ public class UpdateProduct {
      * NFCndID represents the key to calculate metal surcharges. Please consult your
      * Store Manager before setting a value for this field.
      */
-    public void setNfCndId(String nfCndId) {
+    public void setNfCndId(Optional<String> nfCndId) {
         this.nfCndId = nfCndId;
     }
 
@@ -1508,7 +1508,7 @@ public class UpdateProduct {
      * NFScale represents a part for calculating metal surcharges. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public Double getNfScale() {
+    public Optional<Double> getNfScale() {
         return this.nfScale;
     }
 
@@ -1516,7 +1516,7 @@ public class UpdateProduct {
      * NFScale represents a part for calculating metal surcharges. Please consult
      * your Store Manager before setting a value for this field.
      */
-    public void setNfScale(Double nfScale) {
+    public void setNfScale(Optional<Double> nfScale) {
         this.nfScale = nfScale;
     }
 
@@ -1524,7 +1524,7 @@ public class UpdateProduct {
      * NFScaleQuantity represents a part for calculating metal surcharges. Please
      * consult your Store Manager before setting a value for this field.
      */
-    public Double getNfScaleQuantity() {
+    public Optional<Double> getNfScaleQuantity() {
         return this.nfScaleQuantity;
     }
 
@@ -1532,7 +1532,7 @@ public class UpdateProduct {
      * NFScaleQuantity represents a part for calculating metal surcharges. Please
      * consult your Store Manager before setting a value for this field.
      */
-    public void setNfScaleQuantity(Double nfScaleQuantity) {
+    public void setNfScaleQuantity(Optional<Double> nfScaleQuantity) {
         this.nfScaleQuantity = nfScaleQuantity;
     }
 
@@ -1541,7 +1541,7 @@ public class UpdateProduct {
      * the end-user when shopping. Please consult your Store Manager before setting
      * a value for this field.
      */
-    public Boolean getOrderable() {
+    public Optional<Boolean> getOrderable() {
         return this.orderable;
     }
 
@@ -1550,7 +1550,7 @@ public class UpdateProduct {
      * the end-user when shopping. Please consult your Store Manager before setting
      * a value for this field.
      */
-    public void setOrderable(Boolean orderable) {
+    public void setOrderable(Optional<Boolean> orderable) {
         this.orderable = orderable;
     }
 
@@ -1558,7 +1558,7 @@ public class UpdateProduct {
      * OrderUnit is the order unit of the product, a 3-character ISO code (usually
      * project-specific).
      */
-    public String getOrderUnit() {
+    public Optional<String> getOrderUnit() {
         return this.orderUnit;
     }
 
@@ -1566,21 +1566,21 @@ public class UpdateProduct {
      * OrderUnit is the order unit of the product, a 3-character ISO code (usually
      * project-specific).
      */
-    public void setOrderUnit(String orderUnit) {
+    public void setOrderUnit(Optional<String> orderUnit) {
         this.orderUnit = orderUnit;
     }
 
     /**
      * Price is the net price (per order unit) of the product for the end-user.
      */
-    public Double getPrice() {
+    public Optional<Double> getPrice() {
         return this.price;
     }
 
     /**
      * Price is the net price (per order unit) of the product for the end-user.
      */
-    public void setPrice(Double price) {
+    public void setPrice(Optional<Double> price) {
         this.price = price;
     }
 
@@ -1588,7 +1588,7 @@ public class UpdateProduct {
      * PriceFormula represents the formula to calculate the price of the product.
      * Please consult your Store Manager before setting a value for this field.
      */
-    public String getPriceFormula() {
+    public Optional<String> getPriceFormula() {
         return this.priceFormula;
     }
 
@@ -1596,21 +1596,21 @@ public class UpdateProduct {
      * PriceFormula represents the formula to calculate the price of the product.
      * Please consult your Store Manager before setting a value for this field.
      */
-    public void setPriceFormula(String priceFormula) {
+    public void setPriceFormula(Optional<String> priceFormula) {
         this.priceFormula = priceFormula;
     }
 
     /**
      * PriceQty is the quantity for which the price is specified (default: 1.0).
      */
-    public Double getPriceQty() {
+    public Optional<Double> getPriceQty() {
         return this.priceQty;
     }
 
     /**
      * PriceQty is the quantity for which the price is specified (default: 1.0).
      */
-    public void setPriceQty(Double priceQty) {
+    public void setPriceQty(Optional<Double> priceQty) {
         this.priceQty = priceQty;
     }
 
@@ -1665,7 +1665,7 @@ public class UpdateProduct {
      * end-users. Please consult your Store Manager before setting a value for this
      * field.
      */
-    public Boolean getRateable() {
+    public Optional<Boolean> getRateable() {
         return this.rateable;
     }
 
@@ -1674,7 +1674,7 @@ public class UpdateProduct {
      * end-users. Please consult your Store Manager before setting a value for this
      * field.
      */
-    public void setRateable(Boolean rateable) {
+    public void setRateable(Optional<Boolean> rateable) {
         this.rateable = rateable;
     }
 
@@ -1683,7 +1683,7 @@ public class UpdateProduct {
      * rated only after being ordered. Please consult your Store Manager before
      * setting a value for this field.
      */
-    public Boolean getRateableOnlyIfOrdered() {
+    public Optional<Boolean> getRateableOnlyIfOrdered() {
         return this.rateableOnlyIfOrdered;
     }
 
@@ -1692,7 +1692,7 @@ public class UpdateProduct {
      * rated only after being ordered. Please consult your Store Manager before
      * setting a value for this field.
      */
-    public void setRateableOnlyIfOrdered(Boolean rateableOnlyIfOrdered) {
+    public void setRateableOnlyIfOrdered(Optional<Boolean> rateableOnlyIfOrdered) {
         this.rateableOnlyIfOrdered = rateableOnlyIfOrdered;
     }
 
@@ -1700,7 +1700,7 @@ public class UpdateProduct {
      * References defines cross-product references, e.g. alternatives or follow-up
      * products.
      */
-    public Reference[] getReferences() {
+    public Optional<Reference[]> getReferences() {
         return this.references;
     }
 
@@ -1708,7 +1708,7 @@ public class UpdateProduct {
      * References defines cross-product references, e.g. alternatives or follow-up
      * products.
      */
-    public void setReferences(Reference[] references) {
+    public void setReferences(Optional<Reference[]> references) {
         this.references = references;
     }
 
@@ -1716,7 +1716,7 @@ public class UpdateProduct {
      * Safetysheet is the name of an safetysheet file (in the media files) or a URL
      * to the safetysheet on the internet.
      */
-    public String getSafetysheet() {
+    public Optional<String> getSafetysheet() {
         return this.safetysheet;
     }
 
@@ -1724,7 +1724,7 @@ public class UpdateProduct {
      * Safetysheet is the name of an safetysheet file (in the media files) or a URL
      * to the safetysheet on the internet.
      */
-    public void setSafetysheet(String safetysheet) {
+    public void setSafetysheet(Optional<String> safetysheet) {
         this.safetysheet = safetysheet;
     }
 
@@ -1732,7 +1732,7 @@ public class UpdateProduct {
      * ScalePrices can be used when the price of the product is dependent on the
      * ordered quantity.
      */
-    public ScalePrice[] getScalePrices() {
+    public Optional<ScalePrice[]> getScalePrices() {
         return this.scalePrices;
     }
 
@@ -1740,7 +1740,7 @@ public class UpdateProduct {
      * ScalePrices can be used when the price of the product is dependent on the
      * ordered quantity.
      */
-    public void setScalePrices(ScalePrice[] scalePrices) {
+    public void setScalePrices(Optional<ScalePrice[]> scalePrices) {
         this.scalePrices = scalePrices;
     }
 
@@ -1748,7 +1748,7 @@ public class UpdateProduct {
      * Service indicates if the is a good (false) or a service (true). The default
      * value is false.
      */
-    public Boolean getService() {
+    public Optional<Boolean> getService() {
         return this.service;
     }
 
@@ -1756,35 +1756,35 @@ public class UpdateProduct {
      * Service indicates if the is a good (false) or a service (true). The default
      * value is false.
      */
-    public void setService(Boolean service) {
+    public void setService(Optional<Boolean> service) {
         this.service = service;
     }
 
     /**
      * TaxCode to use for this product. This is typically project-specific.
      */
-    public String getTaxCode() {
+    public Optional<String> getTaxCode() {
         return this.taxCode;
     }
 
     /**
      * TaxCode to use for this product. This is typically project-specific.
      */
-    public void setTaxCode(String taxCode) {
+    public void setTaxCode(Optional<String> taxCode) {
         this.taxCode = taxCode;
     }
 
     /**
      * TaxRate for this product, a numeric value between 0.0 and 1.0.
      */
-    public Double getTaxRate() {
+    public Optional<Double> getTaxRate() {
         return this.taxRate;
     }
 
     /**
      * TaxRate for this product, a numeric value between 0.0 and 1.0.
      */
-    public void setTaxRate(Double taxRate) {
+    public void setTaxRate(Optional<Double> taxRate) {
         this.taxRate = taxRate;
     }
 
@@ -1792,7 +1792,7 @@ public class UpdateProduct {
      * Thumbnail is the name of an thumbnail image file (in the media files) or a
      * URL to the image on the internet.
      */
-    public String getThumbnail() {
+    public Optional<String> getThumbnail() {
         return this.thumbnail;
     }
 
@@ -1800,21 +1800,21 @@ public class UpdateProduct {
      * Thumbnail is the name of an thumbnail image file (in the media files) or a
      * URL to the image on the internet.
      */
-    public void setThumbnail(String thumbnail) {
+    public void setThumbnail(Optional<String> thumbnail) {
         this.thumbnail = thumbnail;
     }
 
     /**
      * Unspscs is a list of UNSPSC categories the product belongs to.
      */
-    public Unspsc[] getUnspscs() {
+    public Optional<Unspsc[]> getUnspscs() {
         return this.unspscs;
     }
 
     /**
      * Unspscs is a list of UNSPSC categories the product belongs to.
      */
-    public void setUnspscs(Unspsc[] unspscs) {
+    public void setUnspscs(Optional<Unspsc[]> unspscs) {
         this.unspscs = unspscs;
     }
 
@@ -1823,7 +1823,7 @@ public class UpdateProduct {
      * end-user when shopping. Please consult your Store Manager before setting a
      * value for this field.
      */
-    public Boolean getVisible() {
+    public Optional<Boolean> getVisible() {
         return this.visible;
     }
 
@@ -1832,7 +1832,7 @@ public class UpdateProduct {
      * end-user when shopping. Please consult your Store Manager before setting a
      * value for this field.
      */
-    public void setVisible(Boolean visible) {
+    public void setVisible(Optional<Boolean> visible) {
         this.visible = visible;
     }
 }
