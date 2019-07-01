@@ -65,7 +65,7 @@ Run `gradle test` to run tests. All tests are mocked: No internet access necessa
 
 This software is licensed under the Apache 2 license.
 
-    Copyright (c) 2015 Meplato GmbH, Switzerland <http://www.meplato.com>
+    Copyright (c) 2015 Meplato GmbH <http://www.meplato.com>
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
