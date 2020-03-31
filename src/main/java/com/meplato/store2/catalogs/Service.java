@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015-2016 Meplato GmbH, Switzerland.
+ * Copyright (c) 2013-present Meplato GmbH.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -14,61 +14,48 @@
 // THIS FILE IS AUTO-GENERATED. DO NOT MODIFY!
 /**
  * Package catalogs implements the Meplato Store API.
- *
- * @copyright 2014-2018 Meplato GmbH, Switzerland.
+ * 
+ * @copyright 2013-2020 Meplato GmbH.
  * @author Meplato API Team <support@meplato.com>
- * @version 2.1.5
- * @license Copyright (c) 2015-2018 Meplato GmbH, Switzerland. All rights reserved.
+ * @version 2.1.6
+ * @license Copyright (c) 2015-2020 Meplato GmbH. All rights reserved.
  * @see <a href="https://developer.meplato.com/store2/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/store2/">External documentation</a>
  */
 package com.meplato.store2.catalogs;
 
-import com.meplato.store2.Client;
-import com.meplato.store2.Response;
-import com.meplato.store2.ServiceException;
-import org.apache.commons.codec.binary.Base64;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import org.apache.commons.codec.binary.Base64;
+
+import com.meplato.store2.*;
 
 /**
  * Service is the entry point of the Meplato Store API.
  */
 
 public class Service {
-    /**
-     * API title.
-     */
+    /** API title. */
     public static String TITLE = "Meplato Store API";
-    /**
-     * API version.
-     */
-    public static String VERSION = "2.1.5";
-    /**
-     * User Agent.
-     */
+    /** API version. */
+    public static String VERSION = "2.1.6";
+    /** User Agent. */
     public static String USER_AGENT = "meplato-java-client/2.0";
-    /**
-     * Default base URL of the API endpoints.
-     */
+    /** Default base URL of the API endpoints. */
     public static String BASE_URL = "https://store.meplato.com/api/v2";
+    /** RFC3339 pattern for deserializing date/time from the API. */
+    public static String RFC3339 = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSXXX";
 
-    /**
-     * Client to use for requests.
-     */
+    /** Client to use for requests. */
     private final Client client;
-    /**
-     * Base URL for the API endpoints.
-     */
+    /** Base URL for the API endpoints. */
     private String baseURL;
-    /**
-     * User name for authentication.
-     */
+    /** User name for authentication. */
     private String user;
-    /**
-     * Password for authentication.
-     */
+    /** Password for authentication. */
     private String password;
 
     /**
@@ -79,6 +66,15 @@ public class Service {
     public Service(Client client) {
         this.client = client;
         this.baseURL = BASE_URL;
+    }
+
+    /**
+     * Returns the JSON serializer for this service.
+     *
+     * @return the JSON serializer.
+     */
+    public static Gson getSerializer() {
+        return new GsonBuilder().setDateFormat(RFC3339).create();
     }
 
     /**
@@ -168,6 +164,15 @@ public class Service {
     }
 
     /**
+     * Returns the {@link CreateService}.
+     *
+     * @return the {@link CreateService}.
+     */
+    public CreateService create() {
+        return new CreateService(this);
+    }
+
+    /**
      * Returns the {@link GetService}.
      *
      * @return the {@link GetService}.
@@ -210,6 +215,57 @@ public class Service {
      */
     public SearchService search() {
         return new SearchService(this);
+    }
+
+    /**
+     * Create a new catalog (admin only).
+     */
+    public static class CreateService {
+        private final Service service;
+        private final Map<String, Object> params = new HashMap<String, Object>();
+        private final Map<String, String> headers = new HashMap<String, String>();
+        private CreateCatalog catalog;
+
+        /**
+         * Creates a new instance of CreateService.
+         */
+        public CreateService(Service service) {
+            this.service = service;
+        }
+
+        /**
+         * Catalog properties of the new catalog.
+         */
+        public CreateService catalog(CreateCatalog catalog) {
+            this.catalog = catalog;
+            return this;
+        }
+
+        /**
+         * Execute the operation.
+         */
+        public Catalog execute() throws ServiceException {
+            // Make a copy of the parameters and add the path parameters to it
+            Map<String, Object> params = new HashMap<String, Object>();
+            params.putAll(this.params);
+
+            // Make a copy of the header parameters and set common headers, like the UA
+            Map<String, String> headers = new HashMap<String, String>();
+            headers.putAll(this.headers);
+
+            String authorization = service.getAuthorizationHeader();
+            if (authorization != null && !authorization.isEmpty()) {
+                headers.put("Authorization", authorization);
+            }
+
+            String uriTemplate = service.getBaseURL() + "/catalogs";
+            Response response = service.getClient().execute("POST", uriTemplate, params, headers, this.catalog);
+            if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
+                return response.getBodyJSON(Catalog.class);
+            }
+
+            throw ServiceException.fromResponse(response);
+        }
     }
 
     /**

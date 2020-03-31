@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015-2016 Meplato GmbH, Switzerland.
+ * Copyright (c) 2013-present Meplato GmbH.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -113,6 +113,8 @@ public class Catalog {
     private boolean supportsOciSourcing;
     @SerializedName("supportsOciValidate")
     private boolean supportsOciValidate;
+    @SerializedName("target")
+    private String target;
     @SerializedName("type")
     private String type;
     @SerializedName("updated")
@@ -818,6 +820,22 @@ public class Catalog {
      */
     public void setSupportsOciValidate(boolean supportsOciValidate) {
         this.supportsOciValidate = supportsOciValidate;
+    }
+
+    /**
+     * Target represents the target system which can be either an empty string,
+     * "catscout" or "mall".
+     */
+    public String getTarget() {
+        return this.target;
+    }
+
+    /**
+     * Target represents the target system which can be either an empty string,
+     * "catscout" or "mall".
+     */
+    public void setTarget(String target) {
+        this.target = target;
     }
 
     /**
