@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015-2016 Meplato GmbH, Switzerland.
+ * Copyright (c) 2013-present Meplato GmbH.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -51,6 +51,8 @@ public class ReplaceProduct {
     private String contentUnit;
     @SerializedName("cuPerOu")
     private Double cuPerOu;
+    @SerializedName("currency")
+    private String currency;
     @SerializedName("custField1")
     private String custField1;
     @SerializedName("custField2")
@@ -486,6 +488,24 @@ public class ReplaceProduct {
      */
     public void setCuPerOu(Double cuPerOu) {
         this.cuPerOu = cuPerOu;
+    }
+
+    /**
+     * Currency is the ISO currency code for the prices, e.g. EUR or GBP. If you
+     * pass an empty currency code, it will be initialized with the catalog's
+     * currency. 
+     */
+    public String getCurrency() {
+        return this.currency;
+    }
+
+    /**
+     * Currency is the ISO currency code for the prices, e.g. EUR or GBP. If you
+     * pass an empty currency code, it will be initialized with the catalog's
+     * currency. 
+     */
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 
     /**
