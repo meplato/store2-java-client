@@ -185,6 +185,8 @@ public class Product {
     private double meplatoPrice;
     @SerializedName("merchantId")
     private long merchantId;
+    @SerializedName("mode")
+    private String mode;
     @SerializedName("mpn")
     private String mpn;
     @SerializedName("multiSupplierId")
