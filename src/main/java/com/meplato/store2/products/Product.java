@@ -1467,6 +1467,22 @@ public class Product {
     }
 
     /**
+     * Mode is only used for differential downloads and is the type of change of a
+     * product (CREATED, UPDATED, DELETED).
+     */
+    public String getMode() {
+        return this.mode;
+	}
+
+    /**
+     * Mode is only used for differential downloads and is the type of change of a
+     * product (CREATED, UPDATED, DELETED).
+     */
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    /**
      * MPN is the manufacturer part number.
      */
     public String getMpn() {
