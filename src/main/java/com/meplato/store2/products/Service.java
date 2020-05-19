@@ -17,7 +17,7 @@
  *
  * @copyright 2013-2020 Meplato GmbH.
  * @author Meplato API Team <support@meplato.com>
- * @version 2.1.7
+ * @version 2.1.8
  * @license Copyright (c) 2015-2020 Meplato GmbH. All rights reserved.
  * @see <a href="https://developer.meplato.com/store2/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/store2/">External documentation</a>
@@ -41,7 +41,7 @@ public class Service {
     /** API title. */
     public static String TITLE = "Meplato Store API";
     /** API version. */
-    public static String VERSION = "2.1.7";
+    public static String VERSION = "2.1.8";
     /** User Agent. */
     public static String USER_AGENT = "meplato-java-client/2.0";
     /** Default base URL of the API endpoints. */
@@ -560,6 +560,18 @@ public class Service {
         }
 
         /**
+         * Mode can be used in combination with version to specify if the result should
+         * include all products for the specific version of the catalog (full), or just
+         * the products that changed from the previous version (diff). If the mode is
+         * "diff", the type of change to the product can be found in the attribute
+         * "mode" and has the following values: "Created", "Updated", "Deleted". 
+         */
+        public ScrollService mode(String mode) {
+            this.params.put("mode", mode);
+            return this;
+        }
+
+        /**
          * PageToken must be passed in the 2nd and all consective requests to get the
          * next page of results. You do not need to pass the page token manually. You
          * should just follow the nextUrl link in the metadata to get the next slice of
@@ -583,6 +595,14 @@ public class Service {
         }
 
         /**
+         * Version of the catalog to be retrieved
+         */
+        public ScrollService version(long version) {
+            this.params.put("version", version);
+            return this;
+        }
+
+        /**
          * Execute the operation.
          */
         public ScrollResponse execute() throws ServiceException {
@@ -601,7 +621,7 @@ public class Service {
                 headers.put("Authorization", authorization);
             }
 
-            String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}/products/scroll{?pageToken}";
+            String uriTemplate = service.getBaseURL() + "/catalogs/{pin}/{area}/products/scroll{?pageToken,mode,version}";
             Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
             if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
                 return response.getBodyJSON(ScrollResponse.class);

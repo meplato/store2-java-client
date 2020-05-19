@@ -82,4 +82,32 @@ public class ScrollTest extends BaseTest {
             }
         }
     }
+
+    @Test
+    public void testProductsDifferentialScroll() throws ServiceException, IOException, HttpException {
+        Service service = getProductsService();
+        assertNotNull(service);
+
+        String pageToken = null;
+
+        // Get differential update (from version 2 to 3)
+        this.mockResponseFromFile("products.scroll.differential.success");
+        ScrollResponse response = service.scroll().pin("AD8CCDD5F9").area("live").version(3).mode("diff").execute();
+        assertNotNull(response);
+        assertNotNull(response.getKind());
+        assertNotNull(response.getTotalItems());
+        Product[] products = response.getItems();
+        if (products != null) {
+            for (Product product : products) {
+                assertNotNull(product);
+                assertNotNull(product.getId());
+                assertNotEquals("", product.getId());
+                assertNotNull(product.getSpn());
+                assertNotEquals("", product.getSpn());
+                assertNotEquals("", product.getMode());
+                assertNotNull(product.getCreated());
+                assertNotNull(product.getUpdated());
+            }
+        }
+    }
 }

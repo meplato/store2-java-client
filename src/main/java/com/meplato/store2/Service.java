@@ -17,7 +17,7 @@
  * 
  * @copyright 2013-2020 Meplato GmbH.
  * @author Meplato API Team <support@meplato.com>
- * @version 2.1.7
+ * @version 2.1.8
  * @license Copyright (c) 2015-2020 Meplato GmbH. All rights reserved.
  * @see <a href="https://developer.meplato.com/store2/#terms">Terms of Service</a>
  * @see <a href="https://developer.meplato.com/store2/">External documentation</a>
@@ -39,7 +39,7 @@ public class Service {
     /** API title. */
     public static String TITLE = "Meplato Store API";
     /** API version. */
-    public static String VERSION = "2.1.7";
+    public static String VERSION = "2.1.8";
     /** User Agent. */
     public static String USER_AGENT = "meplato-java-client/2.0";
     /** Default base URL of the API endpoints. */

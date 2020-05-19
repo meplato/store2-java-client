@@ -185,6 +185,8 @@ public class Product {
     private double meplatoPrice;
     @SerializedName("merchantId")
     private long merchantId;
+    @SerializedName("mode")
+    private String mode;
     @SerializedName("mpn")
     private String mpn;
     @SerializedName("multiSupplierId")
@@ -1462,6 +1464,22 @@ public class Product {
      */
     public void setMerchantId(long merchantId) {
         this.merchantId = merchantId;
+    }
+
+    /**
+     * Mode is only used for differential downloads and is the type of change of a
+     * product (CREATED, UPDATED, DELETED).
+     */
+    public String getMode() {
+        return this.mode;
+	}
+
+    /**
+     * Mode is only used for differential downloads and is the type of change of a
+     * product (CREATED, UPDATED, DELETED).
+     */
+    public void setMode(String mode) {
+        this.mode = mode;
     }
 
     /**
