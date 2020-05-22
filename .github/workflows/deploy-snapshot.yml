@@ -9,7 +9,7 @@ on:
       - configure-maven.issue-15
 
 jobs:
-  release:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
