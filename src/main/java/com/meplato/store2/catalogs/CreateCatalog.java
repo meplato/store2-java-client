@@ -47,6 +47,8 @@ public class CreateCatalog {
     private String sageNumber;
     @SerializedName("target")
     private String target;
+    @SerializedName("type")
+    private String type;
     @SerializedName("validFrom")
     private String validFrom;
     @SerializedName("validUntil")
@@ -222,6 +224,22 @@ public class CreateCatalog {
      */
     public void setTarget(String target) {
         this.target = target;
+    }
+
+    /**
+     * Type represents a catalog type which can be either "CC" 1:1 Corporate or "MB"
+     * Meplato Business 1 Creditor.
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * Type represents a catalog type which can be either "CC" 1:1 Corporate or "MB"
+     * Meplato Business 1 Creditor.
+     */
+    public void setType(String type) {
+        this.type = type;
     }
 
     /**
