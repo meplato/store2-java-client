@@ -45,6 +45,7 @@ public class CreateTest extends BaseTest {
         create.setCurrency("EUR");
         create.setLanguage("de");
         create.setTarget("mall");
+        create.setType("CC");
         create.setSageNumber("");
         create.setSageContract("");
 
@@ -53,5 +54,6 @@ public class CreateTest extends BaseTest {
         assertNotNull(catalog.getSelfLink());
         assertNotEquals("", catalog.getSelfLink());
         assertEquals("store#catalog", catalog.getKind());
+        assertEquals("CC", catalog.getType());
     }
 }

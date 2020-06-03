@@ -95,8 +95,6 @@ public class Catalog {
     private String sageNumber;
     @SerializedName("selfLink")
     private String selfLink;
-    @SerializedName("slug")
-    private String slug;
     @SerializedName("state")
     private String state;
     @SerializedName("supportsOciBackgroundsearch")
@@ -680,20 +678,6 @@ public class Catalog {
      */
     public void setSelfLink(String selfLink) {
         this.selfLink = selfLink;
-    }
-
-    /**
-     * Slug of the catalog.
-     */
-    public String getSlug() {
-        return this.slug;
-    }
-
-    /**
-     * Slug of the catalog.
-     */
-    public void setSlug(String slug) {
-        this.slug = slug;
     }
 
     /**
