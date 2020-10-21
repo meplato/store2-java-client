@@ -15,6 +15,7 @@ package com.meplato.store2;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -76,7 +77,10 @@ public class Error {
         public ErrorInner(int code, String message, List<String> details) {
             this.code = code;
             this.message = message;
-            this.details = details;
+            if (details != null)
+                this.details = details;
+            else
+                this.details = Collections.emptyList();
         }
 
         /**
