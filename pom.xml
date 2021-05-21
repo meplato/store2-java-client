@@ -72,7 +72,7 @@
 			<dependency>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-client</artifactId>
-				<version>11.0.2</version>
+				<version>9.4.41.v20210516</version>
 			</dependency>
 			<dependency>
 				<groupId>javax.annotation</groupId>

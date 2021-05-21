@@ -1,6 +1,8 @@
 # Meplato Store 2.0 API for Java
 
-[![Build Status](https://travis-ci.org/meplato/store2-java-client.svg?branch=master)](https://travis-ci.org/meplato/store2-java-client)
+[![Test](https://github.com/meplato/store2-java-client/actions/workflows/test.yml/badge.svg)](https://github.com/meplato/store2-java-client/actions/workflows/test.yml)
+[![Deploy Snapshot](https://github.com/meplato/store2-java-client/actions/workflows/deploy-snapshot.yml/badge.svg)](https://github.com/meplato/store2-java-client/actions/workflows/deploy-snapshot.yml)
+[![Deploy Release](https://github.com/meplato/store2-java-client/actions/workflows/deploy-release.yml/badge.svg)](https://github.com/meplato/store2-java-client/actions/workflows/deploy-release.yml)
 
 This is the Java client for the Meplato Store 2 API. It helps you write
 software to integrate into the Meplato suite for suppliers.
@@ -78,4 +80,3 @@ This software is licensed under the Apache 2 license.
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
