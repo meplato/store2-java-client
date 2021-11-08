@@ -15,7 +15,7 @@
 /**
  * Package products implements the Meplato Store API.
  *
- * @copyright 2013-2020 Meplato GmbH.
+ * @copyright 2013-2021 Meplato GmbH.
  * @author Meplato API Team <support@meplato.com>
  * @version 2.1.9
  * @license Copyright (c) 2015-2020 Meplato GmbH. All rights reserved.

@@ -61,14 +61,16 @@ public class Merchant {
     }
 
     /**
-     * Country is the ISO code for the country of the merchant, e.g. DE or CH.
+     * Country/Region is the ISO code for the country/region of the merchant, e.g.
+     * DE or CH.
      */
     public String getCountry() {
         return this.country;
     }
 
     /**
-     * Country is the ISO code for the country of the merchant, e.g. DE or CH.
+     * Country/Region is the ISO code for the country/region of the merchant, e.g.
+     * DE or CH.
      */
     public void setCountry(String country) {
         this.country = country;
@@ -290,4 +292,3 @@ public class Merchant {
         this.updated = updated;
     }
 }
-

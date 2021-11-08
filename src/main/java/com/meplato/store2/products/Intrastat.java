@@ -113,16 +113,16 @@ public class Intrastat {
     }
 
     /**
-     * OriginCountry represents the ISO code of the country where the product has
-     * been created/produced, e.g. DE. This is a required field.
+     * OriginCountry represents the ISO code of the country/region where the product
+     * has been created/produced, e.g. DE. This is a required field.
      */
     public String getOriginCountry() {
         return this.originCountry;
     }
 
     /**
-     * OriginCountry represents the ISO code of the country where the product has
-     * been created/produced, e.g. DE. This is a required field.
+     * OriginCountry represents the ISO code of the country/region where the product
+     * has been created/produced, e.g. DE. This is a required field.
      */
     public void setOriginCountry(String originCountry) {
         this.originCountry = originCountry;
@@ -164,4 +164,3 @@ public class Intrastat {
         this.weightUnit = weightUnit;
     }
 }
-
