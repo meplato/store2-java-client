@@ -107,6 +107,46 @@ public class UpsertProduct {
     private String customField29;
     @SerializedName("customField30")
     private String customField30;
+    @SerializedName("customField31")
+    private String customField31;
+    @SerializedName("customField32")
+    private String customField32;
+    @SerializedName("customField33")
+    private String customField33;
+    @SerializedName("customField34")
+    private String customField34;
+    @SerializedName("customField35")
+    private String customField35;
+    @SerializedName("customField36")
+    private String customField36;
+    @SerializedName("customField37")
+    private String customField37;
+    @SerializedName("customField38")
+    private String customField38;
+    @SerializedName("customField39")
+    private String customField39;
+    @SerializedName("customField40")
+    private String customField40;
+    @SerializedName("customField41")
+    private String customField41;
+    @SerializedName("customField42")
+    private String customField42;
+    @SerializedName("customField43")
+    private String customField43;
+    @SerializedName("customField44")
+    private String customField44;
+    @SerializedName("customField45")
+    private String customField45;
+    @SerializedName("customField46")
+    private String customField46;
+    @SerializedName("customField47")
+    private String customField47;
+    @SerializedName("customField48")
+    private String customField48;
+    @SerializedName("customField49")
+    private String customField49;
+    @SerializedName("customField50")
+    private String customField50;
     @SerializedName("customField6")
     private String customField6;
     @SerializedName("customField7")
@@ -441,18 +481,20 @@ public class UpsertProduct {
     }
 
     /**
-     * Country represents the ISO code of the country of origin, i.e. the country
-     * where the product has been created/produced, e.g. DE. If unspecified, the
-     * field is initialized with the catalog's country field.
+     * Country/Region represents the ISO code of the country/region of origin, i.e.
+     * the country/region where the product has been created/produced, e.g. DE. If
+     * unspecified, the field is initialized with the catalog's country/region
+     * field.
      */
     public String getCountry() {
         return this.country;
     }
 
     /**
-     * Country represents the ISO code of the country of origin, i.e. the country
-     * where the product has been created/produced, e.g. DE. If unspecified, the
-     * field is initialized with the catalog's country field.
+     * Country/Region represents the ISO code of the country/region of origin, i.e.
+     * the country/region where the product has been created/produced, e.g. DE. If
+     * unspecified, the field is initialized with the catalog's country/region
+     * field.
      */
     public void setCountry(String country) {
         this.country = country;
@@ -493,7 +535,7 @@ public class UpsertProduct {
     /**
      * Currency is the ISO currency code for the prices, e.g. EUR or GBP. If you
      * pass an empty currency code, it will be initialized with the catalog's
-     * currency. 
+     * currency.
      */
     public String getCurrency() {
         return this.currency;
@@ -502,7 +544,7 @@ public class UpsertProduct {
     /**
      * Currency is the ISO currency code for the prices, e.g. EUR or GBP. If you
      * pass an empty currency code, it will be initialized with the catalog's
-     * currency. 
+     * currency.
      */
     public void setCurrency(String currency) {
         this.currency = currency;
@@ -938,6 +980,326 @@ public class UpsertProduct {
      */
     public void setCustomField30(String customField30) {
         this.customField30 = customField30;
+    }
+
+    /**
+     * CustomField31 represents the 31st customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField31() {
+        return this.customField31;
+    }
+
+    /**
+     * CustomField31 represents the 31st customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField31(String customField31) {
+        this.customField31 = customField31;
+    }
+
+    /**
+     * CustomField32 represents the 32nd customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField32() {
+        return this.customField32;
+    }
+
+    /**
+     * CustomField32 represents the 32nd customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField32(String customField32) {
+        this.customField32 = customField32;
+    }
+
+    /**
+     * CustomField33 represents the 33rd customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField33() {
+        return this.customField33;
+    }
+
+    /**
+     * CustomField33 represents the 33rd customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField33(String customField33) {
+        this.customField33 = customField33;
+    }
+
+    /**
+     * CustomField34 represents the 34th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField34() {
+        return this.customField34;
+    }
+
+    /**
+     * CustomField34 represents the 34th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField34(String customField34) {
+        this.customField34 = customField34;
+    }
+
+    /**
+     * CustomField35 represents the 35th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField35() {
+        return this.customField35;
+    }
+
+    /**
+     * CustomField35 represents the 35th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField35(String customField35) {
+        this.customField35 = customField35;
+    }
+
+    /**
+     * CustomField36 represents the 36th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField36() {
+        return this.customField36;
+    }
+
+    /**
+     * CustomField36 represents the 36th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField36(String customField36) {
+        this.customField36 = customField36;
+    }
+
+    /**
+     * CustomField37 represents the 37th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField37() {
+        return this.customField37;
+    }
+
+    /**
+     * CustomField37 represents the 37th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField37(String customField37) {
+        this.customField37 = customField37;
+    }
+
+    /**
+     * CustomField38 represents the 38th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField38() {
+        return this.customField38;
+    }
+
+    /**
+     * CustomField38 represents the 38th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField38(String customField38) {
+        this.customField38 = customField38;
+    }
+
+    /**
+     * CustomField39 represents the 39th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField39() {
+        return this.customField39;
+    }
+
+    /**
+     * CustomField39 represents the 39th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField39(String customField39) {
+        this.customField39 = customField39;
+    }
+
+    /**
+     * CustomField40 represents the 40th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField40() {
+        return this.customField40;
+    }
+
+    /**
+     * CustomField40 represents the 40th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField40(String customField40) {
+        this.customField40 = customField40;
+    }
+
+    /**
+     * CustomField41 represents the 41st customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField41() {
+        return this.customField41;
+    }
+
+    /**
+     * CustomField41 represents the 41st customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField41(String customField41) {
+        this.customField41 = customField41;
+    }
+
+    /**
+     * CustomField42 represents the 42nd customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField42() {
+        return this.customField42;
+    }
+
+    /**
+     * CustomField42 represents the 42nd customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField42(String customField42) {
+        this.customField42 = customField42;
+    }
+
+    /**
+     * CustomField43 represents the 43rd customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField43() {
+        return this.customField43;
+    }
+
+    /**
+     * CustomField43 represents the 43rd customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField43(String customField43) {
+        this.customField43 = customField43;
+    }
+
+    /**
+     * CustomField44 represents the 44th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField44() {
+        return this.customField44;
+    }
+
+    /**
+     * CustomField44 represents the 44th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField44(String customField44) {
+        this.customField44 = customField44;
+    }
+
+    /**
+     * CustomField45 represents the 45th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField45() {
+        return this.customField45;
+    }
+
+    /**
+     * CustomField45 represents the 45th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField45(String customField45) {
+        this.customField45 = customField45;
+    }
+
+    /**
+     * CustomField46 represents the 46th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField46() {
+        return this.customField46;
+    }
+
+    /**
+     * CustomField46 represents the 46th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField46(String customField46) {
+        this.customField46 = customField46;
+    }
+
+    /**
+     * CustomField47 represents the 47th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField47() {
+        return this.customField47;
+    }
+
+    /**
+     * CustomField47 represents the 47th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField47(String customField47) {
+        this.customField47 = customField47;
+    }
+
+    /**
+     * CustomField48 represents the 48th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField48() {
+        return this.customField48;
+    }
+
+    /**
+     * CustomField48 represents the 48th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField48(String customField48) {
+        this.customField48 = customField48;
+    }
+
+    /**
+     * CustomField49 represents the 49th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField49() {
+        return this.customField49;
+    }
+
+    /**
+     * CustomField49 represents the 49th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField49(String customField49) {
+        this.customField49 = customField49;
+    }
+
+    /**
+     * CustomField50 represents the 50th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public String getCustomField50() {
+        return this.customField50;
+    }
+
+    /**
+     * CustomField50 represents the 50th customer-specific field. Please consult
+     * your Store Manager before setting a value for this field.
+     */
+    public void setCustomField50(String customField50) {
+        this.customField50 = customField50;
     }
 
     /**
@@ -1872,4 +2234,3 @@ public class UpsertProduct {
         this.visible = visible;
     }
 }
-
