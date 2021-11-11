@@ -54,16 +54,16 @@ public class Project {
     }
 
     /**
-     * Country specifies the country code where catalogs for this project are
-     * located.
+     * Country/Region specifies the country/region code where catalogs for this
+     * project are located.
      */
     public String getCountry() {
         return this.country;
     }
 
     /**
-     * Country specifies the country code where catalogs for this project are
-     * located.
+     * Country/Region specifies the country/region code where catalogs for this
+     * project are located.
      */
     public void setCountry(String country) {
         this.country = country;
@@ -225,4 +225,3 @@ public class Project {
         this.visible = visible;
     }
 }
-

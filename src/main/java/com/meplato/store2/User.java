@@ -55,14 +55,14 @@ public class User {
     }
 
     /**
-     * Country is the ISO code for the country, e.g. DE or CH.
+     * Country/Region is the ISO code for the country/region, e.g. DE or CH.
      */
     public String getCountry() {
         return this.country;
     }
 
     /**
-     * Country is the ISO code for the country, e.g. DE or CH.
+     * Country/Region is the ISO code for the country/region, e.g. DE or CH.
      */
     public void setCountry(String country) {
         this.country = country;
@@ -238,4 +238,3 @@ public class User {
         this.updated = updated;
     }
 }
-

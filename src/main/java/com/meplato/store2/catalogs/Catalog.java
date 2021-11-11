@@ -129,16 +129,16 @@ public class Catalog {
     }
 
     /**
-     * Country is the ISO-3166 alpha-2 code for the country that the catalog is
-     * destined for (e.g. DE or US).
+     * Country/Region is the ISO-3166 alpha-2 code for the country/region that the
+     * catalog is destined for (e.g. DE or US).
      */
     public String getCountry() {
         return this.country;
     }
 
     /**
-     * Country is the ISO-3166 alpha-2 code for the country that the catalog is
-     * destined for (e.g. DE or US).
+     * Country/Region is the ISO-3166 alpha-2 code for the country/region that the
+     * catalog is destined for (e.g. DE or US).
      */
     public void setCountry(String country) {
         this.country = country;
@@ -823,14 +823,16 @@ public class Catalog {
     }
 
     /**
-     * Type of catalog, e.g. corporate or basic.
+     * Type represents a catalog type which can be either "CC" 1:1 Corporate or "MB"
+     * Meplato Business 1 Creditor.
      */
     public String getType() {
         return this.type;
     }
 
     /**
-     * Type of catalog, e.g. corporate or basic.
+     * Type represents a catalog type which can be either "CC" 1:1 Corporate or "MB"
+     * Meplato Business 1 Creditor.
      */
     public void setType(String type) {
         this.type = type;
@@ -878,4 +880,3 @@ public class Catalog {
         this.validUntil = validUntil;
     }
 }
-
