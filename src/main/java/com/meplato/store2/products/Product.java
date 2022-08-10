@@ -13,7 +13,12 @@
  */
 package com.meplato.store2.products;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -396,7 +401,7 @@ public class Product {
 
     /**
      * Brand is the commercial brand name of the product (i.e. end-consumer
-     * recognizable brand name)
+     * recognizable brand name).
      */
     public String getBrand() {
         return this.brand;
@@ -404,7 +409,7 @@ public class Product {
 
     /**
      * Brand is the commercial brand name of the product (i.e. end-consumer
-     * recognizable brand name)
+     * recognizable brand name).
      */
     public void setBrand(String brand) {
         this.brand = brand;
