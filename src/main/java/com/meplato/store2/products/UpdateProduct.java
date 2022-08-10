@@ -33,6 +33,8 @@ public class UpdateProduct {
     private Optional<Double> boostFactor;
     @SerializedName("bpn")
     private Optional<String> bpn;
+    @SerializedName("brand")
+    private String brand;
     @SerializedName("catalogManaged")
     private Optional<Boolean> catalogManaged;
     @SerializedName("categories")
@@ -364,6 +366,22 @@ public class UpdateProduct {
      */
     public void setBpn(Optional<String> bpn) {
         this.bpn = bpn;
+    }
+
+    /**
+     * Brand is the commercial brand name of the product (i.e. end-consumer
+     * recognizable brand name)
+     */
+    public String getBrand() {
+        return this.brand;
+    }
+
+    /**
+     * Brand is the commercial brand name of the product (i.e. end-consumer
+     * recognizable brand name)
+     */
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     /**
