@@ -185,6 +185,8 @@ public class UpdateProduct {
     private Optional<Feature[]> features;
     @SerializedName("glAccount")
     private Optional<String> glAccount;
+    @SerializedName("greenLogos")
+    private Optional<String[]> greenLogos;
     @SerializedName("gtin")
     private Optional<String> gtin;
     @SerializedName("hazmats")
@@ -1582,6 +1584,20 @@ public class UpdateProduct {
      */
     public void setGlAccount(Optional<String> glAccount) {
         this.glAccount = glAccount;
+    }
+
+    /**
+     * GreenLogos is an array of green logo names, which are hosted in the store, and used to mark products as green.
+     */
+    public Optional<String[]> getGreenLogos() {
+        return this.greenLogos;
+    }
+
+    /**
+     * GreenLogos is an array of green logo names, which are hosted in the store, and used to mark products as green.
+     */
+    public void setGreenLogos(Optional<String[]> greenLogos) {
+        this.greenLogos = greenLogos;
     }
 
     /**
