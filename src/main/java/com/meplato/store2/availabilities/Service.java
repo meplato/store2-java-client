@@ -26,7 +26,6 @@ package com.meplato.store2.availabilities;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
