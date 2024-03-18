@@ -249,7 +249,7 @@ public class Service {
                 headers.put("Authorization", authorization);
             }
 
-            String uriTemplate = service.getBaseURL() + "/api/v2/products/{spn}/availabilities{?region,zipCode}";
+            String uriTemplate = service.getBaseURL() + "/products/{spn}/availabilities{?region,zipCode}";
             Response response = service.getClient().execute("DELETE", uriTemplate, params, headers, null);
             if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
                 return response.getBodyJSON(DeleteResponse.class);
@@ -317,7 +317,7 @@ public class Service {
                 headers.put("Authorization", authorization);
             }
 
-            String uriTemplate = service.getBaseURL() + "/api/v2/products/{spn}/availabilities{?region,zipCode}";
+            String uriTemplate = service.getBaseURL() + "/products/{spn}/availabilities{?region,zipCode}";
             Response response = service.getClient().execute("GET", uriTemplate, params, headers, null);
             if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
                 return response.getBodyJSON(GetResponse.class);
@@ -379,7 +379,7 @@ public class Service {
                 headers.put("Authorization", authorization);
             }
 
-            String uriTemplate = service.getBaseURL() + "/api/v2/products/{spn}/availabilities";
+            String uriTemplate = service.getBaseURL() + "/products/{spn}/availabilities";
             Response response = service.getClient().execute("POST", uriTemplate, params, headers, this.availability);
             if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
                 return response.getBodyJSON(UpsertResponse.class);
