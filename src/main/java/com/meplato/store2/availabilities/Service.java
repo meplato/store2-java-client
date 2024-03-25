@@ -380,7 +380,7 @@ public class Service {
             }
 
             String uriTemplate = service.getBaseURL() + "/products/{spn}/availabilities";
-            Response response = service.getClient().execute("POST", uriTemplate, params, headers, this.availability);
+            Response response = service.getClient().execute("PUT", uriTemplate, params, headers, this.availability);
             if (response != null && response.getStatusCode() >= 200 && response.getStatusCode() < 300) {
                 return response.getBodyJSON(UpsertResponse.class);
             }
