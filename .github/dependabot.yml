@@ -1,0 +1,18 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: monthly
+  ignore:
+    # ignore Maven APIs/SPIs
+    - dependency-name: org.apache.maven:*
+  reviewers:
+    - "XoseRamon"
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: "monthly"
+  reviewers:
+    - "XoseRamon"
+    - "rwenzel"
