@@ -19,12 +19,12 @@
 	</properties>
 
 	<distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>Meplato Maven Packages on GitHub</name>
-            <url>https://maven.pkg.github.com/meplato/store2-java-client</url>
-        </repository>
-    </distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>Meplato Maven Packages on GitHub</name>
+			<url>https://maven.pkg.github.com/meplato/store2-java-client</url>
+		</repository>
+	</distributionManagement>
 
 	<dependencyManagement>
 		<dependencies>
@@ -72,7 +72,7 @@
 			<dependency>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-client</artifactId>
-				<version>12.0.10</version>
+				<version>9.4.54.v20240208</version>
 			</dependency>
 			<dependency>
 				<groupId>javax.annotation</groupId>
@@ -150,8 +150,8 @@
 						</goals>
 						<configuration>
 							<rules>
-								<dependencyConvergence/>
-								<requireUpperBoundDeps/>
+								<dependencyConvergence />
+								<requireUpperBoundDeps />
 							</rules>
 						</configuration>
 					</execution>
